@@ -1,0 +1,353 @@
+/* versão 4 */
+
+/* Fundo da janela */
+QWidget {
+    background-color: #060606;
+}
+
+/* Labels =-=-=-=-=-=-=-=-=-=-=*/ 
+QLabel {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border: transparent;
+    background-color: transparent;
+    padding: 0px;
+}
+/* QLabel Primary */
+QLabel#primary {
+    color: #2a9fd6;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* QLabel Secondary */
+QLabel#secondary {
+    color: #555555;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* QLabel Success */
+QLabel#success {
+    color: #77b300;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* QLabel Danger */
+QLabel#danger {
+    color: #cc0000;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* QLabel Warning */
+QLabel#warning {
+    color: #ff8800;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+/* QLabel Info */
+QLabel#info {
+    color: #9933cc;
+    font-weight: 600;
+    background-color: transparent;
+}
+/* QLabel Primary Border */
+QLabel#primary-border {
+    color: #2a9fd6;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #2a9fd6;
+}
+
+/* QLabel Secondary Border */
+QLabel#secondary-border {
+    color: #555555;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #555555;
+}
+
+/* QLabel Success Border */
+QLabel#success-border {
+    color: #77b300;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #77b300;
+}
+
+/* QLabel Danger Border */
+QLabel#danger-border {
+    color: #cc0000;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #cc0000;
+}
+
+/* QLabel Warning Border */
+QLabel#warning-border {
+    color: #ff8800;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #ff8800;
+}
+
+/* QLabel Info Border */
+QLabel#info-border {
+    color: #9933cc;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #9933cc;
+}
+
+
+/* campos QTextEdit */
+QTextEdit {
+    background-color: #191919;
+    color: #ffffff;
+    border: 1.5px solid #060606;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 6px 10px;
+}
+QTextEdit:focus {
+    border: 2px solid #2a9fd6;
+    background-color: #222222;
+}
+
+/* Campos de texto */
+QLineEdit {
+    background-color: #191919;
+    color: #ffffff;
+    border: 1.5px solid #060606;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 6px 10px;
+}
+QLineEdit:focus {
+    border: 2px solid #2a9fd6;
+    background-color: #222222;
+}
+
+/* Botão base */
+QPushButton {
+    color: #ffffff;
+    background-color: #555555;
+    border: 1.5px solid #060606;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 7px 22px;
+    font-weight: 500;
+}
+QPushButton:hover {
+    background-color: #454545;
+}
+QPushButton:pressed {
+    background-color: #222222;
+}
+/* Primary */
+QPushButton#primary {
+    background-color: #2a9fd6;
+    border: 1.5px solid #2a9fd6;
+}
+QPushButton#primary:hover {
+    background-color: #2288b5;
+}
+QPushButton#primary:pressed {
+    background-color: #18698a;
+}
+
+/* Secondary */
+QPushButton#secondary {
+    background-color: #555555;
+    border: 1.5px solid #060606;
+}
+QPushButton#secondary:hover {
+    background-color: #454545;
+}
+QPushButton#secondary:pressed {
+    background-color: #222222;
+}
+
+/* Success */
+QPushButton#success {
+    background-color: #77b300;
+    border: 1.5px solid #77b300;
+}
+QPushButton#success:hover {
+    background-color: #5e9000;
+}
+QPushButton#success:pressed {
+    background-color: #466c00;
+}
+
+/* Danger */
+QPushButton#danger {
+    background-color: #cc0000;
+    border: 1.5px solid #cc0000;
+}
+QPushButton#danger:hover {
+    background-color: #990000;
+}
+QPushButton#danger:pressed {
+    background-color: #660000;
+}
+
+/* Warning */
+QPushButton#warning {
+    background-color: #ff8800;
+    border: 1.5px solid #ff8800;
+}
+QPushButton#warning:hover {
+    background-color: #cc6d00;
+}
+QPushButton#warning:pressed {
+    background-color: #995200;
+}
+
+/* Info */
+QPushButton#info {
+    background-color: #9933cc;
+    border: 1.5px solid #9933cc;
+}
+QPushButton#info:hover {
+    background-color: #7a299f;
+}
+QPushButton#info:pressed {
+    background-color: #5c2073;
+}
+
+/* Botão estilo link */
+QPushButton#link {
+    background: transparent;
+    border: none;
+    color: #2a9fd6;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#link:hover {
+    color: #9933cc;
+    text-decoration: underline;
+}
+QPushButton#link:pressed {
+    color: #ff8800;
+}
+
+/* QLineEdit Primary */
+QLineEdit#primary {
+    border: 2px solid #2a9fd6;
+    background-color: #191919;
+    color: #ffffff;
+}
+QLineEdit#primary:focus {
+    border: 2.5px solid #9933cc;
+    background-color: #222222;
+}
+
+/* QLineEdit Secondary */
+QLineEdit#secondary {
+    border: 2px solid #555555;
+    background-color: #191919;
+    color: #ffffff;
+}
+QLineEdit#secondary:focus {
+    border: 2.5px solid #454545;
+    background-color: #222222;
+}
+
+/* QLineEdit Success */
+QLineEdit#success {
+    border: 2px solid #77b300;
+    background-color: #191919;
+    color: #ffffff;
+}
+QLineEdit#success:focus {
+    border: 2.5px solid #5e9000;
+    background-color: #222222;
+}
+
+/* QLineEdit Danger */
+QLineEdit#danger {
+    border: 2px solid #cc0000;
+    background-color: #191919;
+    color: #ffffff;
+}
+QLineEdit#danger:focus {
+    border: 2.5px solid #990000;
+    background-color: #222222;
+}
+
+/* QLineEdit Warning */
+QLineEdit#warning {
+    border: 2px solid #ff8800;
+    background-color: #191919;
+    color: #ffffff;
+}
+QLineEdit#warning:focus {
+    border: 2.5px solid #cc6d00;
+    background-color: #222222;
+}
+
+/* QLineEdit Info */
+QLineEdit#info {
+    border: 2px solid #9933cc;
+    background-color: #191919;
+    color: #ffffff;
+}
+QLineEdit#info:focus {
+    border: 2.5px solid #2a9fd6;
+    background-color: #222222;
+}
+
+
+/* Frame default */
+
+QFrame { 
+    border-radius: 8px;
+    background-color: #101010;
+}
+/* Frame Success */
+QFrame#fr-success {
+    border: 2px solid #77b300;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Primary */
+QFrame#fr-primary {
+    border: 2px solid #2a9fd6;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Danger */
+QFrame#fr-danger {
+    border: 2px solid #cc0000;
+    border-radius: 8px;
+    background-color: #191919;
+}
+/* Frame Warning */
+QFrame#fr-warning {
+    border: 2px solid #ff8800;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Info */
+QFrame#fr-info {
+    
+    border-radius: 8px;
+    background-color: #9933cc;
+} 
+QFrame#fr-outline-info {
+    border: 2px solid #9933cc;
+    border-radius: 8px;
+    background-color: #191919;
+} 
+/* checkbox */

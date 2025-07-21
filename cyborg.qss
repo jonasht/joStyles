@@ -1,0 +1,256 @@
+/* --- Variáveis de Cor --- */
+/* "@primary": "#2a9fd6",
+"@secondary": "#555555",
+"@success": "#77b300",
+"@info": "#9933cc",
+"@warning": "#ff8800",
+"@danger": "#cc0000",
+"@light": "#ADAFAE",
+"@dark": "#222222",
+"@bg": "#060606",
+"@fg": "#ffffff",
+"@selectbg": "#454545",
+"@selectfg": "#ffffff",
+"@border": "#060606",
+"@inputfg": "#ffffff",
+"@inputbg": "#191919" */
+
+QWidget {
+    background-color: @bg;
+    color: @fg;
+    /* font-family: "Segoe UI", "Helvetica Neue", "Arial", sans-serif; */
+    /* font-size: 14px; */
+}
+QLabel {
+    font-size: 15px;
+    font-weight: 500;
+    background-color: transparent;
+}
+QLabel#primary {
+    color: @primary;
+}
+
+QLabel#secondary {
+    color: @secondary;
+}
+QLabel#success {
+    color: @success;
+}
+QLabel#info {
+    color: @info;
+}
+
+QLabel#warning {
+    color: @warning;
+}
+QLabel#danger {
+    color: @danger;
+}
+
+/* label inverse */
+QLabel#primary-inverse {
+    color: @fg;
+    background-color: @primary;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#secondary-inverse {
+    color: @fg;
+    background-color: @secondary;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#success-inverse {
+    color: @fg;
+    background-color: @success;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#info-inverse {
+    color: @fg;
+    background-color: @info;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#warning-inverse {
+    color: @fg;
+    background-color: @warning;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#danger-inverse {
+    color: @fg;
+    background-color: @danger;
+    border-radius: 12px;
+    padding: 2px
+}
+/* label border */
+QLabel#primary-border {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 12px;
+}
+QLabel#secondary-border {
+    color: @secondary;
+    border: 2px solid @secondary;
+    border-radius: 12px;
+}
+QLabel#success-border {
+    color: @success;
+    border: 2px solid @success;
+    border-radius: 12px;
+}
+QLabel#info-border {
+    color: @info;
+    border: 2px solid @info;
+    border-radius: 12px;
+}
+QLabel#warning-border {
+    color: @warning;
+    border: 2px solid @warning;
+    border-radius: 12px;
+}
+QLabel#danger-border {
+    color: @danger;
+    border: 2px solid @danger;
+    border-radius: 12px;
+}
+/* QPuhshButton =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
+QPushButton {
+    color: #ffffff;
+    background-color: #555555;
+    border: 1.5px solid #060606;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 7px 22px;
+    font-weight: 500;
+}
+QPushButton:hover {
+    background-color: #454545;
+}
+QPushButton:pressed {
+    background-color: #222222;
+}
+/* Primary */
+QPushButton#primary {
+    background-color: #2a9fd6;
+    border: 1.5px solid #2a9fd6;
+}
+QPushButton#primary:hover {
+    background-color: #2288b5;
+}
+QPushButton#primary:pressed {
+    background-color: #18698a;
+}
+
+/* Secondary */
+QPushButton#secondary {
+    background-color: #555555;
+    border: 1.5px solid #060606;
+}
+QPushButton#secondary:hover {
+    background-color: #454545;
+}
+QPushButton#secondary:pressed {
+    background-color: #222222;
+}
+
+/* Success */
+QPushButton#success {
+    background-color: #77b300;
+    border: 1.5px solid #77b300;
+}
+QPushButton#success:hover {
+    background-color: #5e9000;
+}
+QPushButton#success:pressed {
+    background-color: #466c00;
+}
+/* Info */
+QPushButton#info {
+    background-color: #9933cc;
+    border: 1.5px solid #9933cc;
+}
+QPushButton#info:hover {
+    background-color: #7a299f;
+}
+QPushButton#info:pressed {
+    background-color: #5c2073;
+}
+
+/* Warning */
+QPushButton#warning {
+    background-color: #ff8800;
+    border: 1.5px solid #ff8800;
+}
+QPushButton#warning:hover {
+    background-color: #cc6d00;
+}
+QPushButton#warning:pressed {
+    background-color: #995200;
+}
+
+/* Danger */
+QPushButton#danger {
+    background-color: #cc0000;
+    border: 1.5px solid #cc0000;
+}
+QPushButton#danger:hover {
+    background-color: #990000;
+}
+QPushButton#danger:pressed {
+    background-color: #660000;
+}
+
+
+/* Botão estilo link */
+QPushButton#link {
+    background: transparent;
+    border: none;
+    color: #2a9fd6;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#link:hover {
+    color: #9933cc;
+    text-decoration: underline;
+}
+QPushButton#link:pressed {
+    color: #ff8800;
+}
+
+/* QCheckBox =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+QCheckBox {
+    spacing: 5px; /* Espaço entre a caixa e o texto */
+    color: @fg;
+    font-size: 15px;
+    /* Adicionado: garantir que o fundo seja transparente por padrão */
+    background-color: transparent; 
+}
+
+QCheckBox::indicator {
+    /* Aumentado o tamanho para melhor visibilidade */
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    /* Alterado: usar a cor de fundo do widget como padrão para a caixa */
+    background-color: @inputbg;
+    border: 1px solid @secondary;
+}
+
+QCheckBox::indicator:hover {
+    /* Alterado: destaque mais sutil no hover */
+    border-color: @primary;
+}
+
+/* Estilo para o CheckBox primário quando marcado */
+QCheckBox#primary::indicator:checked {
+    background-color: @primary;
+    border-color: @primary;
+    /* Adicionado: estilo para a "setinha" (check mark) */
+    image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+}
