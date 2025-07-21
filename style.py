@@ -16,20 +16,27 @@ SUCCESS_INVERSE = 'success-inverse'
 INFO_INVERSE = 'info-inverse' 
 WARNING_INVERSE = 'warning-inverse' 
 DANGER_INVERSE = 'danger-inverse' 
-
+# --- Border ---
 PRIMARY_BORDER = 'primary-border' 
 SECONDARY_BORDER = 'secondary-border' 
 SUCCESS_BORDER = 'success-border' 
 INFO_BORDER = 'info-border' 
 WARNING_BORDER = 'warning-border' 
 DANGER_BORDER = 'danger-border' 
-
+# outline
 PRIMARY_OUTLINE = 'primary-outline'
 SECONDARY_OUTLINE = 'secondary-outline'
 SUCCESS_OUTLINE = 'success-outline'
 INFO_OUTLINE = 'info-outline'
 WARNING_OUTLINE = 'warning-outline'
 DANGER_OUTLINE = 'danger-outline'
+# --- link ---
+PRIMARY_LINK = 'primary-link'
+SECONDARY_LINK = 'secondary-link'
+SUCCESS_LINK = 'success-link'
+INFO_LINK = 'info-link'
+WARNING_LINK = 'warning-link'
+DANGER_LINK = 'danger-link'
 
 # --- Dicionário de Cores ---
 THEME_COLORS = {

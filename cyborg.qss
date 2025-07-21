@@ -312,6 +312,104 @@ QPushButton#danger-outline:pressed {
     color: @fg;
     background-color: #660000;
 }
+/* Qpush button link */
+QPushButton#primary-link {
+    background: transparent;
+    border: none;
+    color: @primary;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#primary-link:hover {
+    text-decoration: underline;
+}
+QPushButton#primary-link:pressed {
+    color: @info;
+ 
+}
+QPushButton#secondary-link {
+    background: transparent;
+    border: none;
+    color: @secondary;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#secondary-link:hover {
+    text-decoration: underline;
+}
+QPushButton#secondary-link:pressed {
+    color: @info;
+}
+QPushButton#success-link {
+    background: transparent;
+    border: none;
+    color: @success;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#success-link:hover {
+    text-decoration: underline;
+}
+QPushButton#success-link:pressed {
+    color: @info;
+}
+QPushButton#info-link {
+    background: transparent;
+    border: none;
+    color: @info;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#info-link:hover {
+    text-decoration: underline;
+}
+QPushButton#info-link:pressed {
+    color: @warning;
+}
+QPushButton#warning-link {
+    background: transparent;
+    border: none;
+    color: @warning;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#warning-link:hover {
+    text-decoration: underline;
+}
+QPushButton#warning-link:pressed {
+    color: @info;
+}
+QPushButton#danger-link {
+    background: transparent;
+    border: none;
+    color: @danger;
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+    font-weight: 500;
+    text-decoration: none;
+}
+QPushButton#danger-link:hover {
+    text-decoration: underline;
+}
+QPushButton#danger-link:pressed {
+    color: @warning;
+}
 /* QCheckBox =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 QCheckBox {
     spacing: 5px;
@@ -358,3 +456,74 @@ QCheckBox#danger::indicator:checked {
     background-color: @danger;
     border-color: @danger;
 }
+/* --- QLineEdit --- --------------------- */
+QLineEdit {
+    background-color: #191919;
+    color: @fg;
+    border: 1.5px solid #060606;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 6px 10px;
+}
+QLineEdit:focus {
+    border: 2px solid #2a9fd6;
+    background-color: #222222;
+}
+QLineEdit#primary {
+    border: 2px solid @primary;
+    background-color: #191919;
+    color: @fg;
+}
+QLineEdit#primary:focus {
+    border: 2.5px solid #9933cc;
+    background-color: #222222;
+}
+
+QLineEdit#secondary {
+    border: 2px solid @secondary;
+    background-color: #191919;
+    color: @fg;
+}
+QLineEdit#secondary:focus {
+    border: 2.5px solid #454545;
+    background-color: #222222;
+}
+
+QLineEdit#success {
+    border: 2px solid @success;
+    background-color: #191919;
+    color: @fg;
+}
+QLineEdit#success:focus {
+    border: 2.5px solid #5e9000;
+    background-color: #222222;
+}
+QLineEdit#info {
+    border: 2px solid @info;
+    background-color: #191919;
+    color: @fg;
+}
+QLineEdit#info:focus {
+    border: 2.5px solid #2a9fd6;
+    background-color: #222222;
+}
+
+QLineEdit#warning {
+    border: 2px solid @warning;
+    background-color: #191919;
+    color: @fg;
+}
+QLineEdit#warning:focus {
+    border: 2.5px solid #cc6d00;
+    background-color: #222222;
+}
+QLineEdit#danger {
+    border: 2px solid @danger;
+    background-color: #191919;
+    color: @fg;
+}
+QLineEdit#danger:focus {
+    border: 2.5px solid #990000;
+    background-color: #222222;
+}
+
