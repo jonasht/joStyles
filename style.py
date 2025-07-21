@@ -24,6 +24,13 @@ INFO_BORDER = 'info-border'
 WARNING_BORDER = 'warning-border' 
 DANGER_BORDER = 'danger-border' 
 
+PRIMARY_OUTLINE = 'primary-outline'
+SECONDARY_OUTLINE = 'secondary-outline'
+SUCCESS_OUTLINE = 'success-outline'
+INFO_OUTLINE = 'info-outline'
+WARNING_OUTLINE = 'warning-outline'
+DANGER_OUTLINE = 'danger-outline'
+
 # --- Dicionário de Cores ---
 THEME_COLORS = {
     "@primary": "#2a9fd6",
