@@ -490,7 +490,7 @@ QLineEdit#secondary:focus {
 }
 
 QLineEdit#success {
-    border: 2px solid #success;
+    border: 2px solid @success;
     background-color: #191919;
     color: @fg;
 }
@@ -498,14 +498,13 @@ QLineEdit#success:focus {
     border: 2.5px solid #5e9000;
     background-color: #222222;
 }
-
-QLineEdit#danger {
-    border: 2px solid @danger;
+QLineEdit#info {
+    border: 2px solid @info;
     background-color: #191919;
     color: @fg;
 }
-QLineEdit#danger:focus {
-    border: 2.5px solid #990000;
+QLineEdit#info:focus {
+    border: 2.5px solid #2a9fd6;
     background-color: #222222;
 }
 
@@ -518,13 +517,13 @@ QLineEdit#warning:focus {
     border: 2.5px solid #cc6d00;
     background-color: #222222;
 }
-
-QLineEdit#info {
-    border: 2px solid @info;
+QLineEdit#danger {
+    border: 2px solid @danger;
     background-color: #191919;
     color: @fg;
 }
-QLineEdit#info:focus {
-    border: 2.5px solid #2a9fd6;
+QLineEdit#danger:focus {
+    border: 2.5px solid #990000;
     background-color: #222222;
 }
+
