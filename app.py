@@ -99,6 +99,7 @@ class Windows(QWidget):
         self.bt_warning = QPushButton(WARNING)
         self.bt_danger = QPushButton(DANGER)
         self.bt_link = QPushButton(LINK)
+        
         self.bt_primary.setObjectName(PRIMARY)
         self.bt_secondary.setObjectName(SECONDARY)
         self.bt_success.setObjectName(SUCCESS)
@@ -141,7 +142,30 @@ class Windows(QWidget):
         layout_btOutline.addWidget(self.bt_warningOutline)
         layout_btOutline.addWidget(self.bt_dangerOutline)
         
+        # QButton Link
+        layout_btLink = QHBoxLayout()
+        self.lb_bt = QLabel('QpushButton Link:')
+        self.bt_primaryLink = QPushButton(PRIMARY_LINK)
+        self.bt_secondaryLink = QPushButton(SECONDARY_LINK)
+        self.bt_successLink = QPushButton(SUCCESS_LINK)
+        self.bt_infoLink = QPushButton(INFO_LINK)
+        self.bt_warningLink = QPushButton(WARNING_LINK)
+        self.bt_dangerLink = QPushButton(DANGER_LINK)
 
+        self.bt_primaryLink.setObjectName(PRIMARY_LINK)
+        self.bt_secondaryLink.setObjectName(SECONDARY_LINK)
+        self.bt_successLink.setObjectName(SUCCESS_LINK)
+        self.bt_infoLink.setObjectName(INFO_LINK)
+        self.bt_warningLink.setObjectName(WARNING_LINK)
+        self.bt_dangerLink.setObjectName(DANGER_LINK)
+        
+        layout_btLink.addWidget(self.lb_bt)
+        layout_btLink.addWidget(self.bt_primaryLink)
+        layout_btLink.addWidget(self.bt_secondaryLink)
+        layout_btLink.addWidget(self.bt_successLink)
+        layout_btLink.addWidget(self.bt_infoLink)
+        layout_btLink.addWidget(self.bt_warningLink)
+        layout_btLink.addWidget(self.bt_dangerLink)
         
         # QCheckBox
         layout_cb = QHBoxLayout()
@@ -159,6 +183,14 @@ class Windows(QWidget):
         self.cb_info.setObjectName(INFO)
         self.cb_warning.setObjectName(WARNING)
         self.cb_danger.setObjectName(DANGER)
+        
+        self.cb_primary.setChecked(True)
+        self.cb_secondary.setChecked(True)
+        self.cb_success.setChecked(True)
+        self.cb_info.setChecked(True)
+        self.cb_warning.setChecked(True)
+        self.cb_danger.setChecked(True)
+        
         layout_cb.addWidget(self.lb_cb)
         layout_cb.addWidget(self.cb_primary)
         layout_cb.addWidget(self.cb_secondary)
@@ -166,12 +198,46 @@ class Windows(QWidget):
         layout_cb.addWidget(self.cb_info)
         layout_cb.addWidget(self.cb_warning)
         layout_cb.addWidget(self.cb_danger)
+        
+        # QlineEdit 
+        layout_le = QHBoxLayout()
+        self.lb_le = QLabel('QLineEdit:')
+        self.le_primary = QLineEdit()
+        self.le_secondary = QLineEdit()
+        self.le_success = QLineEdit()
+        self.le_info = QLineEdit()
+        self.le_warning = QLineEdit()
+        self.le_danger = QLineEdit()
+        self.le_primary.setPlaceholderText(PRIMARY)
+        self.le_secondary.setPlaceholderText(SECONDARY)
+        self.le_success.setPlaceholderText(SUCCESS)
+        self.le_info.setPlaceholderText(INFO)
+        self.le_warning.setPlaceholderText(WARNING)
+        self.le_danger.setPlaceholderText(DANGER)
 
-        layout_main.addLayout(layout_btOutline)
+        self.le_primary.setObjectName(PRIMARY)
+        self.le_secondary.setObjectName(SECONDARY)
+        self.le_success.setObjectName(SUCCESS)
+        self.le_info.setObjectName(INFO)
+        self.le_warning.setObjectName(WARNING)
+        self.le_danger.setObjectName(DANGER)
+
+        layout_le.addWidget(self.lb_le)
+        layout_le.addWidget(self.le_primary)
+        layout_le.addWidget(self.le_secondary)
+        layout_le.addWidget(self.le_success)
+        layout_le.addWidget(self.le_info)
+        layout_le.addWidget(self.le_warning)
+        layout_le.addWidget(self.le_danger)
+        
+        # colocando Layouts
         layout_main.addLayout(layout_label)
-        layout_main.addLayout(layout_labelInverse)
         layout_main.addLayout(layout_labelBorder)
+        layout_main.addLayout(layout_labelInverse)
         layout_main.addLayout(layout_bt)
+        layout_main.addLayout(layout_btOutline)
+        layout_main.addLayout(layout_btLink)
+        layout_main.addLayout(layout_le)
         layout_main.addLayout(layout_cb)
         self.setLayout(layout_main)
 
