@@ -456,9 +456,69 @@ QCheckBox#danger::indicator:checked {
     background-color: @danger;
     border-color: @danger;
 }
+/* QRadioButton =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+QRadioButton {
+    padding: 5px;
+    color: @fg;
+    font-size: 15px;
+    background-color: transparent; 
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px; /* Círculo */
+    background-color: @inputbg;
+    border: 1px solid @secondary;
+}
+QRadioButton::indicator:hover {
+    border-color: @primary;
+}
+QRadioButton#primary::indicator:hover {
+    border-color: @primary;
+}
+QRadioButton#primary::indicator:checked {
+    background-color: @primary;
+    border-color: @primary;
+}
+QRadioButton#secondary::indicator:hover {
+    border-color: @secondary;
+}
+QRadioButton#secondary::indicator:checked {
+    background-color: @secondary;
+    border-color: @secondary;
+}
+QRadioButton#success::indicator:hover {
+    border-color: @success;
+}
+QRadioButton#success::indicator:checked {
+    background-color: @success;
+    border-color: @success;
+}
+QRadioButton#info::indicator:hover {
+    border-color: @info;
+}
+QRadioButton#info::indicator:checked {
+    background-color: @info;
+    border-color: @info;
+}
+QRadioButton#warning::indicator:hover {
+    border-color: @warning;
+}
+QRadioButton#warning::indicator:checked {
+    background-color: @warning;
+    border-color: @warning;
+}
+QRadioButton#danger::indicator:hover {
+    border-color: @danger;
+}
+QRadioButton#danger::indicator:checked {
+    background-color: @danger;
+    border-color: @danger;
+}
 /* --- QLineEdit --- --------------------- */
 QLineEdit {
-    background-color: #191919;
+    background-color: transparent;
     color: @fg;
     border: 1.5px solid #060606;
     border-radius: 8px;
@@ -504,7 +564,7 @@ QLineEdit#info {
     color: @fg;
 }
 QLineEdit#info:focus {
-    border: 2.5px solid #2a9fd6;
+    border: 2.5px solid @primary;
     background-color: #222222;
 }
 
@@ -527,3 +587,91 @@ QLineEdit#danger:focus {
     background-color: #222222;
 }
 
+/* Frame default */
+
+QFrame { 
+    border-radius: 8px;
+    background-color: #101010;
+}
+/* Frame Success */
+QFrame#fr-success {
+    border: 2px solid #77b300;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Primary */
+QFrame#fr-primary {
+    border: 2px solid #2a9fd6;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Danger */
+QFrame#fr-danger {
+    border: 2px solid #cc0000;
+    border-radius: 8px;
+    background-color: #191919;
+}
+/* Frame Warning */
+QFrame#fr-warning {
+    border: 2px solid #ff8800;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Info */
+QFrame#fr-info {
+    
+    border-radius: 8px;
+    background-color: #9933cc;
+} 
+QFrame#fr-outline-info {
+    border: 2px solid #9933cc;
+    border-radius: 8px;
+    background-color: #191919;
+} 
+/* Frame default */
+
+QFrame { 
+    border-radius: 8px;
+    background-color: #101010;
+}
+/* Frame Success */
+QFrame#fr-success {
+    border: 2px solid #77b300;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Primary */
+QFrame#fr-primary {
+    border: 2px solid #2a9fd6;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Danger */
+QFrame#fr-danger {
+    border: 2px solid #cc0000;
+    border-radius: 8px;
+    background-color: #191919;
+}
+/* Frame Warning */
+QFrame#fr-warning {
+    border: 2px solid #ff8800;
+    border-radius: 8px;
+    background-color: #191919;
+}
+
+/* Frame Info */
+QFrame#fr-info {
+    
+    border-radius: 8px;
+    background-color: #9933cc;
+} 
+QFrame#fr-outline-info {
+    border: 2px solid #9933cc;
+    border-radius: 8px;
+    background-color: #191919;
+} 
