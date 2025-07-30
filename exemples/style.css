@@ -300,6 +300,7 @@ QLineEdit#info {
     background-color: #191919;
     color: #ffffff;
 }
+
 QLineEdit#info:focus {
     border: 2.5px solid #2a9fd6;
     background-color: #222222;
@@ -312,19 +313,21 @@ QFrame {
     border-radius: 8px;
     background-color: #101010;
 }
-/* Frame Success */
-QFrame#fr-success {
-    border: 2px solid #77b300;
-    border-radius: 8px;
-    background-color: #191919;
-}
-
 /* Frame Primary */
 QFrame#fr-primary {
     border: 2px solid #2a9fd6;
     border-radius: 8px;
     background-color: #191919;
 }
+
+/* Frame Success */
+QFrame#fr-success {
+    border: 2px solid #77b300;
+    border-radius: 8px;
+    /* background-color: #191919; */
+
+}
+
 
 /* Frame Danger */
 QFrame#fr-danger {

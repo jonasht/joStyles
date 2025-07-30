@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import (
 import sys
 from style import *
 
-class W_editLine(QWidget):
+class W_LineEdit(QWidget):
     def __init__(self) -> None:
         super().__init__()
         layout_main = QVBoxLayout()
@@ -50,7 +50,7 @@ class W_editLine(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
-    window = W_editLine()
+    window = W_LineEdit()
     window.setStyleSheet(load_style())
     window.setGeometry(800, 800, 800, 500)
 

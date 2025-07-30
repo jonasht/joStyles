@@ -13,18 +13,17 @@ class W_radioButton(QWidget):
 
         layout_main = QVBoxLayout()
 
-        # QRadioButton
         layout_rb = QHBoxLayout()
         frame_rb = QFrame()
         frame_rb.setLayout(layout_rb)
 
         self.lb_rb = QLabel('QRadioButton:')
-        self.rb_primary = QRadioButton(PRIMARY.capitalize())
-        self.rb_success = QRadioButton(SUCCESS.capitalize())
-        self.rb_secondary = QRadioButton(SECONDARY.capitalize())
-        self.rb_info = QRadioButton(INFO.capitalize())
-        self.rb_warning = QRadioButton(WARNING.capitalize())
-        self.rb_danger = QRadioButton(DANGER.capitalize())
+        self.rb_primary = QRadioButton(PRIMARY)
+        self.rb_success = QRadioButton(SUCCESS)
+        self.rb_secondary = QRadioButton(SECONDARY)
+        self.rb_info = QRadioButton(INFO)
+        self.rb_warning = QRadioButton(WARNING)
+        self.rb_danger = QRadioButton(DANGER)
 
         self.rb_primary.setObjectName(PRIMARY)
         self.rb_secondary.setObjectName(SECONDARY)
@@ -43,14 +42,13 @@ class W_radioButton(QWidget):
 
         
         
-        self.rb_primary.setChecked(True)  # Começa com uma opção selecionada
+        self.rb_primary.setChecked(True) 
         layout_main.addWidget(frame_rb)
 
         self.setLayout(layout_main)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # Carrega o estilo da sua biblioteca joStyles
     app.setStyleSheet(load_style())
     window = W_radioButton()
     window.show()

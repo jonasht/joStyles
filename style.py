@@ -38,6 +38,21 @@ INFO_LINK = 'info-link'
 WARNING_LINK = 'warning-link'
 DANGER_LINK = 'danger-link'
 
+
+FR_PRIMARY = 'fr-primary'
+FR_SECONDARY = 'fr-secondary'
+FR_SUCCESS = 'fr-success'
+FR_INFO = 'fr-info'
+FR_WARNING = 'fr-warning'
+FR_DANGER = 'fr-danger'
+
+FR_PRIMARY_FILL = 'fr-primary-fill'
+FR_SECONDARY_FILL = 'fr-secondary-fill'
+FR_SUCCESS_FILL = 'fr-success-fill'
+FR_INFO_FILL = 'fr-info-fill'
+FR_WARNING_FILL = 'fr-warning-fill'
+FR_DANGER_FILL = 'fr-danger-fill'
+
 # --- Dicionário de Cores ---
 THEME_COLORS = {
     "@primary": "#2a9fd6",

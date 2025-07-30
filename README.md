@@ -27,10 +27,8 @@ Para utilizar o `joStyles` no seu projeto, basta carregar a folha de estilos e a
 import sys
 # Use PySide6, PyQt6, PySide2, etc.
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget
-
 # 1. Importe o necessário do joStyles
-from joStyles import style
-from joStyles.style import load_style
+from joStyles.style import load_style, PRIMARY, SUCCESS, DANGER_OUTLINE
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
@@ -45,13 +43,13 @@ if __name__ == '__main__':
 
     # 3. Use as constantes para definir o estilo dos widgets
     button_primary = QPushButton("Botão Primary")
-    button_primary.setObjectName(style.PRIMARY)
+    button_primary.setObjectName(PRIMARY)
 
     button_success = QPushButton("Botão Success")
-    button_success.setObjectName(style.SUCCESS)
+    button_success.setObjectName(SUCCESS)
 
     button_danger_outline = QPushButton("Botão Danger Outline")
-    button_danger_outline.setObjectName(style.DANGER_OUTLINE)
+    button_danger_outline.setObjectName(DANGER_OUTLINE)
 
     layout.addWidget(button_primary)
     layout.addWidget(button_success)
@@ -69,6 +67,8 @@ if __name__ == '__main__':
 
 Você pode aplicar diferentes estilos para os seguintes widgets: `QPushButton`, `QLabel`, `QLineEdit`, `QTextEdit` e `QFrame`.
 
+### Estilos Principais (Botões, Labels, etc.)
+
 Os nomes base de estilo são:
 - `PRIMARY`
 - `SECONDARY`
@@ -76,14 +76,42 @@ Os nomes base de estilo são:
 - `INFO`
 - `WARNING`
 - `DANGER`
-- `LINK` (apenas para `QPushButton`)
 
 Existem também variações que podem ser combinadas com os nomes base (ex: `PRIMARY_BORDER`):
 
 - **`_INVERSE`**: Estilo com cores invertidas (ex: `style.PRIMARY_INVERSE`).
 - **`_BORDER`**: Estilo com apenas uma borda colorida (ex: `style.SUCCESS_BORDER`).
-- **`_OUTLINE`**: Similar ao `_BORDER`, geralmente usado para botões.
-- **`_LINK`**: Estilo que simula um link de texto.
+- **`_OUTLINE`**: Similar ao `_BORDER`, geralmente usado para botões (ex: `style.DANGER_OUTLINE`).
+
+### Estilos de Link (para `QPushButton`)
+
+Estilos que simulam um link de texto.
+- `LINK` (estilo genérico)
+- `PRIMARY_LINK`
+- `SECONDARY_LINK`
+- `SUCCESS_LINK`
+- `INFO_LINK`
+- `WARNING_LINK`
+- `DANGER_LINK`
+
+### Estilos para `QFrame`
+
+Estilos específicos para `QFrame` para criar painéis e divisórias.
+
+- **Bordas Coloridas:**
+  - `FR_PRIMARY`
+  - `FR_SECONDARY`
+  - `FR_SUCCESS`
+  - `FR_INFO`
+  - `FR_WARNING`
+  - `FR_DANGER`
+- **Preenchimento Colorido:**
+  - `FR_PRIMARY_FILL`
+  - `FR_SECONDARY_FILL`
+  - `FR_SUCCESS_FILL`
+  - `FR_INFO_FILL`
+  - `FR_WARNING_FILL`
+  - `FR_DANGER_FILL`
 
 ## Customização de Cores
 
