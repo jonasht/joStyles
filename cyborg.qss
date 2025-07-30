@@ -115,8 +115,8 @@ QLabel#danger-border {
     border: 2px solid @danger;
     border-radius: 12px;
 }
-/* QPuhshButton =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 
+/* QPuhshButton =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 QPushButton {
     color: #ffffff;
     background-color: #555555;
@@ -132,7 +132,7 @@ QPushButton:hover {
 QPushButton:pressed {
     background-color: #222222;
 }
-/* Primary */
+
 QPushButton#primary {
     background-color: #2a9fd6;
     border: 1.5px solid #2a9fd6;
@@ -144,7 +144,7 @@ QPushButton#primary:pressed {
     background-color: #18698a;
 }
 
-/* Secondary */
+
 QPushButton#secondary {
     background-color: #555555;
     border: 1.5px solid #060606;
@@ -156,7 +156,7 @@ QPushButton#secondary:pressed {
     background-color: #222222;
 }
 
-/* Success */
+
 QPushButton#success {
     background-color: @success;
     border: 1.5px solid #77b300;
@@ -167,7 +167,7 @@ QPushButton#success:hover {
 QPushButton#success:pressed {
     background-color: #466c00;
 }
-/* Info */
+
 QPushButton#info {
     background-color: #9933cc;
     border: 1.5px solid #9933cc;
@@ -179,7 +179,6 @@ QPushButton#info:pressed {
     background-color: #5c2073;
 }
 
-/* Warning */
 QPushButton#warning {
     background-color: #ff8800;
     border: 1.5px solid #ff8800;
@@ -191,7 +190,6 @@ QPushButton#warning:pressed {
     background-color: #995200;
 }
 
-/* Danger */
 QPushButton#danger {
     background-color: #cc0000;
     border: 1.5px solid #cc0000;
@@ -203,8 +201,6 @@ QPushButton#danger:pressed {
     background-color: #660000;
 }
 
-
-/* link */
 QPushButton#link {
     background: transparent;
     border: none;
@@ -456,9 +452,69 @@ QCheckBox#danger::indicator:checked {
     background-color: @danger;
     border-color: @danger;
 }
+/* QRadioButton =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+QRadioButton {
+    padding: 5px;
+    color: @fg;
+    font-size: 15px;
+    background-color: transparent; 
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px; /* Círculo */
+    background-color: @inputbg;
+    border: 1px solid @secondary;
+}
+QRadioButton::indicator:hover {
+    border-color: @primary;
+}
+QRadioButton#primary::indicator:hover {
+    border-color: @primary;
+}
+QRadioButton#primary::indicator:checked {
+    background-color: @primary;
+    border-color: @primary;
+}
+QRadioButton#secondary::indicator:hover {
+    border-color: @secondary;
+}
+QRadioButton#secondary::indicator:checked {
+    background-color: @secondary;
+    border-color: @secondary;
+}
+QRadioButton#success::indicator:hover {
+    border-color: @success;
+}
+QRadioButton#success::indicator:checked {
+    background-color: @success;
+    border-color: @success;
+}
+QRadioButton#info::indicator:hover {
+    border-color: @info;
+}
+QRadioButton#info::indicator:checked {
+    background-color: @info;
+    border-color: @info;
+}
+QRadioButton#warning::indicator:hover {
+    border-color: @warning;
+}
+QRadioButton#warning::indicator:checked {
+    background-color: @warning;
+    border-color: @warning;
+}
+QRadioButton#danger::indicator:hover {
+    border-color: @danger;
+}
+QRadioButton#danger::indicator:checked {
+    background-color: @danger;
+    border-color: @danger;
+}
 /* --- QLineEdit --- --------------------- */
 QLineEdit {
-    background-color: #191919;
+    background-color: transparent;
     color: @fg;
     border: 1.5px solid #060606;
     border-radius: 8px;
@@ -504,7 +560,7 @@ QLineEdit#info {
     color: @fg;
 }
 QLineEdit#info:focus {
-    border: 2.5px solid #2a9fd6;
+    border: 2.5px solid @primary;
     background-color: #222222;
 }
 
@@ -526,4 +582,81 @@ QLineEdit#danger:focus {
     border: 2.5px solid #990000;
     background-color: #222222;
 }
+/* frame --------------------------------------- */
+/* Frame default */ 
 
+QFrame { 
+    border-radius: 8px;
+    border-radius: 8px;
+    background-color: @inputbg;
+}
+/* Frame Primary */
+QFrame#fr-primary {
+    border-radius: 8px;
+    border: 2px solid @primary;
+    background-color: @inputbg;
+}
+QFrame#fr-secondary {
+    border-radius: 8px;
+    border: 2px solid @secondary;
+    background-color: @inputbg;
+}
+/* Frame Success */
+QFrame#fr-success {
+    border-radius: 8px;
+    border: 2px solid @success;
+    background-color: @inputbg;
+}
+/* Frame Info */
+QFrame#fr-info {
+    border-radius: 8px;
+    border: 2px solid @info;
+    background-color: @inputbg;
+} 
+
+
+/* Frame Warning */
+QFrame#fr-warning {
+    border: 2px solid #ff8800;
+    border-radius: 8px;
+    background-color: @inputbg;
+}
+
+/* Frame Danger */
+QFrame#fr-danger {
+    border: 2px solid #cc0000;
+    border-radius: 8px;
+    background-color: @inputbg;
+
+}
+/* frame fill ---------------------------------- */
+QFrame QLabel {
+    background-color: transparent;
+    color: @fg
+}
+QFrame#fr-primary-fill {
+    border-radius: 8px;
+    background: @primary;
+}
+
+
+QFrame#fr-secondary-fill {
+    border-radius: 8px;
+    background: @secondary;
+}
+QFrame#fr-success-fill {
+    border-radius: 8px;
+    background: @success;
+}
+QFrame#fr-info-fill {
+    border-radius: 8px;
+    background-color: @info;
+}
+QFrame#fr-warning-fill {
+    border-radius: 8px;
+    background-color: @warning;
+}
+QFrame#fr-danger-fill {
+    border-radius: 8px;
+    background-color: @danger;
+}

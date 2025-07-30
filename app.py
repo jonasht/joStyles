@@ -7,7 +7,12 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtCore import Qt
 from style import *
-
+from w_label import W_Label
+from w_button import W_button
+from w_lineEdit import W_LineEdit
+from w_checkBox import W_checkBox
+from w_radioButton import W_radioButton
+from w_frame import W_Frame
 
 class Windows(QWidget):
     def __init__(self) -> None:
@@ -15,230 +20,22 @@ class Windows(QWidget):
         
         layout_main = QVBoxLayout()
 
-        # labels 
-        layout_label = QHBoxLayout()
-        self.lb_lb = QLabel('Label:')
-        self.lb_primary = QLabel(PRIMARY)
-        self.lb_secondary = QLabel(SECONDARY)
-        self.lb_success = QLabel(SUCCESS)
-        self.lb_info = QLabel(INFO)
-        self.lb_warning = QLabel(WARNING)
-        self.lb_danger = QLabel(DANGER)
-
-        self.lb_primary.setObjectName(PRIMARY)
-        self.lb_secondary.setObjectName(SECONDARY)
-        self.lb_success.setObjectName(SUCCESS)
-        self.lb_info.setObjectName(INFO)
-        self.lb_warning.setObjectName(WARNING)
-        self.lb_danger.setObjectName(DANGER)
-
-        layout_label.addWidget(self.lb_lb)
-        layout_label.addWidget(self.lb_primary)
-        layout_label.addWidget(self.lb_secondary)
-        layout_label.addWidget(self.lb_success)
-        layout_label.addWidget(self.lb_info)
-        layout_label.addWidget(self.lb_warning)
-        layout_label.addWidget(self.lb_danger)
-
-        # label inverse
-        layout_labelInverse = QHBoxLayout()
-        self.lb_lbInverse = QLabel('LabelInverse:')
-        self.lb_primaryInverse = QLabel(PRIMARY_INVERSE)
-        self.lb_secondaryInverse = QLabel(PRIMARY_INVERSE)
-        self.lb_successInverse = QLabel(SUCCESS_INVERSE)
-        self.lb_infoInverse = QLabel(INFO_INVERSE)
-        self.lb_warningInverse = QLabel(WARNING_INVERSE)
-        self.lb_dangerInverse = QLabel(DANGER_INVERSE)
-
-        self.lb_primaryInverse.setObjectName(PRIMARY_INVERSE)
-        self.lb_secondaryInverse.setObjectName(SECONDARY_INVERSE)
-        self.lb_successInverse.setObjectName(SUCCESS_INVERSE)
-        self.lb_infoInverse.setObjectName(INFO_INVERSE)
-        self.lb_warningInverse.setObjectName(WARNING_INVERSE)
-        self.lb_dangerInverse.setObjectName(DANGER_INVERSE)
-
-        layout_labelInverse.addWidget(self.lb_lbInverse)
-        layout_labelInverse.addWidget(self.lb_primaryInverse)
-        layout_labelInverse.addWidget(self.lb_secondaryInverse)
-        layout_labelInverse.addWidget(self.lb_successInverse)
-        layout_labelInverse.addWidget(self.lb_infoInverse)
-        layout_labelInverse.addWidget(self.lb_warningInverse)
-        layout_labelInverse.addWidget(self.lb_dangerInverse)
-
-        # label border
-        layout_labelBorder = QHBoxLayout()
-        self.lb_lbBorder = QLabel('Label Border:')
-        self.lb_primaryBorder = QLabel(PRIMARY_BORDER)
-        self.lb_secondaryBorder = QLabel(SECONDARY_BORDER)
-        self.lb_successBorder = QLabel(SUCCESS_BORDER)
-        self.lb_infoBorder = QLabel(INFO_BORDER)
-        self.lb_warningBorder = QLabel(WARNING_BORDER)
-        self.lb_dangerBorder = QLabel(DANGER_BORDER)
-        self.lb_primaryBorder.setObjectName(PRIMARY_BORDER)
-        self.lb_secondaryBorder.setObjectName(SECONDARY_BORDER)
-        self.lb_successBorder.setObjectName(SUCCESS_BORDER)
-        self.lb_infoBorder.setObjectName(INFO_BORDER)
-        self.lb_warningBorder.setObjectName(WARNING_BORDER)
-        self.lb_dangerBorder.setObjectName(DANGER_BORDER)
-
-        layout_labelBorder.addWidget(self.lb_lbBorder)
-        layout_labelBorder.addWidget(self.lb_primaryBorder)
-        layout_labelBorder.addWidget(self.lb_secondaryBorder)
-        layout_labelBorder.addWidget(self.lb_successBorder)
-        layout_labelBorder.addWidget(self.lb_infoBorder)
-        layout_labelBorder.addWidget(self.lb_warningBorder)
-        layout_labelBorder.addWidget(self.lb_dangerBorder)
         
-        # QpushButton
-        layout_bt = QHBoxLayout()
-        self.lb_bt = QLabel('QpushButton:')
-        self.bt_primary = QPushButton(PRIMARY)
-        self.bt_secondary = QPushButton(SECONDARY)
-        self.bt_success = QPushButton(SUCCESS)
-        self.bt_info = QPushButton(INFO)
-        self.bt_warning = QPushButton(WARNING)
-        self.bt_danger = QPushButton(DANGER)
-        self.bt_link = QPushButton(LINK)
-        
-        self.bt_primary.setObjectName(PRIMARY)
-        self.bt_secondary.setObjectName(SECONDARY)
-        self.bt_success.setObjectName(SUCCESS)
-        self.bt_info.setObjectName(INFO)
-        self.bt_warning.setObjectName(WARNING)
-        self.bt_danger.setObjectName(DANGER)
-        self.bt_link.setObjectName(LINK)
-        
-        layout_bt.addWidget(self.lb_bt)
-        layout_bt.addWidget(self.bt_primary)
-        layout_bt.addWidget(self.bt_secondary)
-        layout_bt.addWidget(self.bt_success)
-        layout_bt.addWidget(self.bt_info)
-        layout_bt.addWidget(self.bt_warning)
-        layout_bt.addWidget(self.bt_danger)
-        layout_bt.addWidget(self.bt_link)
-
-        # QPushButton Outline
-        layout_btOutline = QHBoxLayout()
-        self.lb_btOutline = QLabel('buttonOutline:')
-        self.bt_primaryOutline = QPushButton(PRIMARY_OUTLINE)
-        self.bt_secondaryOutline = QPushButton(SECONDARY_OUTLINE)
-        self.bt_successOutline = QPushButton(SUCCESS_OUTLINE)
-        self.bt_infoOutline = QPushButton(INFO_OUTLINE)
-        self.bt_warningOutline = QPushButton(WARNING_OUTLINE)
-        self.bt_dangerOutline = QPushButton(DANGER_OUTLINE)
-
-        self.bt_primaryOutline.setObjectName(PRIMARY_OUTLINE)
-        self.bt_secondaryOutline.setObjectName(SECONDARY_OUTLINE)
-        self.bt_successOutline.setObjectName(SUCCESS_OUTLINE)
-        self.bt_infoOutline.setObjectName(INFO_OUTLINE)
-        self.bt_warningOutline.setObjectName(WARNING_OUTLINE)
-        self.bt_dangerOutline.setObjectName(DANGER_OUTLINE)
-
-        layout_btOutline.addWidget(self.lb_btOutline)
-        layout_btOutline.addWidget(self.bt_primaryOutline)
-        layout_btOutline.addWidget(self.bt_secondaryOutline)
-        layout_btOutline.addWidget(self.bt_successOutline)
-        layout_btOutline.addWidget(self.bt_infoOutline)
-        layout_btOutline.addWidget(self.bt_warningOutline)
-        layout_btOutline.addWidget(self.bt_dangerOutline)
-        
-        # QButton Link
-        layout_btLink = QHBoxLayout()
-        self.lb_bt = QLabel('QpushButton Link:')
-        self.bt_primaryLink = QPushButton(PRIMARY_LINK)
-        self.bt_secondaryLink = QPushButton(SECONDARY_LINK)
-        self.bt_successLink = QPushButton(SUCCESS_LINK)
-        self.bt_infoLink = QPushButton(INFO_LINK)
-        self.bt_warningLink = QPushButton(WARNING_LINK)
-        self.bt_dangerLink = QPushButton(DANGER_LINK)
-
-        self.bt_primaryLink.setObjectName(PRIMARY_LINK)
-        self.bt_secondaryLink.setObjectName(SECONDARY_LINK)
-        self.bt_successLink.setObjectName(SUCCESS_LINK)
-        self.bt_infoLink.setObjectName(INFO_LINK)
-        self.bt_warningLink.setObjectName(WARNING_LINK)
-        self.bt_dangerLink.setObjectName(DANGER_LINK)
-        
-        layout_btLink.addWidget(self.lb_bt)
-        layout_btLink.addWidget(self.bt_primaryLink)
-        layout_btLink.addWidget(self.bt_secondaryLink)
-        layout_btLink.addWidget(self.bt_successLink)
-        layout_btLink.addWidget(self.bt_infoLink)
-        layout_btLink.addWidget(self.bt_warningLink)
-        layout_btLink.addWidget(self.bt_dangerLink)
-        
-        # QCheckBox
-        layout_cb = QHBoxLayout()
-        self.lb_cb = QLabel('CheckBox:')
-        self.cb_primary = QCheckBox(PRIMARY)
-        self.cb_secondary = QCheckBox(SECONDARY)
-        self.cb_success = QCheckBox(SUCCESS)
-        self.cb_info = QCheckBox(INFO)
-        self.cb_warning = QCheckBox(WARNING)
-        self.cb_danger = QCheckBox(DANGER)
-
-        self.cb_primary.setObjectName(PRIMARY)
-        self.cb_secondary.setObjectName(SECONDARY)
-        self.cb_success.setObjectName(SUCCESS)
-        self.cb_info.setObjectName(INFO)
-        self.cb_warning.setObjectName(WARNING)
-        self.cb_danger.setObjectName(DANGER)
-        
-        self.cb_primary.setChecked(True)
-        self.cb_secondary.setChecked(True)
-        self.cb_success.setChecked(True)
-        self.cb_info.setChecked(True)
-        self.cb_warning.setChecked(True)
-        self.cb_danger.setChecked(True)
-        
-        layout_cb.addWidget(self.lb_cb)
-        layout_cb.addWidget(self.cb_primary)
-        layout_cb.addWidget(self.cb_secondary)
-        layout_cb.addWidget(self.cb_success)
-        layout_cb.addWidget(self.cb_info)
-        layout_cb.addWidget(self.cb_warning)
-        layout_cb.addWidget(self.cb_danger)
-        
-        # QlineEdit 
-        layout_le = QHBoxLayout()
-        self.lb_le = QLabel('QLineEdit:')
-        self.le_primary = QLineEdit()
-        self.le_secondary = QLineEdit()
-        self.le_success = QLineEdit()
-        self.le_info = QLineEdit()
-        self.le_warning = QLineEdit()
-        self.le_danger = QLineEdit()
-        self.le_primary.setPlaceholderText(PRIMARY)
-        self.le_secondary.setPlaceholderText(SECONDARY)
-        self.le_success.setPlaceholderText(SUCCESS)
-        self.le_info.setPlaceholderText(INFO)
-        self.le_warning.setPlaceholderText(WARNING)
-        self.le_danger.setPlaceholderText(DANGER)
-
-        self.le_primary.setObjectName(PRIMARY)
-        self.le_secondary.setObjectName(SECONDARY)
-        self.le_success.setObjectName(SUCCESS)
-        self.le_info.setObjectName(INFO)
-        self.le_warning.setObjectName(WARNING)
-        self.le_danger.setObjectName(DANGER)
-
-        layout_le.addWidget(self.lb_le)
-        layout_le.addWidget(self.le_primary)
-        layout_le.addWidget(self.le_secondary)
-        layout_le.addWidget(self.le_success)
-        layout_le.addWidget(self.le_info)
-        layout_le.addWidget(self.le_warning)
-        layout_le.addWidget(self.le_danger)
+        w_label = W_Label()
+        w_button = W_button()    
+        w_lineEdit = W_LineEdit()
+        w_checkBox = W_checkBox()
+        w_radioButton = W_radioButton()
+        w_frame = W_Frame()
         
         # colocando Layouts
-        layout_main.addLayout(layout_label)
-        layout_main.addLayout(layout_labelBorder)
-        layout_main.addLayout(layout_labelInverse)
-        layout_main.addLayout(layout_bt)
-        layout_main.addLayout(layout_btOutline)
-        layout_main.addLayout(layout_btLink)
-        layout_main.addLayout(layout_le)
-        layout_main.addLayout(layout_cb)
+        layout_main.addWidget(w_label)
+        layout_main.addWidget(w_button)
+        layout_main.addWidget(w_lineEdit)
+        layout_main.addWidget(w_checkBox)
+        layout_main.addWidget(w_radioButton)
+        layout_main.addWidget(w_frame)
+
         self.setLayout(layout_main)
 
     def keyPressEvent(self, a0):
