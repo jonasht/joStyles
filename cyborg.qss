@@ -513,17 +513,18 @@ QRadioButton#danger::indicator:checked {
     border-color: @danger;
 }
 /* --- QLineEdit --- --------------------- */
+
 QLineEdit {
-    background-color: transparent;
+    background-color: @inputbg;
     color: @fg;
-    border: 1.5px solid #060606;
+    border: 1.5px solid @border;
     border-radius: 8px;
     font-size: 15px;
     padding: 6px 10px;
 }
 QLineEdit:focus {
-    border: 2px solid #2a9fd6;
-    background-color: #222222;
+    border: 2px solid @selectbg;
+    background-color: @dark;
 }
 QLineEdit#primary {
     border: 2px solid @primary;

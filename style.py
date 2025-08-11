@@ -38,6 +38,13 @@ INFO_LINK = 'info-link'
 WARNING_LINK = 'warning-link'
 DANGER_LINK = 'danger-link'
 
+PRIMARY_FILL = 'primary-fill'
+SECONDARY_FILL = 'secondary-fill'
+SUCCESS_FILL = 'success-fill'
+INFO_FILL = 'info-fill'
+WARNING_FILL = 'warning-fill'
+DANGER_FILL = 'danger-fill'
+
 
 FR_PRIMARY = 'fr-primary'
 FR_SECONDARY = 'fr-secondary'
@@ -69,16 +76,26 @@ THEME_COLORS = {
     "@selectfg": "#ffffff",
     "@border": "#060606",
     "@inputfg": "#ffffff",
-    "@inputbg": "#191919"
+    "@inputbg": "#191919",
+    # testes de cores novas
+    "@primary1": "#dd2a9fd6",
+
 }
 
 def load_style():
-    """Carrega o arquivo QSS e substitui os placeholders de cor."""
+    '''Carrega todos os arquivos QSS, os combina e substitui os placeholders de cor.'''
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    qss_path = os.path.join(script_dir, 'cyborg.qss')
     
-    with open(qss_path, 'r', encoding='utf-8') as file:
-        stylesheet = file.read()
+    # Lista de arquivos QSS para carregar em ordem
+    qss_files = ['cyborg.qss', 'comboBox.qss', 'comboBoxFill.qss']
+    stylesheet = ''
+    for qss_file in qss_files:
+        qss_path = os.path.join(script_dir, qss_file)
+        try:
+            with open(qss_path, 'r', encoding='utf-8') as file:
+                stylesheet += file.read() + "\n"
+        except FileNotFoundError:
+            print(f"Aviso: O arquivo de estilo '{qss_path}' não foi encontrado.")
 
     # Substitui cada placeholder pelo seu valor correspondente
     for var, color in THEME_COLORS.items():
@@ -87,4 +104,5 @@ def load_style():
     return stylesheet
 
 if __name__ == '__main__':
-    print(load_style())
+    load_style()
+    # print(load_style())

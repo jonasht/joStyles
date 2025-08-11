@@ -1,0 +1,172 @@
+/* --- Variáveis de Cor --- 
+"@primary": "#2a9fd6",
+"@secondary": "#555555",
+"@success": "#77b300",
+"@info": "#9933cc",
+"@warning": "#ff8800",
+"@danger": "#cc0000",
+"@light": "#ADAFAE",
+"@dark": "#222222",
+"@bg": "#060606",
+"@fg": "#ffffff",
+"@selectbg": "#454545",
+"@selectfg": "#ffffff",
+"@border": "#060606",
+"@inputfg": "#ffffff",
+"@inputbg": "#191919" */
+
+QComboBox {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1.5px solid @border;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em; /* Garante um tamanho mínimo */
+}
+
+/* Estilo quando o mouse está sobre o ComboBox */
+QComboBox:hover {
+    border: 1.5px solid @primary;
+}
+
+/* Estilo quando o ComboBox está focado */
+QComboBox:focus {
+    border: 2px solid @info;
+    background-color: @dark;
+}
+
+/* Estilo quando o ComboBox está aberto (dropdown visível) */
+QComboBox:on { 
+    border: 2px solid @info;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/* Estilo do botão de dropdown */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left-width: 1px;
+    border-left-color: @secondary;
+    border-left-style: solid;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+}
+
+QComboBox::drop-down:hover {
+    background: @secondary;
+}
+
+/* Estilo da seta do dropdown */
+QComboBox::down-arrow {
+    image: url(icons/arrow-down.svg);
+    width: 16px;
+    height: 16px;
+}
+
+/* Estilo da seta quando o dropdown está aberto */
+QComboBox::down-arrow:on {
+    image: url(icons/arrow-up.svg);
+}
+
+/* Estilo da lista de itens (dropdown) */
+QComboBox QAbstractItemView {
+    background-color: @dark;
+    color: @fg;
+    border: 2px solid @info;
+    border-radius: 0px;
+    padding: 4px;
+    selection-background-color: @selectbg;
+    selection-color: @selectfg;
+    outline: 0px; /* Remove a borda de foco pontilhada */
+}
+
+/* Estilo da barra de rolagem dentro do ComboBox */
+QComboBox QAbstractItemView QScrollBar:vertical {
+    border: none;
+    background: @inputbg;
+    width: 12px;
+    margin: 0px 0px 0px 0px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:vertical {
+    background: @secondary;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:vertical:hover {
+    background: @primary;
+}
+
+QComboBox QAbstractItemView QScrollBar::add-line:vertical, QComboBox QAbstractItemView QScrollBar::sub-line:vertical {
+    height: 0px;
+    border: none;
+    background: none;
+}
+
+QComboBox QAbstractItemView QScrollBar::add-page:vertical, QComboBox QAbstractItemView QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Estilo para ComboBox desabilitado */
+QComboBox:disabled {
+    background-color: @dark;
+    color: @secondary;
+}
+
+
+/* primary-------------------------- */
+
+
+QComboBox#primary {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1.0px solid @success;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em; /* Garante um tamanho mínimo */
+}
+
+/* Estilo quando o mouse está sobre o ComboBox */
+QComboBox#primary:hover {
+    border: 1.5px solid @success;
+}
+
+/* Estilo quando o ComboBox está focado */
+QComboBox#primary:focus {
+    border: 2px solid @success;
+    background-color: @dark;
+}
+
+
+/* Estilo do botão de dropdown */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left-width: 1px;
+    border-left-color: @secondary;
+    border-left-style: solid;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+}
+
+QComboBox::drop-down:hover {
+    background: @secondary;
+}
+
+/* Estilo da seta do dropdown */
+QComboBox::down-arrow {
+    image: url(icons/arrow-down.svg);
+    width: 16px;
+    height: 16px;
+}
+
+/* Estilo da seta quando o dropdown está aberto */
+QComboBox::down-arrow:on {
+    image: url(icons/arrow-up.svg);
+}

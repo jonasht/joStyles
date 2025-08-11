@@ -1,9 +1,11 @@
+from PyQt6.QtGui import QKeyEvent
 from PyQt6.QtWidgets import (
     QApplication, QWidget, QHBoxLayout, QVBoxLayout,
     QLabel, QLineEdit, QFrame
 )
 import sys
 from style import *
+from PyQt6.QtCore import Qt
 
 class W_LineEdit(QWidget):
     def __init__(self) -> None:
@@ -21,6 +23,7 @@ class W_LineEdit(QWidget):
         self.le_info = QLineEdit()
         self.le_warning = QLineEdit()
         self.le_danger = QLineEdit()
+        
         self.le_primary.setPlaceholderText(PRIMARY)
         self.le_secondary.setPlaceholderText(SECONDARY)
         self.le_success.setPlaceholderText(SUCCESS)
@@ -46,6 +49,9 @@ class W_LineEdit(QWidget):
         
         layout_main.addWidget(frame_le)
         self.setLayout(layout_main)
+    def keyPressEvent(self, a0: QKeyEvent | None) -> None:
+        if a0.key() == Qt.Key.Key_Escape: # type: ignore
+            self.close()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

@@ -1,0 +1,369 @@
+/* --- Variáveis de Cor ---
+"@primary": "#2a9fd6",
+"@secondary": "#555555",
+"@success": "#77b300",
+"@info": "#9933cc",
+"@warning": "#ff8800",
+"@danger": "#cc0000",
+"@light": "#ADAFAE",
+"@dark": "#222222",
+"@bg": "#060606",
+"@fg": "#ffffff",
+"@selectbg": "#454545",
+"@selectfg": "#ffffff",
+"@border": "#060606",
+"@inputfg": "#ffffff",
+"@inputbg": "#191919"
+*/
+
+/* =========================
+   QComboBox PADRÃO
+   ========================= */
+QComboBox {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1.5px solid @border;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox:hover {
+    border: 1.5px solid @primary;
+}
+
+QComboBox:focus {
+    border: 2px solid @info;
+    background-color: @dark;
+}
+
+QComboBox:on { 
+    border: 2px solid @info;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid @secondary;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+}
+
+QComboBox::drop-down:hover {
+    background: @secondary;
+}
+
+QComboBox::down-arrow {
+    image: url(icons/arrow-down.svg);
+    width: 16px;
+    height: 16px;
+}
+
+QComboBox::down-arrow:on {
+    image: url(icons/arrow-up.svg);
+}
+
+QComboBox QAbstractItemView {
+    background-color: @dark;
+    color: @fg;
+    border: 2px solid @info;
+    padding: 4px;
+    selection-background-color: @selectbg;
+    selection-color: @selectfg;
+    outline: 0;
+}
+
+QComboBox QAbstractItemView QScrollBar:vertical {
+    border: none;
+    background: @inputbg;
+    width: 12px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:vertical {
+    background: @secondary;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QComboBox QAbstractItemView QScrollBar::handle:vertical:hover {
+    background: @primary;
+}
+
+QComboBox QAbstractItemView QScrollBar::add-line:vertical,
+QComboBox QAbstractItemView QScrollBar::sub-line:vertical {
+    height: 0;
+    border: none;
+    background: none;
+}
+
+QComboBox QAbstractItemView QScrollBar::add-page:vertical,
+QComboBox QAbstractItemView QScrollBar::sub-page:vertical {
+    background: none;
+}
+/* disabled --------------------------- */
+QComboBox:disabled {
+    background-color: @dark;
+    color: @secondary;
+    border-color: @secondary;
+}
+QComboBox::down-arrow:disabled {
+    image: url(icons/arrow-down_secondary.svg);
+}
+
+/* =========================
+   QComboBox primary
+   ========================= */
+QComboBox#primary {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1px solid @primary;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox#primary:hover {
+    border: 1.5px solid @primary;
+}
+
+QComboBox#primary:focus {
+    border: 2px solid @primary;
+    background-color: @dark;
+}
+
+QComboBox#primary::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid @primary;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+}
+
+QComboBox#primary::drop-down:hover {
+    background: @dark;
+}
+
+QComboBox#primary::down-arrow {
+    image: url(icons/arrow-down_primary.svg);
+    width: 16px;
+    height: 16px;
+}
+
+QComboBox#primary::down-arrow:on {
+    image: url(icons/arrow-up_primary.svg);
+}
+
+QComboBox#primary QAbstractItemView {
+    border: 2px solid @primary;
+}
+/* =========================
+   QComboBox secondary
+   ========================= */
+QComboBox#secondary {
+    border: 1px solid @secondary;
+}
+
+QComboBox#secondary:hover {
+    border: 1.5px solid @dark;
+}
+
+QComboBox#secondary:focus {
+    border: 2px solid @secondary;
+    background-color: @dark;
+}
+
+QComboBox#secondary::drop-down {
+    border-left: 1px solid @secondary;
+}
+
+QComboBox#secondary::drop-down:hover {
+    background: @dark;
+}
+
+QComboBox#secondary::down-arrow {
+    image: url(icons/arrow-down_secondary.svg);
+}
+
+QComboBox#secondary::down-arrow:on {
+    image: url(icons/arrow-up_secondary.svg);
+}
+
+QComboBox#secondary QAbstractItemView {
+    border: 2px solid @secondary;
+}
+/* =========================
+   QComboBox success
+   ========================= */
+QComboBox#success {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1px solid @success;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox#success:hover {
+    border: 1.5px solid @success;
+}
+
+QComboBox#success:focus {
+    border: 2px solid @success;
+    background-color: @dark;
+}
+
+QComboBox#success::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid @success;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+}
+
+QComboBox#success::drop-down:hover {
+    background: @dark;
+}
+
+QComboBox#success::down-arrow {
+    image: url(icons/arrow-down_success.svg);
+}
+
+QComboBox#success::down-arrow:on {
+    image: url(icons/arrow-up_success.svg);
+}
+
+QComboBox#success QAbstractItemView {
+    border: 2px solid @success;
+}
+
+/* =========================
+   QComboBox info
+   ========================= */
+QComboBox#info {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1px solid @info;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox#info:hover {
+    border: 1.5px solid @info;
+}
+
+QComboBox#info:focus {
+    border: 2px solid @info;
+    /* background-color: @dark; */
+}
+
+QComboBox#info::drop-down {
+    border-left: 1px solid @info;
+}
+
+QComboBox#info::drop-down:hover {
+    background: @dark;
+}
+
+QComboBox#info::down-arrow {
+    image: url(icons/arrow-down_info.svg);
+    /* width: 16px; */
+    /* height: 16px; */
+}
+
+QComboBox#info::down-arrow:on {
+    image: url(icons/arrow-up_info.svg);
+}
+
+QComboBox#info QAbstractItemView {
+    border: 2px solid @info;
+}
+/* =========================
+   QComboBox warning
+   ========================= */
+QComboBox#warning {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1px solid @warning;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox#warning:hover {
+    border: 1.5px solid @warning;
+}
+
+QComboBox#warning:focus {
+    border: 2px solid @warning;
+    /* background-color: @dark; */
+}
+
+QComboBox#warning::drop-down {
+    border-left: 1px solid @warning;
+}
+
+QComboBox#warning::drop-down:hover {
+    background: @dark;
+}
+
+QComboBox#warning::down-arrow {
+    image: url(icons/arrow-down_warning.svg);
+}
+
+QComboBox#warning::down-arrow:on {
+    image: url(icons/arrow-up_warning.svg);
+}
+
+QComboBox#warning QAbstractItemView {
+    border: 2px solid @warning;
+}
+
+/* =========================
+   QComboBox danger
+   ========================= */
+QComboBox#danger {
+    background-color: @inputbg;
+    color: @fg;
+    border: 1px solid @danger;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox#danger:hover {
+    border: 1.5px solid @danger;
+}
+
+QComboBox#danger:focus {
+    border: 2px solid @danger;
+    /* background-color: @dark; */
+}
+
+QComboBox#danger::drop-down {
+    border-left: 1px solid @danger;
+}
+
+QComboBox#danger::drop-down:hover {
+    background: @dark;
+}
+
+QComboBox#danger::down-arrow {
+    image: url(icons/arrow-down_danger.svg);
+}
+
+QComboBox#danger::down-arrow:on {
+    image: url(icons/arrow-up_danger.svg);
+}
+
+QComboBox#danger QAbstractItemView {
+    border: 2px solid @danger;
+}
