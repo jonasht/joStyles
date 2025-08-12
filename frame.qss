@@ -1,0 +1,81 @@
+
+
+
+/* frame =========================================== */
+/* Frame default */ 
+
+QFrame { 
+    border-radius: 8px;
+    border-radius: 8px;
+    background-color: @inputbg;
+}
+/* Frame Primary */
+QFrame#primary {
+    border-radius: 8px;
+    border: 2px solid @primary;
+    background-color: @inputbg;
+}
+QFrame#secondary {
+    border-radius: 8px;
+    border: 2px solid @secondary;
+    background-color: @inputbg;
+}
+/* Frame Success */
+QFrame#success {
+    border-radius: 8px;
+    border: 2px solid @success;
+    background-color: @inputbg;
+}
+/* Frame Info */
+QFrame#info {
+    border-radius: 8px;
+    border: 2px solid @info;
+    background-color: @inputbg;
+} 
+
+
+/* Frame Warning */
+QFrame#warning {
+    border: 2px solid #ff8800;
+    border-radius: 8px;
+    background-color: @inputbg;
+}
+
+/* Frame Danger */
+QFrame#danger {
+    border: 2px solid #cc0000;
+    border-radius: 8px;
+    background-color: @inputbg;
+
+}
+/* frame fill ---------------------------------- */
+QFrame QLabel {
+    background-color: transparent;
+    color: @fg
+}
+QFrame#primary-fill {
+    border-radius: 8px;
+    background: @primary;
+}
+
+
+QFrame#secondary-fill {
+    border-radius: 8px;
+    background: @secondary;
+}
+QFrame#success-fill {
+    border-radius: 8px;
+    background: @success;
+}
+QFrame#info-fill {
+    border-radius: 8px;
+    background-color: @info;
+}
+QFrame#warning-fill {
+    border-radius: 8px;
+    background-color: @warning;
+}
+QFrame#danger-fill {
+    border-radius: 8px;
+    background-color: @danger;
+}

@@ -29,8 +29,8 @@ class W_Frame(QWidget):
         frame_primary = QFrame()
         frame_primary.setLayout(layout_primary)
         frame_primary.setFixedSize(200, 200)
-        frame_primary.setObjectName(FR_PRIMARY)
-        self.lb_primary = QLabel(fmt_cons(FR_PRIMARY))
+        frame_primary.setObjectName(PRIMARY)
+        self.lb_primary = QLabel(fmt_cons(PRIMARY))
         layout_primary.addWidget(self.lb_primary)
         
         # frame secondary  
@@ -38,8 +38,8 @@ class W_Frame(QWidget):
         frame_secondary = QFrame()
         frame_secondary.setLayout(layout_secondary)
         frame_secondary.setFixedSize(200, 200)
-        frame_secondary.setObjectName(FR_SECONDARY)
-        self.lb_secondary = QLabel(fmt_cons(FR_SECONDARY))
+        frame_secondary.setObjectName(SECONDARY)
+        self.lb_secondary = QLabel(fmt_cons(SECONDARY))
         layout_secondary.addWidget(self.lb_secondary)
 
         # frame success
@@ -47,8 +47,8 @@ class W_Frame(QWidget):
         frame_success = QFrame()
         frame_success.setLayout(layout_success)
         frame_success.setFixedSize(200, 200)
-        frame_success.setObjectName(FR_SUCCESS)
-        self.lb_success = QLabel(fmt_cons(FR_SUCCESS))
+        frame_success.setObjectName(SUCCESS)
+        self.lb_success = QLabel(fmt_cons(SUCCESS))
         layout_success.addWidget(self.lb_success)
 
         # frame info
@@ -56,8 +56,8 @@ class W_Frame(QWidget):
         frame_info = QFrame()
         frame_info.setLayout(layout_info)
         frame_info.setFixedSize(200, 200)
-        frame_info.setObjectName(FR_INFO)
-        self.lb_info = QLabel(fmt_cons(FR_INFO))
+        frame_info.setObjectName(INFO)
+        self.lb_info = QLabel(fmt_cons(INFO))
         layout_info.addWidget(self.lb_info)
 
         # frame warning 
@@ -65,8 +65,8 @@ class W_Frame(QWidget):
         frame_warning = QFrame()
         frame_warning.setLayout(layout_warning)
         frame_warning.setFixedSize(200, 200)
-        frame_warning.setObjectName(FR_WARNING)
-        self.lb_warning = QLabel(fmt_cons(FR_WARNING))
+        frame_warning.setObjectName(WARNING)
+        self.lb_warning = QLabel(fmt_cons(WARNING))
         layout_warning.addWidget(self.lb_warning)
 
         # frame danger
@@ -74,8 +74,8 @@ class W_Frame(QWidget):
         frame_danger = QFrame()
         frame_danger.setLayout(layout_danger)
         frame_danger.setFixedSize(200, 200)
-        frame_danger.setObjectName(FR_DANGER)
-        self.lb_danger = QLabel(fmt_cons(FR_DANGER))
+        frame_danger.setObjectName(DANGER)
+        self.lb_danger = QLabel(fmt_cons(DANGER))
         layout_danger.addWidget(self.lb_danger)
         
         # frame fill --------------------------------------
@@ -89,8 +89,8 @@ class W_Frame(QWidget):
         frame_primaryFill = QFrame()
         frame_primaryFill.setLayout(layout_primaryFill)
         frame_primaryFill.setFixedSize(200, 200)
-        frame_primaryFill.setObjectName(FR_PRIMARY_FILL)
-        self.lb_primaryFill = QLabel(fmt_cons(FR_PRIMARY_FILL))
+        frame_primaryFill.setObjectName(PRIMARY_FILL)
+        self.lb_primaryFill = QLabel(fmt_cons(PRIMARY_FILL))
         layout_primaryFill.addWidget(self.lb_primaryFill)
 
         # frame secondary fill
@@ -98,8 +98,8 @@ class W_Frame(QWidget):
         frame_secondaryFill = QFrame()
         frame_secondaryFill.setLayout(layout_secondaryFill)
         frame_secondaryFill.setFixedSize(200, 200)
-        frame_secondaryFill.setObjectName(FR_SECONDARY_FILL)
-        self.lb_secondaryFill = QLabel(fmt_cons(FR_SECONDARY_FILL))
+        frame_secondaryFill.setObjectName(SECONDARY_FILL)
+        self.lb_secondaryFill = QLabel(fmt_cons(SECONDARY_FILL))
         layout_secondaryFill.addWidget(self.lb_secondaryFill)
 
         # frame success fill
@@ -107,8 +107,8 @@ class W_Frame(QWidget):
         frame_successFill = QFrame()
         frame_successFill.setLayout(layout_successFill)
         frame_successFill.setFixedSize(200, 200)
-        frame_successFill.setObjectName(FR_SUCCESS_FILL)  
-        self.lb_successFill = QLabel(fmt_cons(FR_SUCCESS_FILL))
+        frame_successFill.setObjectName(SUCCESS_FILL)  
+        self.lb_successFill = QLabel(fmt_cons(SUCCESS_FILL))
         layout_successFill.addWidget(self.lb_successFill)
         
         # frame info fill
@@ -116,8 +116,8 @@ class W_Frame(QWidget):
         frame_infoFill = QFrame()
         frame_infoFill.setLayout(layout_infoFill)
         frame_infoFill.setFixedSize(200, 200)
-        frame_infoFill.setObjectName(FR_INFO_FILL) 
-        self.lb_infoFill = QLabel(fmt_cons(FR_INFO_FILL))
+        frame_infoFill.setObjectName(INFO_FILL) 
+        self.lb_infoFill = QLabel(fmt_cons(INFO_FILL))
         layout_infoFill.addWidget(self.lb_infoFill)
 
         # frame warning
@@ -125,8 +125,8 @@ class W_Frame(QWidget):
         frame_warningFill = QFrame()
         frame_warningFill.setLayout(layout_warningFill)
         frame_warningFill.setFixedSize(200, 200)
-        frame_warningFill.setObjectName(FR_WARNING_FILL) 
-        self.lb_warningFill = QLabel(fmt_cons(FR_WARNING_FILL))
+        frame_warningFill.setObjectName(WARNING_FILL) 
+        self.lb_warningFill = QLabel(fmt_cons(WARNING_FILL))
         layout_warningFill.addWidget(self.lb_warningFill)
         
         # frame danger
@@ -134,8 +134,8 @@ class W_Frame(QWidget):
         frame_dangerFill = QFrame()
         frame_dangerFill.setLayout(layout_dangerFill)
         frame_dangerFill.setFixedSize(200, 200)
-        frame_dangerFill.setObjectName(FR_DANGER_FILL)
-        self.lb_dangerFill = QLabel(fmt_cons(FR_DANGER_FILL))
+        frame_dangerFill.setObjectName(DANGER_FILL)
+        self.lb_dangerFill = QLabel(fmt_cons(DANGER_FILL))
         layout_dangerFill.addWidget(self.lb_dangerFill)
         
         # add widget frame

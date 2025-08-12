@@ -46,19 +46,6 @@ WARNING_FILL = 'warning-fill'
 DANGER_FILL = 'danger-fill'
 
 
-FR_PRIMARY = 'fr-primary'
-FR_SECONDARY = 'fr-secondary'
-FR_SUCCESS = 'fr-success'
-FR_INFO = 'fr-info'
-FR_WARNING = 'fr-warning'
-FR_DANGER = 'fr-danger'
-
-FR_PRIMARY_FILL = 'fr-primary-fill'
-FR_SECONDARY_FILL = 'fr-secondary-fill'
-FR_SUCCESS_FILL = 'fr-success-fill'
-FR_INFO_FILL = 'fr-info-fill'
-FR_WARNING_FILL = 'fr-warning-fill'
-FR_DANGER_FILL = 'fr-danger-fill'
 
     # cor old de primary: "@primary": "#2a9fd6", bak
 # --- Dicionário de Cores ---
@@ -90,7 +77,6 @@ THEME_COLORS = {
     "@border": "#060606",
     "@inputfg": "#ffffff",
     "@inputbg": "#191919",
-    # testes de cores novas
 
 }
 
@@ -99,7 +85,7 @@ def load_style():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Lista de arquivos QSS para carregar em ordem
-    qss_files = ['cyborg.qss', 'comboBox.qss', 'comboBoxFill.qss']
+    qss_files = ['cyborg.qss', 'comboBox.qss', 'comboBoxFill.qss', 'frame.qss']
     stylesheet = ''
     for qss_file in qss_files:
         qss_path = os.path.join(script_dir, qss_file)
