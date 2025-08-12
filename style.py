@@ -60,14 +60,27 @@ FR_INFO_FILL = 'fr-info-fill'
 FR_WARNING_FILL = 'fr-warning-fill'
 FR_DANGER_FILL = 'fr-danger-fill'
 
+    # cor old de primary: "@primary": "#2a9fd6", bak
 # --- Dicionário de Cores ---
 THEME_COLORS = {
-    "@primary": "#2a9fd6",
-    "@secondary": "#555555",
-    "@success": "#77b300",
-    "@info": "#9933cc",
-    "@warning": "#ff8800",
-    "@danger": "#cc0000",
+    "@primary-light": "#85b9ff;",
+    "@primary":       "#4ea1ff;",
+    "@primary-dark":  "#2675ff;",
+    "@secondary-light": "#767676;",
+    "@secondary":       "#555555;",
+    "@secondary-dark":  "#2e2e2e;",
+    "@success-light": "#a4d155;",
+    "@success":       "#77b300;",
+    "@success-dark":  "#4f6d00;",
+    "@info-light": "#c08ff3;",
+    "@info":       "#9933cc;",
+    "@info-dark":  "#661d99;",
+    "@warning-light": "#ffae33;",
+    "@warning":       "#ff8800;",
+    "@warning-dark":  "#cc6600;",
+    "@danger-light": "#e16d6d;",
+    "@danger":       "#cc0000;",
+    "@danger-dark":  "#8b0000;",
     "@light": "#ADAFAE",
     "@dark": "#222222",
     "@bg": "#060606",
@@ -78,7 +91,6 @@ THEME_COLORS = {
     "@inputfg": "#ffffff",
     "@inputbg": "#191919",
     # testes de cores novas
-    "@primary1": "#dd2a9fd6",
 
 }
 

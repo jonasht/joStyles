@@ -113,6 +113,38 @@ QComboBox:disabled {
 QComboBox::down-arrow:disabled {
     image: url(icons/arrow-down_secondary.svg);
 }
+QComboBox#primary:disabled {
+    background-color: @dark;
+    color: @secondary-light;
+    border-color: @primary-dark;
+}
+QComboBox#secondary:disabled {
+    background-color: @dark;
+    color: @secondary-light;
+    border-color: @secondary-dark;
+}
+QComboBox#success:disabled {
+    background-color: @dark;
+    color: @secondary-light;
+    border-color: @success-dark;
+}
+QComboBox#info:disabled {
+    background-color: @dark;
+    color: @secondary-light;
+    border-color: @info-dark;
+}
+
+QComboBox#warning:disabled {
+    background-color: @dark;
+    color: @secondary-light;
+    border-color: @warning-dark;
+}
+QComboBox#danger:disabled {
+    background-color: @dark;
+    color: @secondary-light;
+    border-color: @danger-dark;
+}
+
 
 /* =========================
    QComboBox primary
