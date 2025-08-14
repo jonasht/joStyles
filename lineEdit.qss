@@ -1,0 +1,120 @@
+/* 
+THEME_COLORS = {
+        '@primarylight':'#85b9ff',
+        '@primary':'#4ea1ff',
+        '@primarydark':'#2675ff',
+        '@secondarylight':'#767676',
+        '@secondary':'#555555',
+        '@secondarydark':'#2e2e2e',
+        '@successlight':'#a4d155',
+        '@success':'#77b300',
+        '@successdark':'#4f6d00',
+        '@infolight':'#c08ff3',
+        '@info':'#9933cc',
+        '@infodark':'#661d99',
+        '@warninglight':'#ffae33',
+        '@warning':'#ff8800',
+        '@warningdark':'#cc6600',
+        '@dangerlight':'#e16d6d',
+        '@danger':'#cc0000',
+        '@dangerdark':'#8b0000',
+        '@light':'#ADAFAE',
+        '@dark':'#222222',
+        '@bg':'#060606',
+        '@fg':'#ffffff',
+        '@selectbg':'#454545',
+        '@selectfg':'#ffffff',
+        '@border':'#060606',
+        '@inputfg':'#ffffff',
+        '@inputbg':'#191919',
+        '@primarydis':'#7aaeff',
+        '@secondarydis':'#6e6e6e',
+        '@successdis':'#90c344',
+        '@infodis':'#b07cd9',
+        '@warningdis':'#e69933',
+        '@dangerdis':'#d38080',
+        '@lightdis':'#c0c2c1',
+        '@darkdis':'#3a3a3a',
+        '@fgprimary':'#ffffff',
+        '@fgsecondary':'#ffffff',
+        '@fgsuccess':'#ffffff',
+        '@fginfo':'#ffffff',
+        '@fgwarning':'#000000',
+        '@fgdanger':'#ffffff',
+        '@fglight':'#000000',
+        '@fgdark':'#ffffff',
+        '@fgprimarydis':'#e0e0e0',
+        '@fgsecondarydis':'#cccccc',
+        '@fgsuccessdis':'#e0e0e0',
+        '@fginfodis':'#e0e0e0',
+        '@fgwarningdis':'#333333',
+        '@fgdangerdis':'#e0e0e0',
+        '@fglightdis':'#333333',
+        '@fgdarkdis':'#cccccc',
+}
+ */
+/* --- QLineEdit --- --------------------- */
+
+QLineEdit {
+    background-color: transparent;
+    color: @fg;
+    border: 1px solid @selectbg;
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 6px 10px;
+}
+QLineEdit:focus {
+    border: 2px solid @selectbg;
+}
+/* ------------------ */
+QLineEdit#primary {
+    border: 1px solid @primary;
+    background-color: @transparent;
+    color: @fg;
+}
+QLineEdit#primary:focus {
+    border: 2px solid @primary;
+}
+
+QLineEdit#secondary {
+    border: 1px solid @secondary;
+    background-color: transparent;
+    color: @fg;
+}
+QLineEdit#secondary:focus {
+    border: 2px solid @secondary;
+}
+
+QLineEdit#success {
+    border: 1px solid @success;
+    background-color: transparent;
+    color: @fg;
+}
+QLineEdit#success:focus {
+    border: 2px solid @success;
+}
+QLineEdit#info {
+    border: 1px solid @info;
+    background-color: transparent;
+    color: @fg;
+}
+QLineEdit#info:focus {
+    border: 2px solid @info;
+}
+
+QLineEdit#warning {
+    border: 1px solid @warning;
+    background-color: transparent;
+    color: @fg;
+}
+QLineEdit#warning:focus {
+    border: 2px solid @warning;
+}
+QLineEdit#danger {
+    border: 1px solid @danger;
+    background-color: transparent;
+    color: @fg;
+}
+QLineEdit#danger:focus {
+    border: 2px solid @danger;
+}

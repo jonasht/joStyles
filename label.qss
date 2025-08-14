@@ -1,0 +1,153 @@
+
+/* '@primarylight':'#85b9ff', */
+/* '@primary':'#4ea1ff', */
+/* '@primarydark':'#2675ff', */
+/* '@secondarylight':'#767676', */
+/* '@secondary':'#555555', */
+/* '@secondarydark':'#2e2e2e', */
+/* '@successlight':'#a4d155', */
+/* '@success':'#77b300', */
+/* '@successdark':'#4f6d00', */
+/* '@infolight':'#c08ff3', */
+/* '@info':'#9933cc', */
+/* '@infodark':'#661d99', */
+/* '@warninglight':'#ffae33', */
+/* '@warning':'#ff8800', */
+/* '@warningdark':'#cc6600', */
+/* '@dangerlight':'#e16d6d', */
+/* '@danger':'#cc0000', */
+/* '@dangerdark':'#8b0000', */
+/* '@light':'#ADAFAE', */
+/* '@dark':'#222222', */
+/* '@bg':'#060606', */
+/* '@fg':'#ffffff', */
+/* '@selectbg':'#454545', */
+/* '@selectfg':'#ffffff', */
+/* '@border':'#060606', */
+/* '@inputfg':'#ffffff', */
+/* '@inputbg':'#191919', */
+/* '@primarydis':'#7aaeff', */
+/* '@secondarydis':'#6e6e6e', */
+/* '@successdis':'#90c344', */
+/* '@infodis':'#b07cd9', */
+/* '@warningdis':'#e69933', */
+/* '@dangerdis':'#d38080', */
+/* '@lightdis':'#c0c2c1', */
+/* '@darkdis':'#3a3a3a', */
+/* '@fgprimary':'#ffffff', */
+/* '@fgsecondary':'#ffffff', */
+/* '@fgsuccess':'#ffffff', */
+/* '@fginfo':'#ffffff', */
+/* '@fgwarning':'#000000', */
+/* '@fgdanger':'#ffffff', */
+/* '@fglight':'#000000', */
+/* '@fgdark':'#ffffff', */
+/* '@fgprimarydis':'#e0e0e0', */
+/* '@fgsecondarydis':'#cccccc', */
+/* '@fgsuccessdis':'#e0e0e0', */
+/* '@fginfodis':'#e0e0e0', */
+/* '@fgwarningdis':'#333333', */
+/* '@fgdangerdis':'#e0e0e0', */
+/* '@fglightdis':'#333333', */
+/* '@fgdarkdis':'#cccccc', */
+
+QLabel {
+    font-size: 15px;
+    font-weight: 500;
+    background-color: transparent;
+}
+QLabel#primary {
+    color: @primary;
+    border: none !important;
+}
+
+QLabel#secondary {
+    color: @secondary;
+    border: none !important;
+}
+QLabel#success {
+    color: @success;
+    border: none !important;
+}
+QLabel#info {
+    color: @info;
+    border: none !important;
+}
+
+QLabel#warning {
+    color: @warning;
+    border: none !important;
+}
+QLabel#danger {
+    color: @danger;
+    border: none !important;
+}
+
+/* label inverse */
+QLabel#primary-inverse {
+    color: @fg;
+    background-color: @primary;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#secondary-inverse {
+    color: @fgsecondary;
+    background-color: @secondary;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#success-inverse {
+    color: @fgsuccess;
+    background-color: @success;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#info-inverse {
+    color: @fginfo;
+    background-color: @info;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#warning-inverse {
+    color: @fgwarning;
+    background-color: @warning;
+    border-radius: 12px;
+    padding: 2px
+}
+QLabel#danger-inverse {
+    color: @fgdanger;
+    background-color: @danger;
+    border-radius: 12px;
+    padding: 2px
+}
+/* label border */
+QLabel#primary-border {
+    color: @primary;
+    border: 2px solid @primary;
+    border-radius: 12px;
+}
+QLabel#secondary-border {
+    color: @secondary;
+    border: 2px solid @secondary;
+    border-radius: 12px;
+}
+QLabel#success-border {
+    color: @success;
+    border: 2px solid @success;
+    border-radius: 12px;
+}
+QLabel#info-border {
+    color: @info;
+    border: 2px solid @info;
+    border-radius: 12px;
+}
+QLabel#warning-border {
+    color: @warning;
+    border: 2px solid @warning;
+    border-radius: 12px;
+}
+QLabel#danger-border {
+    color: @danger;
+    border: 2px solid @danger;
+    border-radius: 12px;
+}

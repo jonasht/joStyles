@@ -50,42 +50,91 @@ DANGER_FILL = 'danger-fill'
     # cor old de primary: "@primary": "#2a9fd6", bak
 # --- Dicionário de Cores ---
 THEME_COLORS = {
-    "@primary-light": "#85b9ff;",
-    "@primary":       "#4ea1ff;",
-    "@primary-dark":  "#2675ff;",
-    "@secondary-light": "#767676;",
-    "@secondary":       "#555555;",
-    "@secondary-dark":  "#2e2e2e;",
-    "@success-light": "#a4d155;",
-    "@success":       "#77b300;",
-    "@success-dark":  "#4f6d00;",
-    "@info-light": "#c08ff3;",
-    "@info":       "#9933cc;",
-    "@info-dark":  "#661d99;",
-    "@warning-light": "#ffae33;",
-    "@warning":       "#ff8800;",
-    "@warning-dark":  "#cc6600;",
-    "@danger-light": "#e16d6d;",
-    "@danger":       "#cc0000;",
-    "@danger-dark":  "#8b0000;",
-    "@light": "#ADAFAE",
-    "@dark": "#222222",
-    "@bg": "#060606",
-    "@fg": "#ffffff",
-    "@selectbg": "#454545",
-    "@selectfg": "#ffffff",
-    "@border": "#060606",
-    "@inputfg": "#ffffff",
-    "@inputbg": "#191919",
-
+        '@primarylight':'#85b9ff',
+        '@primary':'#4ea1ff',
+        '@primarydark':'#2675ff',
+        '@secondarylight':'#767676',
+        '@secondary':'#555555',
+        '@secondarydark':'#2e2e2e',
+        '@successlight':'#a4d155',
+        '@success':'#77b300',
+        '@successdark':'#4f6d00',
+        '@infolight':'#c08ff3',
+        '@info':'#9933cc',
+        '@infodark':'#661d99',
+        '@warninglight':'#ffae33',
+        '@warning':'#ff8800',
+        '@warningdark':'#cc6600',
+        '@dangerlight':'#e16d6d',
+        '@danger':'#cc0000',
+        '@dangerdark':'#8b0000',
+        '@light':'#ADAFAE',
+        '@dark':'#222222',
+        '@bg':'#060606',
+        '@fg':'#ffffff',
+        '@selectbg':'#454545',
+        '@selectfg':'#ffffff',
+        '@border':'#060606',
+        '@inputfg':'#ffffff',
+        '@inputbg':'#191919',
+        '@primarydis':'#7aaeff',
+        '@secondarydis':'#6e6e6e',
+        '@successdis':'#90c344',
+        '@infodis':'#b07cd9',
+        '@warningdis':'#e69933',
+        '@dangerdis':'#d38080',
+        '@lightdis':'#c0c2c1',
+        '@darkdis':'#3a3a3a',
+        '@fgprimary':'#ffffff',
+        '@fgsecondary':'#ffffff',
+        '@fgsuccess':'#ffffff',
+        '@fginfo':'#ffffff',
+        '@fgwarning':'#000000',
+        '@fgdanger':'#ffffff',
+        '@fglight':'#000000',
+        '@fgdark':'#ffffff',
+        '@fgprimarydis':'#e0e0e0',
+        '@fgsecondarydis':'#cccccc',
+        '@fgsuccessdis':'#e0e0e0',
+        '@fginfodis':'#e0e0e0',
+        '@fgwarningdis':'#333333',
+        '@fgdangerdis':'#e0e0e0',
+        '@fglightdis':'#333333',
+        '@fgdarkdis':'#cccccc',
 }
+        
+'''
+    | Categoria     | Foreground normal | Foreground disabled |
+    | _------------ | ----------------- | ------------------- |
+    | **primary**   | `#ffffff`         | `#e0e0e0`           |
+    | **secondary** | `#ffffff`         | `#cccccc`           |
+    | **success**   | `#ffffff`         | `#e0e0e0`           |
+    | **info**      | `#ffffff`         | `#e0e0e0`           |
+    | **warning**   | `#000000`         | `#333333`           |
+    | **danger**    | `#ffffff`         | `#e0e0e0`           |
+    | **light**     | `#000000`         | `#333333`           |
+    | **dark**      | `#ffffff`         | `#cccccc`           |
+'''
+
 
 def load_style():
     '''Carrega todos os arquivos QSS, os combina e substitui os placeholders de cor.'''
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # Lista de arquivos QSS para carregar em ordem
-    qss_files = ['cyborg.qss', 'comboBox.qss', 'comboBoxFill.qss', 'frame.qss']
+    # Lista de arquivos QSS para carregar 
+    qss_files = ['cyborg.qss', 
+                 'frame.qss',
+                 'label.qss',
+                 'lineEdit.qss', 
+                 'pushButton.qss', 
+                 'comboBoxFill.qss', 
+                 'comboBox.qss', 
+                 'radioButton.qss', 
+                 'checkBox.qss', 
+                 ]
+
+                 
+    
     stylesheet = ''
     for qss_file in qss_files:
         qss_path = os.path.join(script_dir, qss_file)
@@ -97,10 +146,49 @@ def load_style():
 
     # Substitui cada placeholder pelo seu valor correspondente
     for var, color in THEME_COLORS.items():
-        stylesheet = stylesheet.replace(var, color)
+        stylesheet = stylesheet.replace(var+';', color+';')
         
-    return stylesheet
+    # escrever stylesheet
+    with open('style.qss', 'w') as file:
+        file.write(stylesheet)
 
-if __name__ == '__main__':
+def get_style():
     load_style()
-    # print(load_style())
+    with open('style.qss', 'r', encoding='utf-8') as file:
+        return file.read()
+
+def load_styleTest():
+    '''Carrega todos os arquivos QSS, os combina e substitui os placeholders de cor.'''
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Lista de arquivos QSS para carregar em ordem
+    qss_files = ['cyborg.qss', 
+                 'label.qss',
+                 'lineEdit.qss', 
+                 'pushButton.qss', 
+                 'frame.qss',
+                 'comboBoxFill.qss', 
+                 'comboBox.qss', 
+                 'radioButton.qss', 
+                 'checkBox.qss', 
+                 ]
+
+    stylesheet = ''
+    for qss_file in qss_files:
+        qss_path = os.path.join(script_dir, qss_file)
+        try:
+            with open(qss_path, 'r', encoding='utf-8') as file:
+                stylesheet += file.read() + "\n"
+        except FileNotFoundError:
+            print(f"Aviso: O arquivo de estilo '{qss_path}' não foi encontrado.")
+
+    # Substitui cada placeholder pelo seu valor correspondente
+    for var, color in THEME_COLORS.items():
+        stylesheet = stylesheet.replace(var+';', color+';')
+        
+    with open('styleSheet.css', 'w') as file:
+        file.write(stylesheet)
+        
+if __name__ == '__main__':
+    load_styleTest()
+    load_style()

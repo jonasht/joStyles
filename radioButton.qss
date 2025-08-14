@@ -1,0 +1,60 @@
+/* QRadioButton =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+QRadioButton {
+    padding: 5px;
+    color: @fg;
+    font-size: 15px;
+    background-color: transparent; 
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px; /* Círculo */
+    background-color: @inputbg;
+    border: 1px solid @secondary;
+}
+QRadioButton::indicator:hover {
+    border-color: @primary;
+}
+QRadioButton#primary::indicator:hover {
+    border-color: @primary;
+}
+QRadioButton#primary::indicator:checked {
+    background-color: @primary;
+    border-color: @primary;
+}
+QRadioButton#secondary::indicator:hover {
+    border-color: @secondary;
+}
+QRadioButton#secondary::indicator:checked {
+    background-color: @secondary;
+    border-color: @secondary;
+}
+QRadioButton#success::indicator:hover {
+    border-color: @success;
+}
+QRadioButton#success::indicator:checked {
+    background-color: @success;
+    border-color: @success;
+}
+QRadioButton#info::indicator:hover {
+    border-color: @info;
+}
+QRadioButton#info::indicator:checked {
+    background-color: @info;
+    border-color: @info;
+}
+QRadioButton#warning::indicator:hover {
+    border-color: @warning;
+}
+QRadioButton#warning::indicator:checked {
+    background-color: @warning;
+    border-color: @warning;
+}
+QRadioButton#danger::indicator:hover {
+    border-color: @danger;
+}
+QRadioButton#danger::indicator:checked {
+    background-color: @danger;
+    border-color: @danger;
+}

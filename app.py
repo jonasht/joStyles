@@ -45,6 +45,6 @@ class Windows(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = Windows()
-    app.setStyleSheet(load_style())
+    app.setStyleSheet(get_style())
     window.show()
     sys.exit(app.exec())

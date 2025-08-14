@@ -1,51 +1,3 @@
-/* --- Variáveis de Cor ---
-"@primary": "#ff2a9fd6",
-
-"@secondary": "#555555",
-"@success": "#77b300",
-"@info": "#9933cc",
-"@warning": "#ff8800",
-"@danger": "#cc0000",
-"@light": "#ADAFAE",
-"@dark": "#222222",
-"@bg": "#060606",
-"@fg": "#ffffff",
-"@selectbg": "#454545",
-"@selectfg": "#ffffff",
-"@border": "#060606",
-"@inputfg": "#ffffff",
-"@inputbg": "#191919"
-
-primary-light: #85b9ff;
-primary:       #4ea1ff;
-primary-dark:  #2675ff;
-
-secondary-light: #767676;
-secondary:       #555555;
-secondary-dark:  #2e2e2e;
-
-success-light: #a4d155;
-success:       #77b300;
-success-dark:  #4f6d00;
-
-info-light: #c08ff3;
-info:       #9933cc;
-info-dark:  #661d99;
-
-warning-light: #ffae33;
-warning:       #ff8800;
-warning-dark:  #cc6600;
-
-danger-light: #e16d6d;
-danger:       #cc0000;
-danger-dark:  #8b0000;
-
-*/
-
-
-/* =========================
-   QComboBox primary
-   ========================= */
 QComboBox#primary-fill {
     background-color: @primary;
     color: @fg;
@@ -56,26 +8,26 @@ QComboBox#primary-fill {
 }
 
 QComboBox#primary-fill:hover {
-    border: 1.5px solid @primary-light;
+    border: 1.5px solid @primarylight;
 }
 
 QComboBox#primary-fill:focus {
     border: 2px solid @primary;
-    background-color: @primary-dark;
+    background-color: @primarydark;
 }
 
 QComboBox#primary-fill::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    border-left: 2px solid @primary-light;
+    border-left: 2px solid @primarylight;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: transparent;
 }
 
 QComboBox#primary-fill::drop-down:hover {
-    background: @primary-light;
+    background: @primarylight;
 }
 
 QComboBox#primary-fill::down-arrow {
@@ -104,26 +56,26 @@ QComboBox#secondary-fill {
 }
 
 QComboBox#secondary-fill:hover {
-    border: 1.5px solid @secondary-light;
+    border: 1.5px solid @secondarylight;
 }
 
 QComboBox#secondary-fill:focus {
     border: 2px solid @secondary;
-    background-color: @secondary-dark;
+    background-color: @secondarydark;
 }
 
 QComboBox#secondary-fill::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    border-left: 2px solid @secondary-light;
+    border-left: 2px solid @secondarylight;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: transparent;
 }
 
 QComboBox#secondary-fill::drop-down:hover {
-    background: @secondary-light;
+    background: @secondarylight;
 }
 
 QComboBox#secondary-fill::down-arrow {
@@ -152,26 +104,26 @@ QComboBox#success-fill {
 }
 
 QComboBox#success-fill:hover {
-    border: 1.5px solid @success-light;
+    border: 1.5px solid @successlight;
 }
 
 QComboBox#success-fill:focus {
     border: 2px solid @success;
-    background-color: @success-dark;
+    background-color: @successdark;
 }
 
 QComboBox#success-fill::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    border-left: 2px solid @success-light;
+    border-left: 2px solid @successlight;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: transparent;
 }
 
 QComboBox#success-fill::drop-down:hover {
-    background: @success-light;
+    background: @successlight;
 }
 
 QComboBox#success-fill::down-arrow {
@@ -201,26 +153,26 @@ QComboBox#info-fill {
 }
 
 QComboBox#info-fill:hover {
-    border: 1.5px solid @info-light;
+    border: 1.5px solid @infolight;
 }
 
 QComboBox#info-fill:focus {
     border: 2px solid @info;
-    background-color: @info-dark;
+    background-color: @infodark;
 }
 
 QComboBox#info-fill::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    border-left: 2px solid @info-light;
+    border-left: 2px solid @infolight;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: transparent;
 }
 
 QComboBox#info-fill::drop-down:hover {
-    background: @info-light;
+    background: @infolight;
 }
 
 QComboBox#info-fill::down-arrow {
@@ -249,26 +201,26 @@ QComboBox#warning-fill {
 }
 
 QComboBox#warning-fill:hover {
-    border: 1.5px solid @warning-light;
+    border: 1.5px solid @warninglight;
 }
 
 QComboBox#warning-fill:focus {
     border: 2px solid @warning;
-    background-color: @warning-dark;
+    background-color: @warningdark;
 }
 
 QComboBox#warning-fill::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    border-left: 2px solid @warning-light;
+    border-left: 2px solid @warninglight;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: transparent;
 }
 
 QComboBox#warning-fill::drop-down:hover {
-    background: @warning-light;
+    background: @warninglight;
 }
 
 QComboBox#warning-fill::down-arrow {
@@ -298,26 +250,26 @@ QComboBox#danger-fill {
 }
 
 QComboBox#danger-fill:hover {
-    border: 1.5px solid @danger-light;
+    border: 1.5px solid @dangerlight;
 }
 
 QComboBox#danger-fill:focus {
     border: 2px solid @danger;
-    background-color: @danger-dark;
+    background-color: @dangerdark;
 }
 
 QComboBox#danger-fill::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
     width: 25px;
-    border-left: 2px solid @danger-light;
+    border-left: 2px solid @dangerlight;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     background: transparent;
 }
 
 QComboBox#danger-fill::drop-down:hover {
-    background: @danger-light;
+    background: @dangerlight;
 }
 
 QComboBox#danger-fill::down-arrow {
@@ -336,33 +288,33 @@ QComboBox#danger-fill QAbstractItemView {
 
 /* combobox fill disabled */
 QComboBox#primary-fill:disabled {
-    background-color: @primary-dark;
+    background-color: @primarydark;
     color: @light;
-    border-color: @primary-light;
+    border-color: @primarylight;
 }
 QComboBox#secondary-fill:disabled {
-    background-color: @secondary-dark;
+    background-color: @secondarydark;
     color: @light;
-    border-color: @secondary-light;
+    border-color: @secondarylight;
 }
 QComboBox#success-fill:disabled {
-    background-color: @success-dark;
+    background-color: @successdark;
     color: @light;
-    border-color: @success-light;
+    border-color: @successlight;
 }
 QComboBox#info-fill:disabled {
-    background-color: @info-dark;
+    background-color: @infodark;
     color: @light;
-    border-color: @info-light;
+    border-color: @infolight;
 }
 
 QComboBox#warning-fill:disabled {
-    background-color: @warning-dark;
+    background-color: @warningdark;
     color: @light;
-    border-color: @warning-light;
+    border-color: @warninglight;
 }
 QComboBox#danger-fill:disabled {
-    background-color: @danger-dark;
+    background-color: @dangerdark;
     color: @light;
-    border-color: @danger-light;
+    border-color: @dangerlight;
 }

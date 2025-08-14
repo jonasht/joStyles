@@ -17,6 +17,7 @@ class W_LineEdit(QWidget):
         frame_le = QFrame()
         frame_le.setLayout(layout_le)
         self.lb_le = QLabel('QLineEdit:')
+        self.le_default = QLineEdit()
         self.le_primary = QLineEdit()
         self.le_secondary = QLineEdit()
         self.le_success = QLineEdit()
@@ -24,6 +25,7 @@ class W_LineEdit(QWidget):
         self.le_warning = QLineEdit()
         self.le_danger = QLineEdit()
         
+        self.le_default.setPlaceholderText('Default')
         self.le_primary.setPlaceholderText(PRIMARY)
         self.le_secondary.setPlaceholderText(SECONDARY)
         self.le_success.setPlaceholderText(SUCCESS)
@@ -39,6 +41,7 @@ class W_LineEdit(QWidget):
         self.le_danger.setObjectName(DANGER)
 
         layout_le.addWidget(self.lb_le)
+        layout_le.addWidget(self.le_default)
         layout_le.addWidget(self.le_primary)
         layout_le.addWidget(self.le_secondary)
         layout_le.addWidget(self.le_success)
@@ -57,7 +60,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     window = W_LineEdit()
-    window.setStyleSheet(load_style())
+    window.setStyleSheet(get_style())
     window.setGeometry(800, 800, 800, 500)
 
     window.show()

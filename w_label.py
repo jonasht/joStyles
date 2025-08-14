@@ -1,3 +1,4 @@
+from PyQt6.QtGui import QKeyEvent
 from PyQt6.QtWidgets import (
     QWidget, QApplication,
     QHBoxLayout, QVBoxLayout, QFrame,
@@ -5,13 +6,13 @@ from PyQt6.QtWidgets import (
 )
 import sys
 from style import *
+from PyQt6.QtCore import Qt
 
 class W_Label(QWidget):
     def __init__(self) -> None:
         super().__init__()
         def fmt_cons(cons):
-            return (cons.upper()).replace('-', '_')
-
+            return cons
         layout_main = QVBoxLayout()
 
 
@@ -21,12 +22,12 @@ class W_Label(QWidget):
         frame_label.setLayout(layout_label)
         
         self.lb_lb = QLabel('Label:')
-        self.lb_primary = QLabel(PRIMARY.upper())
-        self.lb_secondary = QLabel(SECONDARY.upper())
-        self.lb_success = QLabel(SUCCESS.upper())
-        self.lb_info = QLabel(INFO.upper())
-        self.lb_warning = QLabel(WARNING.upper())
-        self.lb_danger = QLabel(DANGER.upper())
+        self.lb_primary = QLabel(PRIMARY)
+        self.lb_secondary = QLabel(SECONDARY)
+        self.lb_success = QLabel(SUCCESS)
+        self.lb_info = QLabel(INFO)
+        self.lb_warning = QLabel(WARNING)
+        self.lb_danger = QLabel(DANGER)
 
         self.lb_primary.setObjectName(PRIMARY)
         self.lb_secondary.setObjectName(SECONDARY)
@@ -48,13 +49,13 @@ class W_Label(QWidget):
         frame_labelInverse = QFrame()
         frame_labelInverse.setLayout(layout_labelInverse)
 
-        self.lb_lbInverse = QLabel('LabelInverse:')
-        self.lb_primaryInverse = QLabel(fmt_cons(PRIMARY_INVERSE))
-        self.lb_secondaryInverse = QLabel(fmt_cons(PRIMARY_INVERSE))
-        self.lb_successInverse = QLabel(fmt_cons(SUCCESS_INVERSE))
-        self.lb_infoInverse = QLabel(fmt_cons(INFO_INVERSE))
-        self.lb_warningInverse = QLabel(fmt_cons(WARNING_INVERSE))
-        self.lb_dangerInverse = QLabel(fmt_cons(DANGER_INVERSE))
+        self.lb_lbInverse = QLabel('Label Inverse:')
+        self.lb_primaryInverse = QLabel(PRIMARY_INVERSE)
+        self.lb_secondaryInverse = QLabel(PRIMARY_INVERSE)
+        self.lb_successInverse = QLabel(SUCCESS_INVERSE)
+        self.lb_infoInverse = QLabel(INFO_INVERSE)
+        self.lb_warningInverse = QLabel(WARNING_INVERSE)
+        self.lb_dangerInverse = QLabel(DANGER_INVERSE)
 
         self.lb_primaryInverse.setObjectName(PRIMARY_INVERSE)
         self.lb_secondaryInverse.setObjectName(SECONDARY_INVERSE)
@@ -78,12 +79,13 @@ class W_Label(QWidget):
         
 
         self.lb_lbBorder = QLabel('Label Border:')
-        self.lb_primaryBorder = QLabel(fmt_cons(PRIMARY_BORDER))
-        self.lb_secondaryBorder = QLabel(fmt_cons(SECONDARY_BORDER))
-        self.lb_successBorder = QLabel(fmt_cons(SUCCESS_BORDER))
-        self.lb_infoBorder = QLabel(fmt_cons(INFO_BORDER))
-        self.lb_warningBorder = QLabel(fmt_cons(WARNING_BORDER))
-        self.lb_dangerBorder = QLabel(fmt_cons(DANGER_BORDER))
+        self.lb_primaryBorder = QLabel(PRIMARY_BORDER)
+        self.lb_secondaryBorder = QLabel(SECONDARY_BORDER)
+        self.lb_successBorder = QLabel(SUCCESS_BORDER)
+        self.lb_infoBorder = QLabel(INFO_BORDER)
+        self.lb_warningBorder = QLabel(WARNING_BORDER)
+        self.lb_dangerBorder = QLabel(DANGER_BORDER)
+        
         self.lb_primaryBorder.setObjectName(PRIMARY_BORDER)
         self.lb_secondaryBorder.setObjectName(SECONDARY_BORDER)
         self.lb_successBorder.setObjectName(SUCCESS_BORDER)
@@ -104,10 +106,19 @@ class W_Label(QWidget):
         layout_main.addWidget(frame_labelBorder)
 
         self.setLayout(layout_main)
+        self.setup_alignment()
 
+    def setup_alignment(self) -> None:
+        self.lb_lb.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+        self.lb_lbBorder.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+        self.lb_lbInverse.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+
+    def keyPressEvent(self, a0: QKeyEvent | None) -> None:
+        if a0.key() == Qt.Key.Key_Escape: #type: ignore
+            self.close()
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    app.setStyleSheet(load_style())
+    app.setStyleSheet(get_style())
 
     window = W_Label()
     window.show()

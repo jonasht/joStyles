@@ -250,6 +250,6 @@ if __name__ == '__main__':
     window.show()
     window.setGeometry(100, 100, 800, 800)
     
-    app.setStyleSheet(load_style())
+    app.setStyleSheet(get_style())
 
     sys.exit(app.exec())

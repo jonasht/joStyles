@@ -115,34 +115,34 @@ QComboBox::down-arrow:disabled {
 }
 QComboBox#primary:disabled {
     background-color: @dark;
-    color: @secondary-light;
-    border-color: @primary-dark;
+    color: @secondarylight;
+    border-color: @primarydark;
 }
 QComboBox#secondary:disabled {
     background-color: @dark;
-    color: @secondary-light;
-    border-color: @secondary-dark;
+    color: @secondarylight;
+    border-color: @secondarydark;
 }
 QComboBox#success:disabled {
     background-color: @dark;
-    color: @secondary-light;
-    border-color: @success-dark;
+    color: @secondarylight;
+    border-color: @successdark;
 }
 QComboBox#info:disabled {
     background-color: @dark;
-    color: @secondary-light;
-    border-color: @info-dark;
+    color: @secondarylight;
+    border-color: @infodark;
 }
 
 QComboBox#warning:disabled {
     background-color: @dark;
-    color: @secondary-light;
-    border-color: @warning-dark;
+    color: @secondarylight;
+    border-color: @warningdark;
 }
 QComboBox#danger:disabled {
     background-color: @dark;
-    color: @secondary-light;
-    border-color: @danger-dark;
+    color: @secondarylight;
+    border-color: @dangerdark;
 }
 
 
