@@ -8,6 +8,59 @@ QWidget {
 
 
 
+
+/* '@primarylight':'#85b9ff', */
+/* '@primary':'#4ea1ff', */
+/* '@primarydark':'#2675ff', */
+/* '@secondarylight':'#767676', */
+/* '@secondary':'#555555', */
+/* '@secondarydark':'#2e2e2e', */
+/* '@successlight':'#a4d155', */
+/* '@success':'#77b300', */
+/* '@successdark':'#4f6d00', */
+/* '@infolight':'#c08ff3', */
+/* '@info':'#9933cc', */
+/* '@infodark':'#661d99', */
+/* '@warninglight':'#ffae33', */
+/* '@warning':'#ff8800', */
+/* '@warningdark':'#cc6600', */
+/* '@dangerlight':'#e16d6d', */
+/* '@danger':'#cc0000', */
+/* '@dangerdark':'#8b0000', */
+/* '@light':'#ADAFAE', */
+/* '@dark':'#222222', */
+/* '@bg':'#060606', */
+/* '@fg':'#ffffff', */
+/* '@selectbg':'#454545', */
+/* '@selectfg':'#ffffff', */
+/* '@border':'#060606', */
+/* '@inputfg':'#ffffff', */
+/* '@inputbg':'#191919', */
+/* '@primarydis':'#7aaeff', */
+/* '@secondarydis':'#6e6e6e', */
+/* '@successdis':'#90c344', */
+/* '@infodis':'#b07cd9', */
+/* '@warningdis':'#e69933', */
+/* '@dangerdis':'#d38080', */
+/* '@lightdis':'#c0c2c1', */
+/* '@darkdis':'#3a3a3a', */
+/* '@fgprimary':'#ffffff', */
+/* '@fgsecondary':'#ffffff', */
+/* '@fgsuccess':'#ffffff', */
+/* '@fginfo':'#ffffff', */
+/* '@fgwarning':'#000000', */
+/* '@fgdanger':'#ffffff', */
+/* '@fglight':'#000000', */
+/* '@fgdark':'#ffffff', */
+/* '@fgprimarydis':'#e0e0e0', */
+/* '@fgsecondarydis':'#cccccc', */
+/* '@fgsuccessdis':'#e0e0e0', */
+/* '@fginfodis':'#e0e0e0', */
+/* '@fgwarningdis':'#333333', */
+/* '@fgdangerdis':'#e0e0e0', */
+/* '@fglightdis':'#333333', */
+/* '@fgdarkdis':'#cccccc', */
+
 QLabel {
     font-size: 15px;
     font-weight: 500;
@@ -15,24 +68,29 @@ QLabel {
 }
 QLabel#primary {
     color: #4ea1ff;
-    border: !important;
+    border: none !important;
 }
 
 QLabel#secondary {
     color: #555555;
+    border: none !important;
 }
 QLabel#success {
     color: #77b300;
+    border: none !important;
 }
 QLabel#info {
     color: #9933cc;
+    border: none !important;
 }
 
 QLabel#warning {
     color: #ff8800;
+    border: none !important;
 }
 QLabel#danger {
     color: #cc0000;
+    border: none !important;
 }
 
 /* label inverse */
@@ -61,7 +119,7 @@ QLabel#info-inverse {
     padding: 2px
 }
 QLabel#warning-inverse {
-    color: #ffffff;
+    color: #000000;
     background-color: #ff8800;
     border-radius: 12px;
     padding: 2px
@@ -104,77 +162,125 @@ QLabel#danger-border {
     border-radius: 12px;
 }
 
-
+/* 
+THEME_COLORS = {
+        '@primarylight':'#85b9ff',
+        '@primary':'#4ea1ff',
+        '@primarydark':'#2675ff',
+        '@secondarylight':'#767676',
+        '@secondary':'#555555',
+        '@secondarydark':'#2e2e2e',
+        '@successlight':'#a4d155',
+        '@success':'#77b300',
+        '@successdark':'#4f6d00',
+        '@infolight':'#c08ff3',
+        '@info':'#9933cc',
+        '@infodark':'#661d99',
+        '@warninglight':'#ffae33',
+        '@warning':'#ff8800',
+        '@warningdark':'#cc6600',
+        '@dangerlight':'#e16d6d',
+        '@danger':'#cc0000',
+        '@dangerdark':'#8b0000',
+        '@light':'#ADAFAE',
+        '@dark':'#222222',
+        '@bg':'#060606',
+        '@fg':'#ffffff',
+        '@selectbg':'#454545',
+        '@selectfg':'#ffffff',
+        '@border':'#060606',
+        '@inputfg':'#ffffff',
+        '@inputbg':'#191919',
+        '@primarydis':'#7aaeff',
+        '@secondarydis':'#6e6e6e',
+        '@successdis':'#90c344',
+        '@infodis':'#b07cd9',
+        '@warningdis':'#e69933',
+        '@dangerdis':'#d38080',
+        '@lightdis':'#c0c2c1',
+        '@darkdis':'#3a3a3a',
+        '@fgprimary':'#ffffff',
+        '@fgsecondary':'#ffffff',
+        '@fgsuccess':'#ffffff',
+        '@fginfo':'#ffffff',
+        '@fgwarning':'#000000',
+        '@fgdanger':'#ffffff',
+        '@fglight':'#000000',
+        '@fgdark':'#ffffff',
+        '@fgprimarydis':'#e0e0e0',
+        '@fgsecondarydis':'#cccccc',
+        '@fgsuccessdis':'#e0e0e0',
+        '@fginfodis':'#e0e0e0',
+        '@fgwarningdis':'#333333',
+        '@fgdangerdis':'#e0e0e0',
+        '@fglightdis':'#333333',
+        '@fgdarkdis':'#cccccc',
+}
+ */
 /* --- QLineEdit --- --------------------- */
 
 QLineEdit {
-    background-color: #191919;
+    background-color: transparent;
     color: #ffffff;
-    border: 1.5px solid #060606;
+    border: 1px solid #454545;
     border-radius: 8px;
     font-size: 15px;
     padding: 6px 10px;
 }
 QLineEdit:focus {
     border: 2px solid #454545;
-    background-color: #222222;
 }
+/* ------------------ */
 QLineEdit#primary {
-    border: 2px solid #4ea1ff;
-    background-color: #191919;
+    border: 1px solid #4ea1ff;
+    background-color: @transparent;
     color: #ffffff;
 }
 QLineEdit#primary:focus {
-    border: 2.5px solid #9933cc;
-    background-color: #222222;
+    border: 2px solid #4ea1ff;
 }
 
 QLineEdit#secondary {
-    border: 2px solid #555555;
-    background-color: #191919;
+    border: 1px solid #555555;
+    background-color: transparent;
     color: #ffffff;
 }
 QLineEdit#secondary:focus {
-    border: 2.5px solid #454545;
-    background-color: #222222;
+    border: 2px solid #555555;
 }
 
 QLineEdit#success {
-    border: 2px solid #77b300;
-    background-color: #191919;
+    border: 1px solid #77b300;
+    background-color: transparent;
     color: #ffffff;
 }
 QLineEdit#success:focus {
-    border: 2.5px solid #5e9000;
-    background-color: #222222;
+    border: 2px solid #77b300;
 }
 QLineEdit#info {
-    border: 2px solid #9933cc;
-    background-color: #191919;
+    border: 1px solid #9933cc;
+    background-color: transparent;
     color: #ffffff;
 }
 QLineEdit#info:focus {
-    border: 2.5px solid #4ea1ff;
-    background-color: #222222;
+    border: 2px solid #9933cc;
 }
 
 QLineEdit#warning {
-    border: 2px solid #ff8800;
-    background-color: #191919;
+    border: 1px solid #ff8800;
+    background-color: transparent;
     color: #ffffff;
 }
 QLineEdit#warning:focus {
-    border: 2.5px solid #cc6d00;
-    background-color: #222222;
+    border: 2px solid #ff8800;
 }
 QLineEdit#danger {
-    border: 2px solid #cc0000;
-    background-color: #191919;
+    border: 1px solid #cc0000;
+    background-color: transparent;
     color: #ffffff;
 }
 QLineEdit#danger:focus {
-    border: 2.5px solid #990000;
-    background-color: #222222;
+    border: 2px solid #cc0000;
 }
 
 /* 
@@ -1349,7 +1455,7 @@ QComboBox#warning::drop-down {
 
 QComboBox#warning::drop-down:hover {
     background: #222222;
-};
+}
 
 QComboBox#warning::down-arrow {
     image: url(icons/arrow-down_warning.svg);
@@ -1363,6 +1469,9 @@ QComboBox#warning QAbstractItemView {
     border: 2px solid #ff8800;
 }
 
+/* =========================
+   QComboBox danger
+   ========================= */
 QComboBox#danger {
     background-color: #191919;
     color: #ffffff;
@@ -1460,7 +1569,62 @@ QRadioButton#danger::indicator:checked {
     background-color: #cc0000;
     border-color: #cc0000;
 }
-/* QCheckBox =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* 
+THEME_COLORS = {
+        '@primarylight':'#85b9ff',
+        '@primary':'#4ea1ff',
+        '@primarydark':'#2675ff',
+        '@secondarylight':'#767676',
+        '@secondary':'#555555',
+        '@secondarydark':'#2e2e2e',
+        '@successlight':'#a4d155',
+        '@success':'#77b300',
+        '@successdark':'#4f6d00',
+        '@infolight':'#c08ff3',
+        '@info':'#9933cc',
+        '@infodark':'#661d99',
+        '@warninglight':'#ffae33',
+        '@warning':'#ff8800',
+        '@warningdark':'#cc6600',
+        '@dangerlight':'#e16d6d',
+        '@danger':'#cc0000',
+        '@dangerdark':'#8b0000',
+        '@light':'#ADAFAE',
+        '@dark':'#222222',
+        '@bg':'#060606',
+        '@fg':'#ffffff',
+        '@selectbg':'#454545',
+        '@selectfg':'#ffffff',
+        '@border':'#060606',
+        '@inputfg':'#ffffff',
+        '@inputbg':'#191919',
+        '@primarydis':'#7aaeff',
+        '@secondarydis':'#6e6e6e',
+        '@successdis':'#90c344',
+        '@infodis':'#b07cd9',
+        '@warningdis':'#e69933',
+        '@dangerdis':'#d38080',
+        '@lightdis':'#c0c2c1',
+        '@darkdis':'#3a3a3a',
+        '@fgprimary':'#ffffff',
+        '@fgsecondary':'#ffffff',
+        '@fgsuccess':'#ffffff',
+        '@fginfo':'#ffffff',
+        '@fgwarning':'#000000',
+        '@fgdanger':'#ffffff',
+        '@fglight':'#000000',
+        '@fgdark':'#ffffff',
+        '@fgprimarydis':'#e0e0e0',
+        '@fgsecondarydis':'#cccccc',
+        '@fgsuccessdis':'#e0e0e0',
+        '@fginfodis':'#e0e0e0',
+        '@fgwarningdis':'#333333',
+        '@fgdangerdis':'#e0e0e0',
+        '@fglightdis':'#333333',
+        '@fgdarkdis':'#cccccc',
+}
+ */
+
 QCheckBox {
     spacing: 5px;
     color: #ffffff;
@@ -1472,10 +1636,13 @@ QCheckBox::indicator {
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    background-color: #191919;
-    border: 1px solid #555555;
+    background-color: transparent;
+    border: 1px solid #454545;
 }
+QCheckBox::indicator:checked{
+    image: url('./icons/checkmark-white.svg');
 
+}
 QCheckBox::indicator:hover {
     border-color: #4ea1ff;
 }
@@ -1484,19 +1651,34 @@ QCheckBox#primary::indicator:checked {
     background-color: #4ea1ff;
     border-color: #4ea1ff;
 }
+QCheckBox#secondary::indicator:hover {
+    border-color: #555555;
+}
+
 QCheckBox#secondary::indicator:checked {
     background-color: #555555;
     border-color: #555555;
+}
+QCheckBox#success::indicator:hover {
+    border-color: #77b300;
 }
 
 QCheckBox#success::indicator:checked {
     background-color: #77b300;
     border-color: #77b300;
 }
+QCheckBox#info::indicator:hover {
+    border-color: #9933cc;
+}
+
 QCheckBox#info::indicator:checked {
     background-color: #9933cc;
     border-color: #9933cc;
 }
+QCheckBox#warning::indicator:hover {
+    border-color: #ff8800;
+}
+
 QCheckBox#warning::indicator:checked {
     background-color: #ff8800;
     border-color: #ff8800;
@@ -1506,5 +1688,7 @@ QCheckBox#danger::indicator:checked {
     background-color: #cc0000;
     border-color: #cc0000;
 }
-
-
+/* checkbox border */
+QCheckBox#primary-border {
+    border-color: #4ea1ff;
+}

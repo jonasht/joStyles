@@ -12,49 +12,159 @@ QRadioButton::indicator {
     border-radius: 10px; /* Círculo */
     background-color: @inputbg;
     border: 1px solid @secondary;
-}
 QRadioButton::indicator:hover {
     border-color: @primary;
 }
+}
+QRadioButton#primary::indicator {
+    background-color: transparent;
+    border: 1px solid @primary;
+}
 QRadioButton#primary::indicator:hover {
-    border-color: @primary;
+    border: 1px solid @primary;
 }
 QRadioButton#primary::indicator:checked {
-    background-color: @primary;
-    border-color: @primary;
+    background-color: transparent;
+    border: 1px solid @primary;
+    image: url('./icons/radio_unchecked_primary.svg');  
+}
+
+QRadioButton#secondary::indicator {
+    background-color: transparent;
+    border: 1px solid @secondary;
 }
 QRadioButton#secondary::indicator:hover {
-    border-color: @secondary;
+    border: 1px solid @secondary;
 }
 QRadioButton#secondary::indicator:checked {
+    border: 1px solid @secondary;
+    image: url('./icons/radio_unchecked_secondary.svg');
+}
+QRadioButton#success::indicator {
+    background-color: transparent;
+    border: 1px solid @success;
+}
+QRadioButton#success::indicator:hover {
+    border: 1px solid @success;
+}
+QRadioButton#success::indicator:checked {
+    background-color: transparent;
+    border: 1px solid @success;
+    image: url('./icons/radio_unchecked_success.svg');
+
+}
+
+QRadioButton#info::indicator {
+    background-color: transparent;
+    border: 1px solid @info;
+}
+QRadioButton#info::indicator:hover {
+    border: 1px solid @info;
+}
+QRadioButton#info::indicator:checked {
+    background-color: transparent;
+    border: 1px solid @info;
+    image: url('./icons/radio_unchecked_info.svg');
+
+}
+QRadioButton#warning::indicator {
+    background-color: transparent;
+    border: 1px solid @warning;
+}
+QRadioButton#warning::indicator:hover {
+    border: 1px solid @warning;
+}
+QRadioButton#warning::indicator:checked {
+    background-color: transparent;
+    border: 1px solid @warning;
+    image: url('./icons/radio_unchecked_warning.svg');
+
+}
+QRadioButton#danger::indicator {
+    background-color: transparent;
+    border: 1px solid @danger;
+}
+QRadioButton#danger::indicator:hover {
+    border: 1px solid @danger;
+}
+QRadioButton#danger::indicator:checked {
+    background-color: transparent;
+    border: 1px solid @danger;
+    image: url('./icons/radio_unchecked_danger.svg');
+
+}
+
+
+/* QRadioButton fill ---------------------- */
+QRadioButton#primary-fill::indicator {
+    background-color: @transparent;
+    border: 1px solid @primary;
+}
+QRadioButton#primary-fill::indicator:hover {
+    border: 2px solid @primary;
+}
+QRadioButton#primary-fill::indicator:checked {
+    background-color: @primary;
+    border-color: @primary;
+    
+}
+QRadioButton#secondary-fill::indicator {
+    background-color: @transparent;
+    border: 1px solid @secondary;
+}
+
+QRadioButton#secondary-fill::indicator:hover {
+    border: 2px solid @secondary;
+}
+QRadioButton#secondary-fill::indicator:checked {
     background-color: @secondary;
     border-color: @secondary;
 }
-QRadioButton#success::indicator:hover {
-    border-color: @success;
+
+QRadioButton#success-fill::indicator {
+    background-color: @transparent;
+    border: 1px solid @success;
 }
-QRadioButton#success::indicator:checked {
+QRadioButton#success-fill::indicator:hover {
+    border: 2px solid @success;
+}
+QRadioButton#success-fill::indicator:checked {
     background-color: @success;
     border-color: @success;
 }
-QRadioButton#info::indicator:hover {
-    border-color: @info;
+
+QRadioButton#info-fill::indicator {
+    background-color: @transparent;
+    border: 1px solid @info;
 }
-QRadioButton#info::indicator:checked {
+QRadioButton#info-fill::indicator:hover {
+    border: 2px solid @info;
+}
+QRadioButton#info-fill::indicator:checked {
     background-color: @info;
     border-color: @info;
 }
-QRadioButton#warning::indicator:hover {
-    border-color: @warning;
+
+QRadioButton#warning-fill::indicator {
+    background-color: @transparent;
+    border: 1px solid @warning;
 }
-QRadioButton#warning::indicator:checked {
+QRadioButton#warning-fill::indicator:hover {
+    border: 2px solid @warning;
+}
+QRadioButton#warning-fill::indicator:checked {
     background-color: @warning;
     border-color: @warning;
 }
-QRadioButton#danger::indicator:hover {
-    border-color: @danger;
+
+QRadioButton#danger-fill::indicator {
+    background-color: @transparent;
+    border: 1px solid @danger;
 }
-QRadioButton#danger::indicator:checked {
+QRadioButton#danger-fill::indicator:hover {
+    border: 2px solid @danger;
+}
+QRadioButton#danger-fill::indicator:checked {
     background-color: @danger;
     border-color: @danger;
 }

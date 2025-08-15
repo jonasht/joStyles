@@ -1,4 +1,59 @@
-/* QCheckBox =-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+/* 
+THEME_COLORS = {
+        '@primarylight':'#85b9ff',
+        '@primary':'#4ea1ff',
+        '@primarydark':'#2675ff',
+        '@secondarylight':'#767676',
+        '@secondary':'#555555',
+        '@secondarydark':'#2e2e2e',
+        '@successlight':'#a4d155',
+        '@success':'#77b300',
+        '@successdark':'#4f6d00',
+        '@infolight':'#c08ff3',
+        '@info':'#9933cc',
+        '@infodark':'#661d99',
+        '@warninglight':'#ffae33',
+        '@warning':'#ff8800',
+        '@warningdark':'#cc6600',
+        '@dangerlight':'#e16d6d',
+        '@danger':'#cc0000',
+        '@dangerdark':'#8b0000',
+        '@light':'#ADAFAE',
+        '@dark':'#222222',
+        '@bg':'#060606',
+        '@fg':'#ffffff',
+        '@selectbg':'#454545',
+        '@selectfg':'#ffffff',
+        '@border':'#060606',
+        '@inputfg':'#ffffff',
+        '@inputbg':'#191919',
+        '@primarydis':'#7aaeff',
+        '@secondarydis':'#6e6e6e',
+        '@successdis':'#90c344',
+        '@infodis':'#b07cd9',
+        '@warningdis':'#e69933',
+        '@dangerdis':'#d38080',
+        '@lightdis':'#c0c2c1',
+        '@darkdis':'#3a3a3a',
+        '@fgprimary':'#ffffff',
+        '@fgsecondary':'#ffffff',
+        '@fgsuccess':'#ffffff',
+        '@fginfo':'#ffffff',
+        '@fgwarning':'#000000',
+        '@fgdanger':'#ffffff',
+        '@fglight':'#000000',
+        '@fgdark':'#ffffff',
+        '@fgprimarydis':'#e0e0e0',
+        '@fgsecondarydis':'#cccccc',
+        '@fgsuccessdis':'#e0e0e0',
+        '@fginfodis':'#e0e0e0',
+        '@fgwarningdis':'#333333',
+        '@fgdangerdis':'#e0e0e0',
+        '@fglightdis':'#333333',
+        '@fgdarkdis':'#cccccc',
+}
+ */
+
 QCheckBox {
     spacing: 5px;
     color: @fg;
@@ -10,10 +65,13 @@ QCheckBox::indicator {
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    background-color: @inputbg;
-    border: 1px solid @secondary;
+    background-color: transparent;
+    border: 1px solid @selectbg;
 }
+QCheckBox::indicator:checked{
+    image: url('./icons/checkmark-white.svg');
 
+}
 QCheckBox::indicator:hover {
     border-color: @primary;
 }
@@ -22,19 +80,34 @@ QCheckBox#primary::indicator:checked {
     background-color: @primary;
     border-color: @primary;
 }
+QCheckBox#secondary::indicator:hover {
+    border-color: @secondary;
+}
+
 QCheckBox#secondary::indicator:checked {
     background-color: @secondary;
     border-color: @secondary;
+}
+QCheckBox#success::indicator:hover {
+    border-color: @success;
 }
 
 QCheckBox#success::indicator:checked {
     background-color: @success;
     border-color: @success;
 }
+QCheckBox#info::indicator:hover {
+    border-color: @info;
+}
+
 QCheckBox#info::indicator:checked {
     background-color: @info;
     border-color: @info;
 }
+QCheckBox#warning::indicator:hover {
+    border-color: @warning;
+}
+
 QCheckBox#warning::indicator:checked {
     background-color: @warning;
     border-color: @warning;
@@ -44,4 +117,75 @@ QCheckBox#danger::indicator:checked {
     background-color: @danger;
     border-color: @danger;
 }
+/* checkbox border */
+QCheckBox#primary-border::indicator {
+    border-color: @primary;
+    
+}
+QCheckBox#primary-border::indicator:hover {
+    border-color: @primarylight;
+}
+QCheckBox#primary-border::indicator:checked {
+    background-color: @primary;
+    border-color: @primarydark;
+}
 
+QCheckBox#secondary-border::indicator {
+    border-color: @secondary;
+    
+}
+QCheckBox#secondary-border::indicator:hover {
+    border-color: @secondarylight;
+}
+QCheckBox#secondary-border::indicator:checked {
+    background-color: @secondary;
+    border-color: @secondarydark;
+}
+
+QCheckBox#success-border::indicator {
+    border-color: @success;
+    
+}
+QCheckBox#success-border::indicator:hover {
+    border-color: @successlight;
+}
+QCheckBox#success-border::indicator:checked {
+    background-color: @success;
+    border-color: @successdark;
+}
+
+QCheckBox#info-border::indicator {
+    border-color: @info;
+    
+}
+QCheckBox#info-border::indicator:hover {
+    border-color: @infolight;
+}
+QCheckBox#info-border::indicator:checked {
+    background-color: @info;
+    border-color: @infodark;
+}
+
+QCheckBox#warning-border::indicator {
+    border-color: @warning;
+    
+}
+QCheckBox#warning-border::indicator:hover {
+    border-color: @warninglight;
+}
+QCheckBox#warning-border::indicator:checked {
+    background-color: @warning;
+    border-color: @warningdark;
+}
+
+QCheckBox#danger-border::indicator {
+    border-color: @danger;
+    
+}
+QCheckBox#danger-border::indicator:hover {
+    border-color: @dangerlight;
+}
+QCheckBox#danger-border::indicator:checked {
+    background-color: @danger;
+    border-color: @dangerdark;
+}

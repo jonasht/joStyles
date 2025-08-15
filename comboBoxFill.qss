@@ -1,6 +1,6 @@
 QComboBox#primary-fill {
     background-color: @primary;
-    color: @fg;
+    color: @fgprimary;
     border: 1px solid @primary;
     border-radius: 8px;
     padding: 6px 10px;
@@ -48,7 +48,7 @@ QComboBox#primary-fill QAbstractItemView {
    ========================= */
 QComboBox#secondary-fill {
     background-color: @secondary;
-    color: @fg;
+    color: @fgsecondary;
     border: 1px solid @secondary;
     border-radius: 8px;
     padding: 6px 10px;
@@ -96,7 +96,7 @@ QComboBox#secondary-fill QAbstractItemView {
    ========================= */
 QComboBox#success-fill {
     background-color: @success;
-    color: @fg;
+    color: @fgsuccess;
     border: 1px solid @success;
     border-radius: 8px;
     padding: 6px 10px;
@@ -143,9 +143,57 @@ QComboBox#success-fill QAbstractItemView {
 /* =========================
    QComboBox info
    ========================= */
+QComboBox#warning-fill {
+    background-color: @warning;
+    color: @fgwarning;
+    border: 1px solid @warning;
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 6em;
+}
+
+QComboBox#warning-fill:hover {
+    border: 1.5px solid @warninglight;
+}
+
+QComboBox#warning-fill:focus {
+    border: 2px solid @warning;
+    background-color: @warningdark;
+}
+
+QComboBox#warning-fill::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 2px solid @warninglight;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: transparent;
+}
+
+QComboBox#warning-fill::drop-down:hover {
+    background: @warninglight;
+}
+
+QComboBox#info-fill::down-arrow {
+    image: url(icons/arrow-down.svg);
+    width: 16px;
+    height: 16px;
+}
+
+QComboBox#info-fill::down-arrow:on {
+    image: url(icons/arrow-up.svg);
+}
+
+QComboBox#info-fill QAbstractItemView {
+    border: 2px solid @info;
+}
+/* =========================
+   QComboBox warning
+   ========================= */
 QComboBox#info-fill {
     background-color: @info;
-    color: @fg;
+    color: @fginfo;
     border: 1px solid @info;
     border-radius: 8px;
     padding: 6px 10px;
@@ -188,61 +236,13 @@ QComboBox#info-fill::down-arrow:on {
 QComboBox#info-fill QAbstractItemView {
     border: 2px solid @info;
 }
-/* =========================
-   QComboBox warning
-   ========================= */
-QComboBox#warning-fill {
-    background-color: @warning;
-    color: @fg;
-    border: 1px solid @warning;
-    border-radius: 8px;
-    padding: 6px 10px;
-    min-width: 6em;
-}
-
-QComboBox#warning-fill:hover {
-    border: 1.5px solid @warninglight;
-}
-
-QComboBox#warning-fill:focus {
-    border: 2px solid @warning;
-    background-color: @warningdark;
-}
-
-QComboBox#warning-fill::drop-down {
-    subcontrol-origin: padding;
-    subcontrol-position: top right;
-    width: 25px;
-    border-left: 2px solid @warninglight;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    background: transparent;
-}
-
-QComboBox#warning-fill::drop-down:hover {
-    background: @warninglight;
-}
-
-QComboBox#warning-fill::down-arrow {
-    image: url(icons/arrow-down.svg);
-    width: 16px;
-    height: 16px;
-}
-
-QComboBox#warning-fill::down-arrow:on {
-    image: url(icons/arrow-up.svg);
-}
-
-QComboBox#warning-fill QAbstractItemView {
-    border: 2px solid @warning;
-}
 
 /* =========================
    QComboBox danger
    ========================= */
 QComboBox#danger-fill {
     background-color: @danger;
-    color: @fg;
+    color: @fgdanger;
     border: 1px solid @danger;
     border-radius: 8px;
     padding: 6px 10px;
@@ -289,32 +289,32 @@ QComboBox#danger-fill QAbstractItemView {
 /* combobox fill disabled */
 QComboBox#primary-fill:disabled {
     background-color: @primarydark;
-    color: @light;
+    color: @fgprimarydis;
     border-color: @primarylight;
 }
 QComboBox#secondary-fill:disabled {
     background-color: @secondarydark;
-    color: @light;
+    color: @fgsecondarydis;
     border-color: @secondarylight;
 }
 QComboBox#success-fill:disabled {
     background-color: @successdark;
-    color: @light;
+    color: @fgsuccessdis;
     border-color: @successlight;
 }
 QComboBox#info-fill:disabled {
     background-color: @infodark;
-    color: @light;
+    color: @fgsuccessdis;
     border-color: @infolight;
 }
 
 QComboBox#warning-fill:disabled {
     background-color: @warningdark;
-    color: @light;
+    color: @fgwarningdis;
     border-color: @warninglight;
 }
 QComboBox#danger-fill:disabled {
     background-color: @dangerdark;
-    color: @light;
+    color: @fgdarkdis;
     border-color: @dangerlight;
 }

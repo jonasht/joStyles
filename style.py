@@ -15,7 +15,8 @@ SECONDARY_INVERSE = 'secondary-inverse'
 SUCCESS_INVERSE = 'success-inverse' 
 INFO_INVERSE = 'info-inverse' 
 WARNING_INVERSE = 'warning-inverse' 
-DANGER_INVERSE = 'danger-inverse' 
+DANGER_INVERSE = 'danger-inverse'
+ 
 # --- Border ---
 PRIMARY_BORDER = 'primary-border' 
 SECONDARY_BORDER = 'secondary-border' 
@@ -30,6 +31,7 @@ SUCCESS_OUTLINE = 'success-outline'
 INFO_OUTLINE = 'info-outline'
 WARNING_OUTLINE = 'warning-outline'
 DANGER_OUTLINE = 'danger-outline'
+
 # --- link ---
 PRIMARY_LINK = 'primary-link'
 SECONDARY_LINK = 'secondary-link'
@@ -38,6 +40,7 @@ INFO_LINK = 'info-link'
 WARNING_LINK = 'warning-link'
 DANGER_LINK = 'danger-link'
 
+# --- fill ---
 PRIMARY_FILL = 'primary-fill'
 SECONDARY_FILL = 'secondary-fill'
 SUCCESS_FILL = 'success-fill'
@@ -131,6 +134,7 @@ def load_style():
                  'comboBox.qss', 
                  'radioButton.qss', 
                  'checkBox.qss', 
+                 'textEdit.qss'
                  ]
 
                  
