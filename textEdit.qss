@@ -109,11 +109,47 @@ QTextEdit#danger:focus {
     border: 2px solid @danger;
     background-color: transparent;
 }
+/* QTextEdit normal disabled */
+QTextEdit:disabled {
+    background-color: @selectbg;
+    color:  @fg;
+}
+QTextEdit#primary:disabled {
+    background-color: @selectbg;
+    border: 1px solid @primary;
+
+}
+
+QTextEdit#secondary:disabled {
+    background-color: @selectbg;
+    border: 1px solid @secondary;
+
+}
+QTextEdit#success:disabled {
+    background-color: @selectbg;
+}
+QTextEdit#info:disabled {
+    background-color:@selectbg;
+    border: 1px solid @info;
+}
+QTextEdit#warning:disabled {
+    background-color:@selectbg;
+    border: 1px solid @warning;
+}
+QTextEdit#danger:disabled {
+    background-color:@selectbg;
+    border: 1px solid @danger;
+}
+
 /* ------ fill ---------------------- */
 QTextEdit#primary-fill {
     color: @fgprimary;
     border: 1px solid @primary;
-    background-color: @primarydark;
+    background-color: @primary;
+}
+QTextEdit#primary-fill:hover {
+    border: 1px solid @primarylight;
+    background-color: @primary;
 }
 QTextEdit#primary-fill:focus {
     border: 2px solid @primary;
@@ -123,38 +159,67 @@ QTextEdit#primary-fill:focus {
 QTextEdit#secondary-fill {
     color: @fgsecondary;
     border: 1px solid @secondary;
-    background-color: @secondarydark;
 
+}
+QTextEdit#secondary-fill:hover {
+    border: 1px solid @secondarylight;
+    background-color: @secondary;
 }
 QTextEdit#secondary-fill:focus {
     border: 2px solid @secondary;
     background-color: @secondarydark;
 }
 QTextEdit#success-fill {
+    color: @fgsuccess;
     border: 1px solid @success;
+}
+QTextEdit#success-fill:hover {
+    border: 1px solid @successlight;
+    background-color: @success;
 }
 QTextEdit#success-fill:focus {
     border: 2px solid @success;
-    background-color: successdark;
+    background-color: @successdark;
 }
 QTextEdit#info-fill {
+    color: fginfo;
     border: 1px solid @info;
 }
+QTextEdit#info-fill:hover {
+    border: 1px solid @infolight;
+    background-color: @info;
+}
+
 QTextEdit#info-fill:focus {
     border: 2px solid @info;
     background-color: @infodark;
 }
 QTextEdit#warning-fill {
+    color: @fgwarning;
     border: 1px solid @warning;
+}
+QTextEdit#warning-fill:hover {
+    border: 1px solid @warninglight;
+    background-color: @warning;
 }
 QTextEdit#warning-fill:focus {
     border: 2px solid @warning;
     background-color: @warningdark;
 }
 QTextEdit#danger-fill {
+    color: @fgdanger;
     border: 1px solid @danger;
+}
+QTextEdit#danger-fill:hover {
+    border: 1px solid @dangerlight;
+    background-color: @danger;
 }
 QTextEdit#danger-fill:focus {
     border: 2px solid @danger;
-    background-color: @dangerdis;
+    background-color: @dangerdark;
+}
+
+QTextEdit#primary:read-only {
+    border: 6px solid @primary;
+    background-color: transparent;
 }

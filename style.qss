@@ -1982,11 +1982,47 @@ QTextEdit#danger:focus {
     border: 2px solid #cc0000;
     background-color: transparent;
 }
+/* QTextEdit normal disabled */
+QTextEdit:disabled {
+    background-color: #454545;
+    color:  #ffffff;
+}
+QTextEdit#primary:disabled {
+    background-color: #454545;
+    border: 1px solid #4ea1ff;
+
+}
+
+QTextEdit#secondary:disabled {
+    background-color: #454545;
+    border: 1px solid #555555;
+
+}
+QTextEdit#success:disabled {
+    background-color: #454545;
+}
+QTextEdit#info:disabled {
+    background-color:#454545;
+    border: 1px solid #9933cc;
+}
+QTextEdit#warning:disabled {
+    background-color:#454545;
+    border: 1px solid #ff8800;
+}
+QTextEdit#danger:disabled {
+    background-color:#454545;
+    border: 1px solid #cc0000;
+}
+
 /* ------ fill ---------------------- */
 QTextEdit#primary-fill {
     color: #ffffff;
     border: 1px solid #4ea1ff;
-    background-color: #2675ff;
+    background-color: #4ea1ff;
+}
+QTextEdit#primary-fill:hover {
+    border: 1px solid #85b9ff;
+    background-color: #4ea1ff;
 }
 QTextEdit#primary-fill:focus {
     border: 2px solid #4ea1ff;
@@ -1996,39 +2032,67 @@ QTextEdit#primary-fill:focus {
 QTextEdit#secondary-fill {
     color: #ffffff;
     border: 1px solid #555555;
-    background-color: #2e2e2e;
 
+}
+QTextEdit#secondary-fill:hover {
+    border: 1px solid #767676;
+    background-color: #555555;
 }
 QTextEdit#secondary-fill:focus {
     border: 2px solid #555555;
     background-color: #2e2e2e;
 }
 QTextEdit#success-fill {
+    color: #ffffff;
     border: 1px solid #77b300;
+}
+QTextEdit#success-fill:hover {
+    border: 1px solid #a4d155;
+    background-color: #77b300;
 }
 QTextEdit#success-fill:focus {
     border: 2px solid #77b300;
-    background-color: successdark;
+    background-color: #4f6d00;
 }
 QTextEdit#info-fill {
+    color: fginfo;
     border: 1px solid #9933cc;
 }
+QTextEdit#info-fill:hover {
+    border: 1px solid #c08ff3;
+    background-color: #9933cc;
+}
+
 QTextEdit#info-fill:focus {
     border: 2px solid #9933cc;
     background-color: #661d99;
 }
 QTextEdit#warning-fill {
+    color: #000000;
     border: 1px solid #ff8800;
+}
+QTextEdit#warning-fill:hover {
+    border: 1px solid #ffae33;
+    background-color: #ff8800;
 }
 QTextEdit#warning-fill:focus {
     border: 2px solid #ff8800;
     background-color: #cc6600;
 }
 QTextEdit#danger-fill {
+    color: #ffffff;
     border: 1px solid #cc0000;
+}
+QTextEdit#danger-fill:hover {
+    border: 1px solid #e16d6d;
+    background-color: #cc0000;
 }
 QTextEdit#danger-fill:focus {
     border: 2px solid #cc0000;
-    background-color: #d38080;
+    background-color: #8b0000;
 }
 
+QTextEdit#primary:read-only {
+    border: 6px solid #4ea1ff;
+    background-color: transparent;
+}
