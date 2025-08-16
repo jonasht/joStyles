@@ -2091,8 +2091,35 @@ QTextEdit#danger-fill:focus {
     border: 2px solid #cc0000;
     background-color: #8b0000;
 }
-
+/* QTextEdit read-only------- */
+QTextEdit:read-only {
+    background-color: transparent;
+    color:  #ffffff;
+    border: 2px solid #454545;
+}
 QTextEdit#primary:read-only {
-    border: 6px solid #4ea1ff;
+    border: 2px solid #4ea1ff;
     background-color: transparent;
 }
+QTextEdit#secondary:read-only {
+    border: 2px solid #555555;
+    background-color: transparent;
+}
+QTextEdit#success:read-only {
+    border: 2px solid #77b300;
+    background-color: transparent;
+}
+QTextEdit#info:read-only {
+    border: 2px solid #9933cc;
+    background-color: transparent;
+}
+QTextEdit#warning:read-only {
+    border: 2px solid #ff8800;
+    background-color: transparent;
+}
+QTextEdit#danger:read-only {
+    border: 2px solid #cc0000;
+    background-color: transparent;
+}
+
+
