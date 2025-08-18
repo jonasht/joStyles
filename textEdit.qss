@@ -249,3 +249,35 @@ QTextEdit#danger:read-only {
     background-color: transparent;
 }
 
+/* QTextEdit fill read-only --- */
+QTextEdit#primary-fill:read-only {
+    color: @fgprimary;
+    border: 1px solid @primary;
+    background-color: @primary;
+}
+
+QTextEdit#secondary-fill:read-only {
+    color: @fgsecondary;
+    border: 1px solid @secondary;
+    background-color: @secondary;
+}
+QTextEdit#success-fill:read-only {
+    color: @fgsuccess;
+    border: 1px solid @success;
+    background-color: @success;
+}
+QTextEdit#info-fill:read-only {
+    color: fginfo;
+    border: 1px solid @info;
+    background-color: @info;
+}
+QTextEdit#warning-fill:read-only {
+    color: @fgwarning;
+    border: 1px solid @warning;
+    background-color: @warning;
+}
+QTextEdit#danger-fill:read-only {
+    color: @fgdanger;
+    border: 1px solid @danger;
+    background-color: @danger;
+}

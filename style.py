@@ -1,4 +1,5 @@
 import os
+from PyQt6.QtGui import QColor
 
 # --- Constantes para Nomes de Objetos ---
 PRIMARY = 'primary'
@@ -49,7 +50,7 @@ WARNING_FILL = 'warning-fill'
 DANGER_FILL = 'danger-fill'
 
 
-
+        
     # cor old de primary: "@primary": "#2a9fd6", bak
 # --- Dicionário de Cores ---
 THEME_COLORS = {
@@ -118,6 +119,74 @@ THEME_COLORS = {
     | **light**     | `#000000`         | `#333333`           |
     | **dark**      | `#ffffff`         | `#cccccc`           |
 '''
+class Jcolor:
+    PRIMARY = QColor(THEME_COLORS['@primary'])  # '#4ea1ff;',
+    SECONDARY = QColor(THEME_COLORS['@secondary']) #555555
+    SUCCESS = QColor(THEME_COLORS['@success']) #77b300
+    INFO = QColor(THEME_COLORS['@info']) #9933cc
+    WARNING = QColor(THEME_COLORS['@warning']) #ff8800
+    DANGER = QColor(THEME_COLORS['@danger']) #cc0000
+    FGPRIMARY = QColor(THEME_COLORS['@fgprimary']) #ffffff
+    FGSECONDARY = QColor(THEME_COLORS['@fgsecondary']) #ffffff
+    FGSUCCESS = QColor(THEME_COLORS['@fgsuccess']) #ffffff
+    FGINFO = QColor(THEME_COLORS['@fginfo']) #ffffff
+    FGWARNING = QColor(THEME_COLORS['@fgwarning']) #000000
+    FGDANGER = QColor(THEME_COLORS['@fgdanger']) #ffffff
+    
+
+
+class Color:
+    PRIMARYLIGHT = THEME_COLORS['@primarylight'] #85b9ff
+    PRIMARY = THEME_COLORS['@primary']  # '#4ea1ff;',
+    PRIMARYDARK = THEME_COLORS['@primarydark'] #2675ff
+    SECONDARYLIGHT = THEME_COLORS['@secondarylight'] #767676
+    SECONDARY = THEME_COLORS['@secondary'] #555555
+    SECONDARYDARK = THEME_COLORS['@secondarydark'] #2e2e2e
+    SUCCESSLIGHT = THEME_COLORS['@successlight'] #a4d155
+    SUCCESS = THEME_COLORS['@success'] #77b300
+    SUCCESSDARK = THEME_COLORS['@successdark'] #4f6d00
+    INFOLIGHT = THEME_COLORS['@infolight'] #c08ff3
+    INFO = THEME_COLORS['@info'] #9933cc
+    INFODARK = THEME_COLORS['@infodark'] #661d99
+    WARNINGLIGHT = THEME_COLORS['@warninglight'] #ffae33
+    WARNING = THEME_COLORS['@warning'] #ff8800
+    WARNINGDARK = THEME_COLORS['@warningdark'] #cc6600
+    DANGERLIGHT = THEME_COLORS['@dangerlight'] #e16d6d
+    DANGER = THEME_COLORS['@danger'] #cc0000
+    DANGERDARK = THEME_COLORS['@dangerdark'] #8b0000
+    LIGHT = THEME_COLORS['@light'] #ADAFAE
+    DARK = THEME_COLORS['@dark'] #222222
+    BG = THEME_COLORS['@bg'] #060606
+    FG = THEME_COLORS['@fg'] #ffffff
+    SELECTBG = THEME_COLORS['@selectbg'] #454545
+    SELECTFG = THEME_COLORS['@selectfg'] #ffffff
+    BORDER = THEME_COLORS['@border'] #060606
+    INPUTFG = THEME_COLORS['@inputfg'] #ffffff
+    INPUTBG = THEME_COLORS['@inputbg'] #191919
+    PRIMARYDIS = THEME_COLORS['@primarydis'] #7aaeff
+    SECONDARYDIS = THEME_COLORS['@secondarydis'] #6e6e6e
+    SUCCESSDIS = THEME_COLORS['@successdis'] #90c344
+    INFODIS = THEME_COLORS['@infodis'] #b07cd9
+    WARNINGDIS = THEME_COLORS['@warningdis'] #e69933
+    DANGERDIS = THEME_COLORS['@dangerdis'] #d38080
+    LIGHTDIS = THEME_COLORS['@lightdis'] #c0c2c1
+    DARKDIS = THEME_COLORS['@darkdis'] #3a3a3a
+    FGPRIMARY = THEME_COLORS['@fgprimary'] #ffffff
+    FGSECONDARY = THEME_COLORS['@fgsecondary'] #ffffff
+    FGSUCCESS = THEME_COLORS['@fgsuccess'] #ffffff
+    FGINFO = THEME_COLORS['@fginfo'] #ffffff
+    FGWARNING = THEME_COLORS['@fgwarning'] #000000
+    FGDANGER = THEME_COLORS['@fgdanger'] #ffffff
+    FGLIGHT = THEME_COLORS['@fglight'] #000000
+    FGDARK = THEME_COLORS['@fgdark'] #ffffff
+    FGPRIMARYDIS = THEME_COLORS['@fgprimarydis'] #e0e0e0
+    FGSECONDARYDIS = THEME_COLORS['@fgsecondarydis'] #cccccc
+    FGSUCCESSDIS = THEME_COLORS['@fgsuccessdis'] #e0e0e0
+    FGINFODIS = THEME_COLORS['@fginfodis'] #e0e0e0
+    FGWARNINGDIS = THEME_COLORS['@fgwarningdis'] #333333
+    FGDANGERDIS = THEME_COLORS['@fgdangerdis'] #e0e0e0
+    FGLIGHTDIS = THEME_COLORS['@fglightdis'] #333333
+    FGDARKDIS = THEME_COLORS['@fgdarkdis'] #cccccc
 
 
 def load_style():
@@ -134,7 +203,8 @@ def load_style():
                  'comboBox.qss', 
                  'radioButton.qss', 
                  'checkBox.qss', 
-                 'textEdit.qss'
+                 'textEdit.qss',
+                 'tableWidget.qss',
                  ]
 
                  
@@ -174,7 +244,8 @@ def load_styleTest():
                  'comboBoxFill.qss', 
                  'comboBox.qss', 
                  'radioButton.qss', 
-                 'checkBox.qss', 
+                 'checkBox.qss',
+                 'tableWdiget.qss'
                  ]
 
     stylesheet = ''
@@ -194,5 +265,5 @@ def load_styleTest():
         file.write(stylesheet)
         
 if __name__ == '__main__':
-    load_styleTest()
-    load_style()
+    print('\n'*20)
+    print(Jstyle.BT_PRIMARY)

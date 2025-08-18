@@ -22,6 +22,7 @@ class W_textEdit(QWidget):
         layout_teFill = QHBoxLayout()
         frame_teFill = QFrame()
         frame_teFill.setLayout(layout_teFill)
+        layout_rbFill = QVBoxLayout()
 
         self.lb_te = QLabel('TextEdit:')
         self.te_default = QTextEdit('='*12+'\ndefault\n'+'='*12)
@@ -42,8 +43,8 @@ class W_textEdit(QWidget):
         self.te_info.setObjectName(INFO)
         self.te_warning.setObjectName(WARNING)
         self.te_danger.setObjectName(DANGER)
-        self.rb_normal.setObjectName(INFO)
-        self.rb_disabled.setObjectName(INFO)
+        self.rb_normal.setObjectName(SUCCESS)
+        self.rb_disabled.setObjectName(DANGER)
         self.rb_readonly.setObjectName(INFO)
 
         layout_te.addWidget(self.lb_te)
@@ -59,9 +60,9 @@ class W_textEdit(QWidget):
         layout_rb.addWidget(self.rb_disabled)
         layout_rb.addWidget(self.rb_readonly)
         layout_te.addLayout(layout_rb)
-        self.rb_normal.clicked.connect(self.update_text_edit_state)
-        self.rb_disabled.clicked.connect(self.update_text_edit_state)
-        self.rb_readonly.clicked.connect(self.update_text_edit_state)
+        self.rb_normal.clicked.connect(self.update_stateTe)
+        self.rb_disabled.clicked.connect(self.update_stateTe)
+        self.rb_readonly.clicked.connect(self.update_stateTe)
         # textEdit fill
         self.lb_teFill = QLabel('TextEdit Fill:')
         self.te_primaryFill = QTextEdit('='*12+ f'\n=={PRIMARY}\n'+'='*12)
@@ -70,7 +71,10 @@ class W_textEdit(QWidget):
         self.te_infoFill = QTextEdit('='*12+ f'\n===={INFO}\n'+'='*12)
         self.te_warningFill = QTextEdit('='*12+ f'\n=={WARNING}\n'+'='*12)
         self.te_dangerFill = QTextEdit('='*12+ f'\n=={DANGER}\n'+'='*12)
-        
+        self.rb_normalFill = QRadioButton('Normal')
+        self.rb_disabledFill = QRadioButton('Disabled')
+        self.rb_readonlyFill = QRadioButton('ReadOnly')
+
         layout_teFill.addWidget(self.lb_teFill)
         layout_teFill.addWidget(self.te_primaryFill)
         layout_teFill.addWidget(self.te_secondaryFill)
@@ -78,6 +82,10 @@ class W_textEdit(QWidget):
         layout_teFill.addWidget(self.te_infoFill)
         layout_teFill.addWidget(self.te_warningFill)
         layout_teFill.addWidget(self.te_dangerFill)
+        layout_rbFill.addWidget(self.rb_normalFill)
+        layout_rbFill.addWidget(self.rb_disabledFill)
+        layout_rbFill.addWidget(self.rb_readonlyFill)
+        layout_teFill.addLayout(layout_rbFill)
         
         self.te_primaryFill.setObjectName(PRIMARY_FILL)
         self.te_secondaryFill.setObjectName(SECONDARY_FILL)
@@ -85,8 +93,13 @@ class W_textEdit(QWidget):
         self.te_infoFill.setObjectName(INFO_FILL)
         self.te_warningFill.setObjectName(WARNING_FILL)
         self.te_dangerFill.setObjectName(DANGER_FILL)
+        self.rb_normalFill.setObjectName(SUCCESS)
+        self.rb_disabledFill.setObjectName(DANGER)
+        self.rb_readonlyFill.setObjectName(INFO)
 
-
+        self.rb_normalFill.clicked.connect(self.update_stateTeFill)
+        self.rb_disabledFill.clicked.connect(self.update_stateTeFill)
+        self.rb_readonlyFill.clicked.connect(self.update_stateTeFill)
         layout_main.addWidget(frame_te)
         layout_main.addWidget(frame_teFill)
 
@@ -103,15 +116,24 @@ class W_textEdit(QWidget):
 
         
         self.rb_normal.setChecked(True)
-        self.update_text_edit_state()
+        self.rb_normalFill.setChecked(True)
+        self.update_stateTe()
 
-    def update_text_edit_state(self):
+    def update_stateTe(self):
         is_disabled = self.rb_disabled.isChecked()
         is_readonly = self.rb_readonly.isChecked()
 
-        all_text_edits = self.text_edits + self.text_edits_fill
 
-        for te in all_text_edits:
+        for te in self.text_edits:
+            te.setEnabled(not is_disabled)
+            te.setReadOnly(is_readonly)
+            
+    def update_stateTeFill(self):
+        is_disabled = self.rb_disabledFill.isChecked()
+        is_readonly = self.rb_readonlyFill.isChecked()
+
+
+        for te in self.text_edits_fill:
             te.setEnabled(not is_disabled)
             te.setReadOnly(is_readonly)
 
