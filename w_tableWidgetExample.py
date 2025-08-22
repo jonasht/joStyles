@@ -29,7 +29,7 @@ class W_TableWidget(QWidget):
 
         # --- 2. Configurando o número de linhas e colunas ---
         # É importante definir isso antes de popular a tabela.
-        self.table_widget.setRowCount(4)
+        self.table_widget.setRowCount(12)
         self.table_widget.setColumnCount(3)  # Adicionamos uma coluna para o botão de ação
 
         # --- 3. Configurando os cabeçalhos (headers) ---
@@ -54,7 +54,7 @@ class W_TableWidget(QWidget):
         # Define os títulos para as colunas (cabeçalho horizontal).
         header_labels = ["Nome do Usuário", "Cidade de Origem", "Ação"]
         self.table_widget.setHorizontalHeaderLabels(header_labels)
-        self.table_widget.setObjectName(DANGER)
+        
         # Você também pode definir cabeçalhos para as linhas (cabeçalho vertical).
         # Ex: self.table_widget.setVerticalHeaderLabels(["ID 1", "ID 2", "ID 3", "ID 4"])
 
@@ -62,43 +62,41 @@ class W_TableWidget(QWidget):
         """Preenche a tabela com QTableWidgetItem e outros widgets (QPushButton)."""
         # Vamos popular a tabela manualmente, linha por linha, para fins didáticos.
 
-        # --- Linha 0 ---
-        # Coluna 0 (Nome)
-        self.table_widget.setItem(0, 0, QTableWidgetItem("Aloysius"))
-        # Coluna 1 (Cidade)
-        item_cidade_0 = QTableWidgetItem("Indore")
-        item_cidade_0.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.table_widget.setItem(0, 1, item_cidade_0)
-        # Coluna 2 (Ação com Botão)
-        button_0 = QPushButton("Ver Detalhes de Aloysius")
-        button_0.clicked.connect(lambda: self.on_button_clicked(0))
-        self.table_widget.setCellWidget(0, 2, button_0)
-
-        # --- Linha 1 ---
-        self.table_widget.setItem(1, 0, QTableWidgetItem("Alan"))
-        item_cidade_1 = QTableWidgetItem("Bhopal")
-        item_cidade_1.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.table_widget.setItem(1, 1, item_cidade_1)
-        button_1 = QPushButton("Ver Detalhes de Alan")
-        button_1.clicked.connect(lambda: self.on_button_clicked(1))
-        self.table_widget.setCellWidget(1, 2, button_1)
-
-        # --- Linha 2 ---
-        self.table_widget.setItem(2, 0, QTableWidgetItem("Arnavi"))
-        item_cidade_2 = QTableWidgetItem("Mandsaur")
-        item_cidade_2.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.table_widget.setItem(2, 1, item_cidade_2)
-        button_2 = QPushButton("Ver Detalhes de Arnavi")
-        button_2.clicked.connect(lambda: self.on_button_clicked(2))
-        self.table_widget.setCellWidget(2, 2, button_2)
-
-        # --- Linha 3 ---
-        self.table_widget.setItem(3, 0, QTableWidgetItem("Beatriz"))
+        item_cidade_0 = QTableWidgetItem("Ouro Fino")
+        item_cidade_1 = QTableWidgetItem("Campinas")
+        item_cidade_2 = QTableWidgetItem("Porto Alegre")
         item_cidade_3 = QTableWidgetItem("São Paulo")
-        item_cidade_3.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        item_cidade_4 = QTableWidgetItem('Bragrança')
+
+        self.table_widget.setItem(0, 0, QTableWidgetItem("Camila"))
+        self.table_widget.setItem(0, 1, item_cidade_0)
+        self.table_widget.setItem(1, 0, QTableWidgetItem("Alan"))
+        self.table_widget.setItem(1, 1, item_cidade_1)
+        self.table_widget.setItem(2, 0, QTableWidgetItem("Roger"))
+        self.table_widget.setItem(2, 1, item_cidade_2)
+        self.table_widget.setItem(3, 0, QTableWidgetItem("Beatriz"))
         self.table_widget.setItem(3, 1, item_cidade_3)
+        self.table_widget.setItem(4, 0, QTableWidgetItem("Danialla"))
+        self.table_widget.setItem(4, 1, item_cidade_4)
+        
+        item_cidade_0.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        item_cidade_1.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        item_cidade_2.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+        item_cidade_3.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        button_0 = QPushButton("Ver Detalhes de Aloysius")
+        button_1 = QPushButton("Ver Detalhes de Alan")
+        button_2 = QPushButton("Ver Detalhes de Arnavi")
         button_3 = QPushButton("Ver Detalhes de Beatriz")
+        
+        button_0.clicked.connect(lambda: self.on_button_clicked(0))
+        button_1.clicked.connect(lambda: self.on_button_clicked(1))
+        button_2.clicked.connect(lambda: self.on_button_clicked(2))
         button_3.clicked.connect(lambda: self.on_button_clicked(3))
+
+        self.table_widget.setCellWidget(0, 2, button_0)
+        self.table_widget.setCellWidget(1, 2, button_1)
+        self.table_widget.setCellWidget(2, 2, button_2)
         self.table_widget.setCellWidget(3, 2, button_3)
 
     def setup_column_sizes(self):
@@ -108,9 +106,14 @@ class W_TableWidget(QWidget):
         header.setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
         # Ajusta a coluna 1 (Cidade) para se redimensionar com base no seu conteúdo.
         header.setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
+
         # Faz com que a coluna 2 (Ação) se estique para preencher o espaço restante.
         header.setSectionResizeMode(2, QHeaderView.ResizeMode.Stretch)
 
+        self.table_widget.verticalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
+        self.table_widget.verticalHeader().setSectionResizeMode(1, QHeaderView.ResizeMode.ResizeToContents)
+        self.table_widget.verticalHeader().setSectionResizeMode(2, QHeaderView.ResizeMode.ResizeToContents)
+        self.table_widget.verticalHeader().setSectionResizeMode(3, QHeaderView.ResizeMode.ResizeToContents)
     def on_button_clicked(self, row):
         """Slot que é chamado quando um dos botões na tabela é clicado."""
         name_item = self.table_widget.item(row, 0)
@@ -140,5 +143,6 @@ if __name__ == '__main__':
     app.setStyleSheet(get_style())
 
     window = W_TableWidget()
+    window.setGeometry(100, 100, 1000, 800)
     window.show()
     sys.exit(app.exec())

@@ -4,6 +4,22 @@ import re
 class Jstyle:
     
  
+    # QPushButton {
+        # color: @fg;
+        # background-color: @secondary;
+        # border: 1.5px solid @secondary;
+        # border-radius: 8px;
+        # font-size: 16px;
+        # padding: 7px 22px;
+        # font-weight: 500;
+    # }
+    # QPushButton:hover {
+        # background-color: @secondarylight;
+    # }
+    # QPushButton:pressed {
+        # background-color: @secondarydark;
+    # }
+
     BT_PRIMARY = f'''
     QPushButton {{
         background-color: {Color.PRIMARY};
@@ -112,6 +128,19 @@ class Jstyle:
                     color: {Color.WARNING};
                 }}'''
                 
+# /* QPushButton disabled */
+# QPushButton#warning:disabled {
+    # background-color: #e69933;
+    # color: #333333;
+    # border-color: #e69933;
+# }
+# QPushButton#danger:disabled {
+    # background-color: #d38080;
+    # color: #e0e0e0;
+    # border-color: #d38080;
+# }
+# 
+# 
 # /* button outline ---------------------------*/
     BT_PRIMARY_OUTLINE = f'''QPushButton {{
             background-color: transparent;
@@ -200,108 +229,174 @@ class Jstyle:
             color: {Color.FGDANGER};
             background-color: {Color.DANGER};
         }}
-
-      '''
-        
-    def __init__(self) -> None:...
-    
+        '''
+# /* outline disabled 0-----0-0-0-0-0-*/
+# QPushButton#primary-outline:disabled {
+    # color: @primarydark;
+    # border: 1.5px solid @primarydark;
+# }
+# 
+# QPushButton#secondary-outline:disabled {
+    # color: @secondarylight;
+    # border: 1.5px solid @secondarydark;
+# }
+# 
+# QPushButton#success-outline:disabled {
+    # color: @successdark;
+    # border: 1.5px solid @successdark;
+# }
+# 
+# QPushButton#info-outline:disabled {
+    # color: @infodark;
+    # border: 1.5px solid @infodark;
+# }
+# 
+# QPushButton#warning-outline:disabled {
+    # color: @warningdark;
+    # border: 1.5px solid @warningdark;
+# }
+# 
+# QPushButton#danger-outline:disabled {
+    # color: @dangerdark;
+    # border: 1.5px solid @dangerdark;
+# }
+# /* QpushButton link -------------------------- */
+# QPushButton#primary-link {
+    # background: transparent;
+    # border: none;
+    # color: @primary;
+    # font-size: 15px;
+    # text-align: left;
+    # padding: 0;
+    # font-weight: 500;
+    # text-decoration: none;
+# }
+# QPushButton#primary-link:hover {
+    # text-decoration: underline;
+    # color: @primarylight;
+# }
+# QPushButton#primary-link:pressed {
+    # color: @primarydark;
+#  
+# }
+# QPushButton#secondary-link {
+    # background: transparent;
+    # border: none;
+    # color: @secondary;
+    # font-size: 15px;
+    # text-align: left;
+    # padding: 0;
+    # font-weight: 500;
+    # text-decoration: none;
+# }
+# QPushButton#secondary-link:hover {
+    # text-decoration: underline;
+    # color: @secondarylight;
+# }
+# QPushButton#secondary-link:pressed {
+    # color: @secondarydark;
+# }
+# QPushButton#success-link {
+    # background: transparent;
+    # border: none;
+    # color: @success;
+    # font-size: 15px;
+    # text-align: left;
+    # padding: 0;
+    # font-weight: 500;
+    # text-decoration: none;
+# }
+# QPushButton#success-link:hover {
+    # text-decoration: underline;
+    # color: @successlight;
+# }
+# QPushButton#success-link:pressed {
+    # color: @successdark;
+# }
+# QPushButton#info-link {
+    # background: transparent;
+    # border: none;
+    # color: @info;
+    # font-size: 15px;
+    # text-align: left;
+    # padding: 0;
+    # font-weight: 500;
+    # text-decoration: none;
+# }
+# QPushButton#info-link:hover {
+    # text-decoration: underline;
+    # color: @infolight;
+# }
+# QPushButton#info-link:pressed {
+    # color: @infodark;
+# }
+# QPushButton#warning-link {
+    # background: transparent;
+    # border: none;
+    # color: @warning;
+    # font-size: 15px;
+    # text-align: left;
+    # padding: 0;
+    # font-weight: 500;
+    # text-decoration: none;
+# }
+# QPushButton#warning-link:hover {
+    # text-decoration: underline;
+    # color: @warninglight;
+# }
+# QPushButton#warning-link:pressed {
+    # color: @warningdark;
+# }
+# 
+# QPushButton#danger-link {
+    # background: transparent;
+    # border: none;
+    # color: @danger;
+    # font-size: 15px;
+    # text-align: left;
+    # padding: 0;
+    # font-weight: 500;
+    # text-decoration: none;
+# }
+# QPushButton#danger-link:hover {
+    # text-decoration: underline;
+    # color: @dangerlight;
+# }
+# QPushButton#danger-link:pressed {
+    # color: @dangerdark;
+# }
+# 
+# 
+# QPushButton#primary-link:disabled {
+    # color: @primarydark;
+# }
+# QPushButton#secondary-link:disabled {
+    # color: @secondarydark;
+# }
+# QPushButton#success-link:disabled {
+    # color: @successdark;
+# }
+# QPushButton#info-link:disabled {
+    # color: @infodark;
+# }
+# QPushButton#warning-link:disabled {
+    # color: @warningdark;
+# }
+# QPushButton#danger-link:disabled {
+    # color: @dangerdark;
+# } 
     def read_qss(self):
-        with open('./style.qss', 'r', encoding='utf-8') as file:
+        with open('./style.qss') as file:
             return file.read()
-    
-    def get_styleByType(self, widget_name, styleType):
 
-        
-        padrao = str(widget_name)+'#'+styleType+r'(:[\w-]+)?\s*{[^}]*}'
-
+    def get_primary(self):
+        padrao = r'QpushButton#primary(?!-outline)(:[\w-]+)?\s*{[^}]*}'
         var_qss = self.read_qss()
+
         matches = re.finditer(padrao, var_qss, re.DOTALL)
-        blocos = [m.group(0) for m in matches]
+        return [m.group(0) for m in matches]
 
-        blocos = "\n\n".join(blocos)
-        blocos.replace(f'{widget_name}#{styleType}', widget_name)
-        # print(blocos)
-        # blocos = re.sub(r"(QPushButton)#primary", r"\1", blocos)
-        blocos = re.sub('#'+styleType, "", blocos)
-        return blocos
-        
-
-    def get_primary(self, widget):
-        # widget_name = widget.__class__.__name__ 
-        widget_name = widget
-
-        to_return = self.get_styleByType(widget_name, 'primary')
-        return to_return
-    
-    def get_secondary(self, widget):
-        widget_name = widget
-        to_return = self.get_styleByType(widget_name, 'secondary')
-        return to_return
-    def get_success(self, widget):
-        widget_name = widget
-        
-        to_return = self.get_styleByType(widget_name, 'success')
-        return to_return
-    def get_info(self, widget):
-        widget_name = widget
-        
-        to_return = self.get_styleByType(widget_name, 'info')
-        return to_return
-    def get_warning(self, widget):
-        widget_name = widget
-        
-        to_return = self.get_styleByType(widget_name, 'warning')
-        return to_return
-    
-    def get_danger(self, widget):
-        widget_name = widget
-        
-        to_return = self.get_styleByType(widget_name, 'danger')
-        return to_return
-
-
-
-class JButton(Jstyle):
-    def __init__(self,) -> None:
-        self.widget_name = 'QPushButton'
-        
-        self.primary = self.get_styleByType(self.widget_name, 'primary')
-        self.secondary = self.get_styleByType(self.widget_name, 'secondary')
-        self.success = self.get_styleByType(self.widget_name, 'success')
-        self.info = self.get_styleByType(self.widget_name, 'info')
-        self.warning = self.get_styleByType(self.widget_name, 'warning')
-        self.danger = self.get_styleByType(self.widget_name, 'danger')
-        self.link = self.get_styleByType(self.widget_name, 'link')
-        
-        # bt outline
-        
-        self.primaryOutline = self.get_styleByType(self.widget_name, 'primary-outline')
-        self.secondaryOutline = self.get_styleByType(self.widget_name, 'secondary-outline')
-        self.successOutline = self.get_styleByType(self.widget_name, 'success-outline')
-        self.infoOutline = self.get_styleByType(self.widget_name, 'info-outline')
-        self.warningOutline = self.get_styleByType(self.widget_name, 'warning-outline')
-        self.dangerOutline = self.get_styleByType(self.widget_name, 'danger-outline')
-        
-
-class JLabel(Jstyle):
-    def __init__(self) -> None:
-        super().__init__()
-        widget_name = 'QLabel'
-
-        self.primary = self.get_styleByType(widget_name, 'primary') 
-        self.secondary = self.get_styleByType(widget_name, 'secondary') 
-        self.success = self.get_styleByType(widget_name, 'success') 
-        self.info = self.get_styleByType(widget_name, 'info') 
-        self.warning = self.get_styleByType(widget_name, 'warning') 
-        self.danger = self.get_styleByType(widget_name, 'danger') 
-        
-        
-        
 if __name__ == '__main__':
-    
-    j = Jstyle()
-    bt = JButton()
+    resultado = Jstyle().get_primary()
 
-
-    widget = 'QPushButton'
-    print('bottoes', bt.successOutline)
+    print(resultado)

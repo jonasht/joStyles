@@ -2199,14 +2199,4 @@ QTableWidget::item:selected:active {
     outline: none;
 }
 
-QTableWidget QPushButton#primary {
-    background-color: #4ea1ff;
-    border: 1.5px solid #4ea1ff;
-}
-QTableWidget QPushButton#primary:hover {
-    background-color: #85b9ff;
-}
-QTableWidget QPushButton#primary:pressed {
-    background-color: #2675ff;
-}
 
