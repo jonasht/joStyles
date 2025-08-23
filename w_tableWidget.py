@@ -17,16 +17,11 @@ from PyQt6.QtGui import QColor
 from jstyle import JButton, JButton, JLabel
 
 class W_TableWidget(QWidget):
-    """
-    Uma janela de exemplo didática para demonstrar o uso do QTableWidget.
-    """
     def __init__(self):
         super().__init__()
 
         main_layout = QVBoxLayout(self)
         layout_btTop = QHBoxLayout()
-        # --- 1. Criação do QTableWidget ---
-        # QTableWidget é o widget que exibe uma tabela ou grade de itens.
         
         self.bt_defaultTop = QPushButton('Default')
         self.bt_primaryTop = QPushButton('Primary')
@@ -55,8 +50,6 @@ class W_TableWidget(QWidget):
 
         main_layout.addWidget(self.tw)
 
-        # --- 2. Configurando o número de linhas e colunas ---
-        # É importante definir isso antes de popular a tabela.
         self.tw.setRowCount(7)
         self.tw.setColumnCount(5)  # Adicionamos uma coluna para o botão de ação
 
@@ -213,7 +206,6 @@ class W_TableWidget(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # Tenta carregar o estilo customizado do projeto
     app.setStyleSheet(get_style())
 
     window = W_TableWidget()

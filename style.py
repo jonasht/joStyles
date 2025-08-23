@@ -192,19 +192,18 @@ class Color:
 def load_style():
     '''Carrega todos os arquivos QSS, os combina e substitui os placeholders de cor.'''
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    
     # Lista de arquivos QSS para carregar 
-    qss_files = ['cyborg.qss', 
-                 'frame.qss',
-                 'label.qss',
-                 'lineEdit.qss', 
-                 'pushButton.qss', 
-                 'comboBoxFill.qss', 
-                 'comboBox.qss', 
-                 'radioButton.qss', 
-                 'checkBox.qss', 
-                 'textEdit.qss',
-                 'tableWidget.qss',
+    qss_files = ['./qss/cyborg.qss', 
+                 './qss/frame.qss',
+                 './qss/label.qss',
+                 './qss/lineEdit.qss', 
+                 './qss/pushButton.qss', 
+                 './qss/comboBoxFill.qss', 
+                 './qss/comboBox.qss', 
+                 './qss/radioButton.qss', 
+                 './qss/checkBox.qss', 
+                 './qss/textEdit.qss',
+                 './qss/tableWidget.qss',
                  ]
 
                  
