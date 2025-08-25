@@ -1,45 +1,146 @@
-/* TABLEWIDGET BASE */
+/* VARIÁVEIS */
+@primarylight: #85b9ff;
+@primary: #4ea1ff;
+@primarydark: #2675ff;
+@secondarylight: #767676;
+@secondary: #555555;
+@secondarydark: #2e2e2e;
+@successlight: #a4d155;
+@success: #77b300;
+@successdark: #4f6d00;
+@infolight: #c08ff3;
+@info: #9933cc;
+@infodark: #661d99;
+@warninglight: #ffae33;
+@warning: #ff8800;
+@warningdark: #cc6600;
+@dangerlight: #e16d6d;
+@danger: #cc0000;
+@dangerdark: #8b0000;
+@light: #ADAFAE;
+@dark: #222222;
+@bg: #060606;
+@fg: #ffffff;
+@selectbg: #454545;
+@selectfg: #ffffff;
+@border: #060606;
+@inputfg: #ffffff;
+@inputbg: #191919;
+@primarydis: #7aaeff;
+@secondarydis: #6e6e6e;
+@successdis: #90c344;
+@infodis: #b07cd9;
+@warningdis: #e69933;
+@dangerdis: #d38080;
+@lightdis: #c0c2c1;
+@darkdis: #3a3a3a;
+@fgprimary: #ffffff;
+@fgsecondary: #ffffff;
+@fgsuccess: #ffffff;
+@fginfo: #ffffff;
+@fgwarning: #000000;
+@fgdanger: #ffffff;
+@fglight: #000000;
+@fgdark: #ffffff;
+@fgprimarydis: #e0e0e0;
+@fgsecondarydis: #cccccc;
+@fgsuccessdis: #e0e0e0;
+@fginfodis: #e0e0e0;
+@fgwarningdis: #333333;
+@fgdangerdis: #e0e0e0;
+@fglightdis: #333333;
+@fgdarkdis: #cccccc;
 
+/* TABLEWIDGET BASE */
 QTableWidget {
-    background-color: #1c1c1c;       /* fundo geral */
-    color: #ffffff;                  /* texto normal */
-    border: 1px solid #333;
-    gridline-color: #333;
-    selection-background-color: @primary; /* azul primary */
-    selection-color: #ffffff;
-    alternate-background-color: #222;
+    background-color: @inputbg;       
+    color: @fg;                  
+    border: 1px solid @border;
+    gridline-color: @border;
+    selection-background-color: @selectbg; 
+    selection-color: @selectfg;
+    alternate-background-color: @darkdis;
     border-radius: 4px;
 }
 
 /* CABEÇALHO HORIZONTAL */
 
 QHeaderView::section {
-    background-color: @primary;    /* azul primary */
-    color: #ffffff;
+    background-color: @secondarydark;
+    color: @fg;
     padding: 4px;
-    border: 1px solid #1c1c1c;
+    border: 1px solid @dark;
     font-weight: bold;
 }
 
 /* CABEÇALHO VERTICAL */
-
 QHeaderView::section:vertical {
-    background-color: @primary;
-    color: #ffffff;
+    background-color: @secondarydark;
+    color: @fg;
     padding: 4px;
-    border: 1px solid #1c1c1c;
+    border: 1px solid @border;
 }
 
 /* CANTINHO SUPERIOR ESQUERDO */
-
 QTableCornerButton::section {
-    background-color: @primary;
-    border: 1px solid #1c1c1c;
+    background-color: @selectbg;
+    border: 1px solid @border;
 }
 
 /* ITEM SELECIONADO - REMOVER BORDA DE FOCO */
-
 QTableWidget::item:selected:active {
     outline: none;
+} 
+
+/* QTableWidget tipos -------------------------------------------------- */
+
+QTableWidget#primary {
+    background-color: @inputbg;       
+    color: @fg;                  
+    border: 1px solid @border;
+    gridline-color: @border;
+    selection-background-color: blue; 
+    selection-color: @selectfg;
+    alternate-background-color: @primarydark;
+    border-radius: 4px;
+}
+
+/* CABEÇALHO HORIZONTAL */
+QHeaderView#primary::section {
+    background-color: green;
+    color: @fg;
+    padding: 4px;
+    border: 1px solid @dark;
+    font-weight: bold;
+}
+
+/* CABEÇALHO VERTICAL */
+QHeaderView#primary::section:vertical {
+    background-color: pink;
+    color: @fg;
+    padding: 4px;
+    border: 1px solid red;
+}
+
+/* CANTINHO SUPERIOR ESQUERDO */
+QTableCornerButton#primary::section {
+    background-color: red;
+    border: 1px solid @border;
+}
+
+/* ITEM SELECIONADO - REMOVER BORDA DE FOCO */
+QTableWidget#primary::item:selected:active {
+    outline: none;
+}
+/* Colunas (horizontal header) */
+QTableWidget#primary QHeaderView#primary::section:horizontal {
+    background-color: blue;
+    color: @fgprimary;
+}
+
+/* Linhas (vertical header) */
+QTableWidget#primary QHeaderView#primary::section:vertical {
+    background-color: blue;
+    color: @fgsecondary;
 }
 

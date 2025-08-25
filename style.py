@@ -204,6 +204,7 @@ def load_style():
                  './qss/checkBox.qss', 
                  './qss/textEdit.qss',
                  './qss/tableWidget.qss',
+                 './qss/tableView.qss'
                  ]
 
                  
@@ -230,38 +231,6 @@ def get_style():
     with open('style.qss', 'r', encoding='utf-8') as file:
         return file.read()
 
-def load_styleTest():
-    '''Carrega todos os arquivos QSS, os combina e substitui os placeholders de cor.'''
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    
-    # Lista de arquivos QSS para carregar em ordem
-    qss_files = ['cyborg.qss', 
-                 'label.qss',
-                 'lineEdit.qss', 
-                 'pushButton.qss', 
-                 'frame.qss',
-                 'comboBoxFill.qss', 
-                 'comboBox.qss', 
-                 'radioButton.qss', 
-                 'checkBox.qss',
-                 'tableWdiget.qss'
-                 ]
-
-    stylesheet = ''
-    for qss_file in qss_files:
-        qss_path = os.path.join(script_dir, qss_file)
-        try:
-            with open(qss_path, 'r', encoding='utf-8') as file:
-                stylesheet += file.read() + "\n"
-        except FileNotFoundError:
-            print(f"Aviso: O arquivo de estilo '{qss_path}' não foi encontrado.")
-
-    # Substitui cada placeholder pelo seu valor correspondente
-    for var, color in THEME_COLORS.items():
-        stylesheet = stylesheet.replace(var+';', color+';')
-        
-    with open('styleSheet.css', 'w') as file:
-        file.write(stylesheet)
         
 if __name__ == '__main__':
     print('\n'*20)

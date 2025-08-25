@@ -1,0 +1,98 @@
+/* @primarylight: #85b9ff; */
+/* @primary: #4ea1ff; */
+/* @primarydark: #2675ff; */
+/* @secondarylight: #767676; */
+/* @secondary: #555555; */
+/* @secondarydark: #2e2e2e; */
+/* @successlight: #a4d155; */
+/* @success: #77b300; */
+/* @successdark: #4f6d00; */
+/* @infolight: #c08ff3; */
+/* @info: #9933cc; */
+/* @infodark: #661d99; */
+/* @warninglight: #ffae33; */
+/* @warning: #ff8800; */
+/* @warningdark: #cc6600; */
+/* @dangerlight: #e16d6d; */
+/* @danger: #cc0000; */
+/* @dangerdark: #8b0000; */
+/* @light: #ADAFAE; */
+/* @dark: #222222; */
+/* @bg: #060606; */
+/* @fg: #ffffff; */
+/* @selectbg: #454545; */
+/* @selectfg: #ffffff; */
+/* @border: #060606; */
+/* @inputfg: #ffffff; */
+/* @inputbg: #191919; */
+/* @primarydis: #7aaeff; */
+/* @secondarydis: #6e6e6e; */
+/* @successdis: #90c344; */
+/* @infodis: #b07cd9; */
+/* @warningdis: #e69933; */
+/* @dangerdis: #d38080; */
+/* @lightdis: #c0c2c1; */
+/* @darkdis: #3a3a3a; */
+/* @fgprimary: #ffffff; */
+/* @fgsecondary: #ffffff; */
+/* @fgsuccess: #ffffff; */
+/* @fginfo: #ffffff; */
+/* @fgwarning: #000000; */
+/* @fgdanger: #ffffff; */
+/* @fglight: #000000; */
+/* @fgdark: #ffffff; */
+/* @fgprimarydis: #e0e0e0; */
+/* @fgsecondarydis: #cccccc; */
+/* @fgsuccessdis: #e0e0e0; */
+/* @fginfodis: #e0e0e0; */
+/* @fgwarningdis: #333333; */
+/* @fgdangerdis: #e0e0e0; */
+/* @fglightdis: #333333; */
+/* @fgdarkdis: #cccccc; */
+
+
+/* Estilo geral da QTableView */
+QTableView {
+    background-color: @inputbg;
+    border: 2px solid @border;
+    gridline-color: @border;
+    font-size: 14px;
+    selection-background-color: @selectbg;
+    selection-color: #ffffff;
+    alternate-background-color: #e9ecef;
+}
+
+/* Cabeçalho horizontal */
+QHeaderView::section {
+    background-color: @secondarydark;
+    color: @fg;
+    font-weight: bold;
+    padding: 6px;
+    border: 1px solid @dark;
+}
+
+/* Cabeçalho vertical */
+QHeaderView::section:vertical {
+    background-color: @secondarydark;
+    color: @fg;
+    font-weight: normal;
+    padding: 4px;
+    border: 1px solid @border;
+}
+
+/* Linhas alternadas */
+QTableView::item:alternate {
+    background: @inputbg;
+}
+
+/* Hover na célula */
+QTableView::item:hover {
+    background: @inputbg;
+    color: @fg;
+}
+
+/* Célula selecionada */
+QTableView::item:selected {
+    background: @selectbg;
+    color: @fg;
+}

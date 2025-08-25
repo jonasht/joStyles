@@ -4,204 +4,6 @@ import re
 class Jstyle:
     
  
-    BT_PRIMARY = f'''
-    QPushButton {{
-        background-color: {Color.PRIMARY};
-        border: 1.5px solid {Color.PRIMARY};
-    }}
-    QPushButton:hover {{
-        background-color: {Color.PRIMARYLIGHT};
-    }}
-    QPushButton:pressed {{
-        background-color: {Color.PRIMARYDARK};
-    }}
-    QPushButton:disabled {{
-    background-color: {Color.PRIMARYDIS};
-    color: {Color.FGPRIMARYDIS};
-    border-color: {Color.PRIMARYDIS};
-}}
-    '''
-
-    BT_SECONDARY = f'''QPushButton {{
-                        background-color: {Color.SECONDARY};
-                        border: 1.5px solid {Color.SECONDARY};
-                    }}
-                    QPushButton:hover {{
-                        background-color: {Color.SECONDARYLIGHT};
-                    }}
-                    QPushButton:pressed {{
-                        background-color: {Color.SECONDARYDARK};
-                    }}
-'''
-                    # QPushButton#secondary:disabled {{
-    # background-color: #6e6e6e;
-    # color: #cccccc;
-    # border-color: #6e6e6e;
-# }}
-    BT_SUCCESS = f'''QPushButton {{
-                    background-color: {Color.SUCCESS};
-                    border: 1.5px solid {Color.SUCCESS};
-                    }}
-                    QPushButton:hover {{
-                    background-color: {Color.SUCCESSLIGHT};
-                    }}
-                    QPushButton:pressed {{
-                    background-color: {Color.SUCCESSDARK};
-                    }}
-                    '''
-                    # QPushButton#success:disabled {{
-    # background-color: #90c344;
-    # color: #e0e0e0;
-    # border-color: #90c344;
-# }}
-
-    BT_INFO = f'''QPushButton {{
-                        background-color: {Color.INFO};
-                        border: 1.5px solid {Color.INFO};
-                    }}
-                    QPushButton:hover {{
-                        background-color: {Color.INFOLIGHT};
-                    }}
-                    QPushButton:pressed {{
-                        background-color: {Color.INFODARK};
-                    }}
-                    '''
-                    # QPushButton#info:disabled {{
-    # background-color: #b07cd9;
-    # color: #e0e0e0;
-    # border-color: #b07cd9;
-# }}
-
-    BT_WARNING = f'''QPushButton {{
-                    background-color: {Color.WARNING};
-                    border: 1.5px solid {Color.WARNING};
-                }}
-                QPushButton:hover {{
-                    background-color: {Color.WARNINGLIGHT};
-                }}
-                QPushButton:pressed {{
-                    background-color: {Color.WARNINGDARK};
-                }}'''
-
-    BT_DANGER = f'''QPushButton {{
-                    background-color: {Color.DANGER};
-                    border: 1.5px solid {Color.DANGER};
-                }}
-                QPushButton:hover {{
-                    background-color: {Color.DANGERLIGHT};
-                }}
-                QPushButton:pressed {{
-                    background-color: {Color.DANGERDARK};
-                }}'''
-
-    BT_LINK = f'''QPushButton#link {{
-                    background: transparent;
-                    border: none;
-                    color: {Color.PRIMARY};
-                    font-size: 15px;
-                    text-align: left;
-                    padding: 0;
-                    font-weight: 500;
-                    text-decoration: none;
-                }}
-                QPushButton#link:hover {{
-                    color: {Color.INFO};
-                    text-decoration: underline;
-                }}
-                QPushButton#link:pressed {{
-                    color: {Color.WARNING};
-                }}'''
-                
-# /* button outline ---------------------------*/
-    BT_PRIMARY_OUTLINE = f'''QPushButton {{
-            background-color: transparent;
-            color: {Color.PRIMARY};
-            border: 1.5px solid {Color.PRIMARY};
-        }}
-        QPushButton:hover {{
-            color: {Color.FGPRIMARY};
-            background-color: {Color.PRIMARY};
-        }}
-        QPushButton:pressed {{
-            color: {Color.FGPRIMARY};
-            background-color: {Color.PRIMARYDARK};
-        }}
-        '''
-# 
-    BT_SECONDARY_OUTLINE = f'''QPushButton {{
-            background-color: transparent;
-            border: 1.5px solid {Color.SECONDARY};
-            color: {Color.SECONDARY};
-        }}
-        QPushButton:hover {{
-            color: {Color.FGSECONDARY};
-            background-color: {Color.SECONDARY};
-        
-        }}
-        QPushButton:pressed {{
-            color: {Color.FGSECONDARY};
-            background-color: {Color.SECONDARYDARK};
-        }}
-        '''
-# 
-    BT_SUCCESS_OUTLINE = f'''QPushButton {{
-            background-color: transparent;
-            border: 1.5px solid {Color.SUCCESS};
-            color: {Color.SUCCESS};
-        }}
-        QPushButton:hover {{
-            color: {Color.FGSUCCESS};
-            background-color: {Color.SUCCESS};
-        }}
-        QPushButton:pressed {{
-            color: {Color.FGSUCCESS};
-            background-color: {Color.SUCCESSDARK};
-        }}
-#       '''
-    BT_INFO_OUTLINE = f'''QPushButton {{
-            background-color: transparent;
-            border: 1.5px solid {Color.INFO};
-            color: {Color.INFO};
-        }}
-        QPushButton:hover {{
-            color: {Color.FGINFO};
-            background-color: {Color.INFO};
-        }}
-        QPushButton:pressed {{
-            color: {Color.FGINFO};
-            background-color: {Color.INFODARK};
-        }}
-        '''
-        
-    BT_WARNING_OUTLINE = f'''QPushButton {{
-            background-color: transparent;
-            border: 1.5px solid {Color.WARNING};
-            color: {Color.WARNING};
-        }}
-        QPushButton:hover {{
-            color: {Color.FGWARNING};
-            background-color: {Color.WARNING};
-        }}
-        QPushButton:pressed {{
-            color: {Color.FGWARNING};
-            background-color: {Color.WARNINGDARK};
-        }}
-        '''
-    BT_DANGER_OUTLINE = f'''QPushButton {{
-            background-color: transparent;
-            border: 1.5px solid {Color.DANGER};
-            color: {Color.DANGER};
-        }}
-        QPushButton:hover {{
-            color: {Color.FGDANGER};
-            background-color: {Color.DANGER};
-        }}
-        QPushButton:pressed {{
-            color: {Color.FGDANGER};
-            background-color: {Color.DANGER};
-        }}
-
-      '''
         
     def __init__(self) -> None:...
     
@@ -210,7 +12,6 @@ class Jstyle:
             return file.read()
     
     def get_styleByType(self, widget_name, styleType):
-
         
         padrao = str(widget_name)+'#'+styleType+r'(:[\w-]+)?\s*{[^}]*}'
 
@@ -220,16 +21,12 @@ class Jstyle:
 
         blocos = "\n\n".join(blocos)
         blocos.replace(f'{widget_name}#{styleType}', widget_name)
-        # print(blocos)
-        # blocos = re.sub(r"(QPushButton)#primary", r"\1", blocos)
         blocos = re.sub('#'+styleType, "", blocos)
         return blocos
         
 
     def get_primary(self, widget):
-        # widget_name = widget.__class__.__name__ 
         widget_name = widget
-
         to_return = self.get_styleByType(widget_name, 'primary')
         return to_return
     

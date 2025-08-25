@@ -38,6 +38,14 @@ class W_TableWidget(QWidget):
         self.bt_warningTop.setObjectName(WARNING)
         self.bt_dangerTop.setObjectName(DANGER)
 
+        self.bt_defaultTop.clicked.connect(lambda: self.set_table_style(''))
+        self.bt_primaryTop.clicked.connect(lambda: self.set_table_style(PRIMARY))
+        self.bt_secondaryTop.clicked.connect(lambda: self.set_table_style(SECONDARY))
+        self.bt_successTop.clicked.connect(lambda: self.set_table_style(SUCCESS))
+        self.bt_infoTop.clicked.connect(lambda: self.set_table_style(INFO))
+        self.bt_warningTop.clicked.connect(lambda: self.set_table_style(WARNING))
+        self.bt_dangerTop.clicked.connect(lambda: self.set_table_style(DANGER))
+
         layout_btTop.addWidget(self.bt_defaultTop)
         layout_btTop.addWidget(self.bt_primaryTop)
         layout_btTop.addWidget(self.bt_secondaryTop)
@@ -51,8 +59,7 @@ class W_TableWidget(QWidget):
         main_layout.addWidget(self.tw)
 
         self.tw.setRowCount(7)
-        self.tw.setColumnCount(5)  # Adicionamos uma coluna para o botão de ação
-
+        self.tw.setColumnCount(5) 
 
         self.tw.cellClicked.connect(self.on_cell_clicked)
         self.tw.cellDoubleClicked.connect(self.on_cell_double_clicked)
@@ -179,7 +186,7 @@ class W_TableWidget(QWidget):
         item_warningone.setBackground(jc.WARNING)
         item_dangerone.setBackground(jc.DANGER)
         
-        
+        # self.tw.setObjectName(PRIMARY)
 
     def on_button_clicked(self, row):
         """Slot que é chamado quando um dos botões na tabela é clicado."""
@@ -198,6 +205,13 @@ class W_TableWidget(QWidget):
         item = self.tw.item(row, column)
         if item:
             QMessageBox.information(self, "Duplo Clique", f"Você deu um duplo clique em '{item.text()}'.")
+
+    def set_table_style(self, style_name):
+        """Define o nome do objeto para a tabela e reaplica a folha de estilo."""
+        self.tw.setObjectName(style_name)
+        self.tw.style().unpolish(self.tw)
+        self.tw.style().polish(self.tw)
+        self.tw.setAlternatingRowColors(True)
 
     def keyPressEvent(self, a0):
         if a0.key() == Qt.Key.Key_Escape: # type: ignore
