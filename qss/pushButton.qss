@@ -67,6 +67,9 @@ QPushButton:hover {
     background-color: @secondarylight;
 }
 QPushButton:pressed {
+    background-color: @inputbg;
+}
+QpushButton:checked {
     background-color: @secondarydark;
 }
 
@@ -361,8 +364,12 @@ QPushButton#primary-link:hover {
 }
 QPushButton#primary-link:pressed {
     color: @primarydark;
- 
 }
+QPushButton#primary-link:checked {
+    color: @primarydark;
+    text-decoration: underline;
+}
+
 QPushButton#secondary-link {
     background: transparent;
     border: none;
@@ -379,6 +386,10 @@ QPushButton#secondary-link:hover {
 }
 QPushButton#secondary-link:pressed {
     color: @secondarydark;
+}
+QPushButton#secondary-link:checked {
+    color: @secondarydark;
+    text-decoration: underline;
 }
 QPushButton#success-link {
     background: transparent;
@@ -397,6 +408,11 @@ QPushButton#success-link:hover {
 QPushButton#success-link:pressed {
     color: @successdark;
 }
+QPushButton#success-link:checked {
+    color: @successdark;
+    text-decoration: underline;
+}
+
 QPushButton#info-link {
     background: transparent;
     border: none;
@@ -413,6 +429,11 @@ QPushButton#info-link:hover {
 }
 QPushButton#info-link:pressed {
     color: @infodark;
+}
+QPushButton#info-link:checked {
+    color: @infodark;
+    text-decoration: underline;
+
 }
 QPushButton#warning-link {
     background: transparent;
@@ -431,7 +452,10 @@ QPushButton#warning-link:hover {
 QPushButton#warning-link:pressed {
     color: @warningdark;
 }
-
+QPushButton#warning-link:checked {
+    color: @warningdark;
+    text-decoration: underline;
+}
 QPushButton#danger-link {
     background: transparent;
     border: none;
@@ -448,6 +472,10 @@ QPushButton#danger-link:hover {
 }
 QPushButton#danger-link:pressed {
     color: @dangerdark;
+}
+QPushButton#danger-link:checked {
+    color: @dangerdark;
+    text-decoration: underline;
 }
 
 

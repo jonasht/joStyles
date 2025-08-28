@@ -428,6 +428,9 @@ QPushButton:hover {
     background-color: #767676;
 }
 QPushButton:pressed {
+    background-color: #191919;
+}
+QpushButton:checked {
     background-color: #2e2e2e;
 }
 
@@ -722,8 +725,12 @@ QPushButton#primary-link:hover {
 }
 QPushButton#primary-link:pressed {
     color: #2675ff;
- 
 }
+QPushButton#primary-link:checked {
+    color: #2675ff;
+    text-decoration: underline;
+}
+
 QPushButton#secondary-link {
     background: transparent;
     border: none;
@@ -740,6 +747,10 @@ QPushButton#secondary-link:hover {
 }
 QPushButton#secondary-link:pressed {
     color: #2e2e2e;
+}
+QPushButton#secondary-link:checked {
+    color: #2e2e2e;
+    text-decoration: underline;
 }
 QPushButton#success-link {
     background: transparent;
@@ -758,6 +769,11 @@ QPushButton#success-link:hover {
 QPushButton#success-link:pressed {
     color: #4f6d00;
 }
+QPushButton#success-link:checked {
+    color: #4f6d00;
+    text-decoration: underline;
+}
+
 QPushButton#info-link {
     background: transparent;
     border: none;
@@ -774,6 +790,11 @@ QPushButton#info-link:hover {
 }
 QPushButton#info-link:pressed {
     color: #661d99;
+}
+QPushButton#info-link:checked {
+    color: #661d99;
+    text-decoration: underline;
+
 }
 QPushButton#warning-link {
     background: transparent;
@@ -792,7 +813,10 @@ QPushButton#warning-link:hover {
 QPushButton#warning-link:pressed {
     color: #cc6600;
 }
-
+QPushButton#warning-link:checked {
+    color: #cc6600;
+    text-decoration: underline;
+}
 QPushButton#danger-link {
     background: transparent;
     border: none;
@@ -809,6 +833,10 @@ QPushButton#danger-link:hover {
 }
 QPushButton#danger-link:pressed {
     color: #8b0000;
+}
+QPushButton#danger-link:checked {
+    color: #8b0000;
+    text-decoration: underline;
 }
 
 
